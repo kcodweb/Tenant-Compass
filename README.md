@@ -3,9 +3,7 @@
 HackNation 7th Global AI Hackathon · Challenge 2 (RealPage) · Team Tenant Compass (Karan, sole member). For any sample apartment address: which housing rules apply on a
 given date, with citations and exact source quotes, and which addresses a law change affects.
 
-**Live demo: https://kcodweb.github.io/Tenant-Compass/** (guided tour: https://kcodweb.github.io/Tenant-Compass/#tour)
-
-**Not legal advice.** Every interface says so.
+**Live demo: https://kcodweb.github.io/Tenant-Compass/**
 
 ## Results
 
