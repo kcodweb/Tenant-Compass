@@ -47,7 +47,9 @@
      "in_supplied_corpus": false
     }
    ],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
    "team_rule_id": "r-0002",
@@ -103,7 +105,9 @@
      "in_supplied_corpus": false
     }
    ],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
    "team_rule_id": "r-0003",
@@ -119,19 +123,19 @@
    "overrides": [
     "r-0014",
     "r-0015",
+    "r-0020",
     "r-0021",
     "r-0022",
     "r-0023",
     "r-0024",
-    "r-0025",
-    "r-0029",
+    "r-0028",
+    "r-0030",
     "r-0031",
     "r-0032",
-    "r-0033",
-    "r-0039",
-    "r-0040"
+    "r-0037",
+    "r-0038"
    ],
-   "interaction": "Does not apply where a local just cause ordinance adopted on or before September 1, 2019 applies, or where a later-adopted or amended local ordinance is more protective (with a binding local finding), in which case the local ordinance applies. A property cannot be subject to both. Local ordinances adopted after September 1, 2019 that are less protective may not be enforced unless this section is repealed. Relocation assistance under this section is credited against relocation required by other law. Yields where a covering local rule of the same category applies: r-0014, r-0015, r-0021, r-0022, r-0023, r-0024, r-0025, r-0029, r-0031, r-0032, r-0033, r-0039, r-0040.",
+   "interaction": "Does not apply where a local just cause ordinance adopted on or before September 1, 2019 applies, or where a later-adopted or amended local ordinance is more protective (with a binding local finding), in which case the local ordinance applies. A property cannot be subject to both. Local ordinances adopted after September 1, 2019 that are less protective may not be enforced unless this section is repealed. Relocation assistance under this section is credited against relocation required by other law. Yields where a covering local rule of the same category applies: r-0014, r-0015, r-0020, r-0021, r-0022, r-0023, r-0024, r-0028, r-0030, r-0031, r-0032, r-0037, r-0038.",
    "effective_date": "2024-04-01",
    "citation": "Cal. Civ. Code § 1946.2",
    "source_doc_id": "D023",
@@ -166,7 +170,9 @@
      "in_supplied_corpus": false
     }
    ],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "current_version"
   },
   {
    "team_rule_id": "r-0004",
@@ -180,21 +186,11 @@
    "coverage_conditions": "Temporary displacement for capital improvement work lasting less than 20 days, in San Francisco.",
    "exemptions": null,
    "overrides": [
-    "r-0014",
-    "r-0015",
-    "r-0021",
-    "r-0022",
-    "r-0023",
-    "r-0024",
-    "r-0025",
-    "r-0029",
+    "r-0030",
     "r-0031",
-    "r-0032",
-    "r-0033",
-    "r-0039",
-    "r-0040"
+    "r-0032"
    ],
-   "interaction": "Displaces S.F. Admin. Code § 37.9C relocation amounts for temporary capital improvement evictions of less than 20 days.",
+   "interaction": "Displaces S.F. Admin. Code § 37.9C relocation amounts for temporary capital improvement evictions of less than 20 days. The source describes this state law for San Francisco, CA only, so it is applied there only.",
    "effective_date": "2026-03-01",
    "citation": "Cal. Civ. Code § 1947.9",
    "source_doc_id": "D083",
@@ -221,7 +217,11 @@
    "extractor": "claude-opus-5-5",
    "citation_basis": "supplied_corpus",
    "corroborating_sources": [],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": [
+    "San Francisco, CA"
+   ],
+   "effective_date_basis": "current_version"
   },
   {
    "team_rule_id": "r-0005",
@@ -262,7 +262,9 @@
    "extractor": "claude-opus-5-5",
    "citation_basis": "supplied_corpus",
    "corroborating_sources": [],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
    "team_rule_id": "r-0006",
@@ -277,14 +279,12 @@
    "exemptions": "The cap does not apply to: (1) deed- or regulatory-restricted affordable housing, or housing under an affordable-housing subsidy agreement; (2) school or university dormitories; (3) housing under local rent control that restricts annual increases below the state cap; (4) housing issued a certificate of occupancy within the previous 15 years, unless a mobilehome; (5) separately alienable units (e.g., single-family homes and condos) not owned by a REIT, a corporation, or an LLC with a corporate member, if the required exemption notice was given; (6) an owner-occupied two-unit property where neither unit is an ADU or JADU; (7) homeowners of mobilehomes.",
    "overrides": [
     "r-0016",
-    "r-0017",
-    "r-0026",
-    "r-0034",
-    "r-0035",
-    "r-0041",
-    "r-0042"
+    "r-0025",
+    "r-0033",
+    "r-0039",
+    "r-0040"
    ],
-   "interaction": "Does not apply to housing under valid local rent control (consistent with Costa-Hawkins, Civ. Code 1954.50 et seq.) that restricts annual increases below the state cap. Does not expand or limit local rent-control authority. Yields where a covering local rule of the same category applies: r-0016, r-0017, r-0026, r-0034, r-0035, r-0041, r-0042.",
+   "interaction": "Does not apply to housing under valid local rent control (consistent with Costa-Hawkins, Civ. Code 1954.50 et seq.) that restricts annual increases below the state cap. Does not expand or limit local rent-control authority. Yields where a covering local rule of the same category applies: r-0016, r-0025, r-0033, r-0039, r-0040.",
    "effective_date": "2020-01-01",
    "citation": "Cal. Civ. Code § 1947.12",
    "source_doc_id": "D024",
@@ -326,7 +326,9 @@
      "in_supplied_corpus": false
     }
    ],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
    "team_rule_id": "r-0008",
@@ -367,7 +369,9 @@
    "extractor": "claude-opus-5-5",
    "citation_basis": "supplied_corpus",
    "corroborating_sources": [],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
    "team_rule_id": "r-0009",
@@ -433,7 +437,9 @@
    "alt_effective_dates": [
     "2020-01-01 (D015)",
     "2024-01-01 (D015, D021, D027)"
-   ]
+   ],
+   "applies_only_in": null,
+   "effective_date_basis": "current_version"
   },
   {
    "team_rule_id": "r-0010",
@@ -489,7 +495,9 @@
      "in_supplied_corpus": false
     }
    ],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "current_version"
   },
   {
    "team_rule_id": "r-0011",
@@ -545,7 +553,9 @@
      "in_supplied_corpus": false
     }
    ],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
    "team_rule_id": "r-0012",
@@ -586,7 +596,9 @@
    "extractor": "claude-opus-5-5",
    "citation_basis": "supplied_corpus",
    "corroborating_sources": [],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
    "team_rule_id": "r-0013",
@@ -627,7 +639,9 @@
    "extractor": "claude-opus-5-5",
    "citation_basis": "supplied_corpus",
    "corroborating_sources": [],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
    "team_rule_id": "r-0014",
@@ -641,11 +655,10 @@
    "coverage_conditions": "Applies to units fully or partially covered by the Rent Ordinance, including new construction (partially covered).",
    "exemptions": "Units where the tenant shares a kitchen or bath with the landlord are exempt only if the landlord lived in a unit on the same property at the start of the tenancy.",
    "overrides": [
-    "r-0003",
-    "r-0004"
+    "r-0003"
    ],
    "interaction": null,
-   "effective_date": "2026-01-01",
+   "effective_date": null,
    "citation": "Berkeley Mun. Code ch. 13.76 (as amended by Measure BB, Nov. 2024)",
    "source_doc_id": "D006",
    "source_url": "https://rentboard.berkeleyca.gov/laws-regulations/measure-bb-changes-berkeleys-rent-ordinance",
@@ -686,7 +699,9 @@
      "in_supplied_corpus": true
     }
    ],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
    "team_rule_id": "r-0015",
@@ -700,8 +715,7 @@
    "coverage_conditions": "Tenants evicted so the owner can withdraw the property from the rental housing market (Ellis Act)",
    "exemptions": null,
    "overrides": [
-    "r-0003",
-    "r-0004"
+    "r-0003"
    ],
    "interaction": "Payment amounts mirror the owner move-in relocation payments under the Rent Stabilization and Good Cause for Eviction Ordinance.",
    "effective_date": "2026-01-01",
@@ -730,7 +744,9 @@
    "extractor": "claude-opus-5-5",
    "citation_basis": "supplied_corpus",
    "corroborating_sources": [],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "current_version"
   },
   {
    "team_rule_id": "r-0016",
@@ -763,7 +779,7 @@
     "exempt_if_newer_than_years": null,
     "owner_fact_dependent": true,
     "subsidy_dependent": false,
-    "other_unknown_fact": null,
+    "other_unknown_fact": "Whether the unit is subject to Berkeley rent ceilings (this notice does not state the construction-date cutoff) and whether the landlord meets Regulation 1148 eligibility conditions",
     "owner_fact_max_units": 2
    },
    "yields_to_local": false,
@@ -779,55 +795,21 @@
      "citation": "Berkeley Mun. Code ch. 13.76",
      "quoted_span": "Most units in multifamily properties built before 1980** Fully Covered Yes Yes Yes Yes",
      "in_supplied_corpus": true
+    },
+    {
+     "source_doc_id": "D008",
+     "source_url": "https://rentboard.berkeleyca.gov/sites/default/files/documents/AGA%20Public%20Notice.pdf",
+     "citation": "Berkeley Mun. Code § 13.76.110; Berkeley Rent Bd. Reg. 1148",
+     "quoted_span": "eligible landlords to increase the 2025 permanent rent ceilings by 1.0% no earlier than",
+     "in_supplied_corpus": true
     }
    ],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
    "team_rule_id": "r-0017",
-   "jurisdiction": "Berkeley, CA",
-   "level": "city",
-   "category": "rent_increase_limits",
-   "status": "in_force",
-   "title": "Berkeley Rent Stabilization 2026 Annual General Adjustment (AGA)",
-   "requirement": "For 2026, eligible landlords may raise 2025 permanent rent ceilings by no more than 1.0% (65% of Bay Area CPI change July 2024 to June 2025), and no earlier than January 1, 2026. Landlords must meet the eligibility conditions and give tenants the notice required by Rent Board Regulation 1148. The AGA does not apply to tenancies that began on or after January 1, 2025 with rents set under Costa-Hawkins.",
-   "key_value": "1.0% annual general adjustment for 2026 (65% of CPI)",
-   "coverage_conditions": "Applies to units subject to Berkeley permanent rent ceilings under the Rent Stabilization Ordinance. Landlords must qualify under Regulation 1148. This notice does not state which buildings are covered.",
-   "exemptions": "Does not adjust rents for tenancies that began on or after January 1, 2025 whose rents were set under the Costa-Hawkins Rental Housing Act. Other eligibility conditions are in Regulation 1148.",
-   "overrides": [
-    "r-0006"
-   ],
-   "interaction": "Costa-Hawkins Rental Housing Act (state) allows vacancy-decontrol rent setting for some tenancies; those tenancies are excluded from the 2026 AGA.",
-   "effective_date": "2026-01-01",
-   "citation": "Berkeley Mun. Code § 13.76.110; Berkeley Rent Bd. Reg. 1148",
-   "source_doc_id": "D008",
-   "source_url": "https://rentboard.berkeleyca.gov/sites/default/files/documents/AGA%20Public%20Notice.pdf",
-   "quoted_span": "eligible landlords to increase the 2025 permanent rent ceilings by 1.0% no earlier than",
-   "confidence": 0.85,
-   "conflict_flag": false,
-   "conflict_note": null,
-   "coverage": {
-    "min_units": null,
-    "max_units": null,
-    "co_on_or_before": null,
-    "co_after": null,
-    "exempt_if_newer_than_years": null,
-    "owner_fact_dependent": false,
-    "subsidy_dependent": false,
-    "other_unknown_fact": "Whether the unit is subject to Berkeley rent ceilings (this notice does not state the construction-date cutoff) and whether the landlord meets Regulation 1148 eligibility conditions",
-    "owner_fact_max_units": null
-   },
-   "yields_to_local": false,
-   "may_preempt_local": false,
-   "penalty": null,
-   "retrieved_at": "2026-10-01 22:35 UTC",
-   "extractor": "claude-opus-5-5",
-   "citation_basis": "supplied_corpus",
-   "corroborating_sources": [],
-   "alt_effective_dates": []
-  },
-  {
-   "team_rule_id": "r-0018",
    "jurisdiction": "Berkeley, CA",
    "level": "city",
    "category": "screening_restrictions",
@@ -865,10 +847,12 @@
    "extractor": "claude-opus-5-5",
    "citation_basis": "supplied_corpus",
    "corroborating_sources": [],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0019",
+   "team_rule_id": "r-0018",
    "jurisdiction": "Berkeley, CA",
    "level": "city",
    "category": "security_deposits",
@@ -914,10 +898,12 @@
      "in_supplied_corpus": true
     }
    ],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0020",
+   "team_rule_id": "r-0019",
    "jurisdiction": "Los Angeles, CA",
    "level": "city",
    "category": "algorithmic_rent_setting",
@@ -955,10 +941,12 @@
    "extractor": "claude-opus-5-5",
    "citation_basis": "supplied_corpus",
    "corroborating_sources": [],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0021",
+   "team_rule_id": "r-0020",
    "jurisdiction": "Los Angeles, CA",
    "level": "city",
    "category": "just_cause_eviction",
@@ -969,8 +957,7 @@
    "coverage_conditions": "Most residential rental properties in the City of Los Angeles not regulated by the RSO, including buildings newer than October 1, 1978 and single-family dwellings.",
    "exemptions": "Units regulated by the RSO, which has its own protections. Also exempt: transient hotels, licensed care facilities, fraternity/sorority houses, the owner's roommate, cooperatives under certain circumstances, some non-profit homeless facilities or short-term substance abuse treatment centers, and some properties owned by HACLA or the government. Tenancy must be at least 6 months old or the original lease must have expired.",
    "overrides": [
-    "r-0003",
-    "r-0004"
+    "r-0003"
    ],
    "interaction": "Covers units not under the RSO; units covered by the JCO may also be subject to state AB 1482 rent caps.",
    "effective_date": null,
@@ -1007,10 +994,12 @@
      "in_supplied_corpus": true
     }
    ],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0022",
+   "team_rule_id": "r-0021",
    "jurisdiction": "Los Angeles, CA",
    "level": "city",
    "category": "just_cause_eviction",
@@ -1021,8 +1010,7 @@
    "coverage_conditions": "Units covered by the LA Just Cause Ordinance (LAMC ch. XVI, art. 5).",
    "exemptions": "Single-family dwellings owned by natural persons pay one month's rent (LAMC 165.06.A.6). Accumulated unpaid rent may be offset, except where the termination is required by a government order to vacate (LAMC 165.06.J). Reduced Mom & Pop amounts apply only to owner or relative occupancy evictions in buildings of 4 or fewer units.",
    "overrides": [
-    "r-0003",
-    "r-0004"
+    "r-0003"
    ],
    "interaction": "Where a Protected Unit is demolished for new construction and the tenant is lower income, the RPO and state HCA amounts apply if higher.",
    "effective_date": "2026-07-01",
@@ -1051,10 +1039,12 @@
    "extractor": "claude-opus-5-5",
    "citation_basis": "supplied_corpus",
    "corroborating_sources": [],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "current_version"
   },
   {
-   "team_rule_id": "r-0023",
+   "team_rule_id": "r-0022",
    "jurisdiction": "Los Angeles, CA",
    "level": "city",
    "category": "just_cause_eviction",
@@ -1065,8 +1055,7 @@
    "coverage_conditions": "All RSO and JCO rental units in the City of Los Angeles.",
    "exemptions": "Units exempt from both the RSO and the JCO.",
    "overrides": [
-    "r-0003",
-    "r-0004"
+    "r-0003"
    ],
    "interaction": "Applies alongside the JCO and RSO just cause provisions.",
    "effective_date": "2023-03-27",
@@ -1113,10 +1102,12 @@
    "alt_effective_dates": [
     "2023-03-27 (D040)",
     "2026-07-01 (D043)"
-   ]
+   ],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0024",
+   "team_rule_id": "r-0023",
    "jurisdiction": "Los Angeles, CA",
    "level": "city",
    "category": "just_cause_eviction",
@@ -1127,8 +1118,7 @@
    "coverage_conditions": "Demolition or conversion of residential rental property in the City of Los Angeles.",
    "exemptions": null,
    "overrides": [
-    "r-0003",
-    "r-0004"
+    "r-0003"
    ],
    "interaction": null,
    "effective_date": null,
@@ -1157,10 +1147,12 @@
    "extractor": "claude-opus-5-5",
    "citation_basis": "supplied_corpus",
    "corroborating_sources": [],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0025",
+   "team_rule_id": "r-0024",
    "jurisdiction": "Los Angeles, CA",
    "level": "city",
    "category": "just_cause_eviction",
@@ -1171,8 +1163,7 @@
    "coverage_conditions": "Protected Units demolished for new construction. Protected Units include all RSO units, units under an affordability covenant or rent control within the past 5 years, units rented by lower-income households within the past 5 years, and units withdrawn under the Ellis Act within the past 10 years.",
    "exemptions": "Above low-income households and non-Protected Units receive regular RSO/JCO relocation.",
    "overrides": [
-    "r-0003",
-    "r-0004"
+    "r-0003"
    ],
    "interaction": "Codifies and expands state Housing Crisis Act occupant protections. The owner pays the higher of State or City amounts.",
    "effective_date": "2025-02-11",
@@ -1201,10 +1192,12 @@
    "extractor": "claude-opus-5-5",
    "citation_basis": "supplied_corpus",
    "corroborating_sources": [],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0026",
+   "team_rule_id": "r-0025",
    "jurisdiction": "Los Angeles, CA",
    "level": "city",
    "category": "rent_increase_limits",
@@ -1218,7 +1211,7 @@
     "r-0006"
    ],
    "interaction": "Units not covered by the RSO may instead be subject to state rent cap rules (Cal. Civ. Code § 1947.12), which are not described here.",
-   "effective_date": "2025-07-01",
+   "effective_date": null,
    "citation": "L.A. Mun. Code ch. XV, art. 1",
    "source_doc_id": "D041",
    "source_url": "https://housing.lacity.gov/residents/rso-overview",
@@ -1252,10 +1245,12 @@
      "in_supplied_corpus": true
     }
    ],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0027",
+   "team_rule_id": "r-0026",
    "jurisdiction": "Los Angeles, CA",
    "level": "city",
    "category": "security_deposits",
@@ -1301,10 +1296,12 @@
      "in_supplied_corpus": false
     }
    ],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0028",
+   "team_rule_id": "r-0027",
    "jurisdiction": "San Diego, CA",
    "level": "city",
    "category": "algorithmic_rent_setting",
@@ -1357,10 +1354,12 @@
      "in_supplied_corpus": false
     }
    ],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0029",
+   "team_rule_id": "r-0028",
    "jurisdiction": "San Diego, CA",
    "level": "city",
    "category": "just_cause_eviction",
@@ -1371,8 +1370,7 @@
    "coverage_conditions": "Applies to residential rental property in San Diego, except buildings issued a certificate of occupancy within the previous 15 years (mobilehomes excepted) and other listed exemptions.",
    "exemptions": "Transient/tourist hotel occupancy; short-term residential occupancy; deed- or agreement-restricted affordable housing and subsidized affordable housing (Section 8 not exempt); mobilehomes under the Mobilehome Residency Law; nonprofit hospital, religious, care facilities and nonprofit transitional housing; school/college dormitories; units where the tenant shares a bathroom or kitchen with a resident landlord; owner-occupied single-family residence (including renting up to two bedrooms/ADUs/JADUs); owner-occupied duplex; housing with a certificate of occupancy within the previous 15 years (except mobilehomes); separately alienable units (e.g., single-family homes/condos) whose landlord is not a REIT, corporation, LLC with a corporate member, or mobilehome park management, with the required written exemption notice (in the lease for tenancies from 1/1/2024). Tenancies of 30 days or less and fixed-term leases of 3 months or less are not tenancies.",
    "overrides": [
-    "r-0003",
-    "r-0004"
+    "r-0003"
    ],
    "interaction": "Local ordinance adopted consistent with Cal. Civ. Code § 1946.2; rights are in addition to state and federal law. Relocation assistance is credited against relocation assistance required by other federal, state or local law.",
    "effective_date": "2023-06-24",
@@ -1401,10 +1399,12 @@
    "extractor": "claude-opus-5-5",
    "citation_basis": "supplied_corpus",
    "corroborating_sources": [],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0030",
+   "team_rule_id": "r-0029",
    "jurisdiction": "San Francisco, CA",
    "level": "city",
    "category": "algorithmic_rent_setting",
@@ -1467,10 +1467,12 @@
    "alt_effective_dates": [
     "2024-10 (D002, D037)",
     "2024-10-14 (D081)"
-   ]
+   ],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0031",
+   "team_rule_id": "r-0030",
    "jurisdiction": "San Francisco, CA",
    "level": "city",
    "category": "just_cause_eviction",
@@ -1511,10 +1513,12 @@
    "extractor": "claude-opus-5-5",
    "citation_basis": "supplied_corpus",
    "corroborating_sources": [],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0032",
+   "team_rule_id": "r-0031",
    "jurisdiction": "San Francisco, CA",
    "level": "city",
    "category": "just_cause_eviction",
@@ -1563,10 +1567,12 @@
      "in_supplied_corpus": true
     }
    ],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "current_version"
   },
   {
-   "team_rule_id": "r-0033",
+   "team_rule_id": "r-0032",
    "jurisdiction": "San Francisco, CA",
    "level": "city",
    "category": "just_cause_eviction",
@@ -1615,53 +1621,12 @@
      "in_supplied_corpus": true
     }
    ],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "current_version"
   },
   {
-   "team_rule_id": "r-0034",
-   "jurisdiction": "San Francisco, CA",
-   "level": "city",
-   "category": "rent_increase_limits",
-   "status": "in_force",
-   "title": "San Francisco Rent Ordinance allowable annual rent increase",
-   "requirement": "For rent-controlled units, the allowable annual rent increase is 1.6% for the period March 1, 2026 through February 28, 2027. Prior periods were 1.4% for 2025-26 and 1.7% for 2024-25.",
-   "key_value": "1.6% allowable annual increase (Mar 1, 2026 – Feb 28, 2027)",
-   "coverage_conditions": "Rent increase limits under the SF Rent Ordinance apply to units in buildings with a certificate of occupancy on or before June 13, 1979. This cutoff comes from the published program rule, not from this page.",
-   "exemptions": null,
-   "overrides": [
-    "r-0006"
-   ],
-   "interaction": null,
-   "effective_date": "2026-03-01",
-   "citation": "S.F. Admin. Code ch. 37",
-   "source_doc_id": "D083",
-   "source_url": "https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit",
-   "quoted_span": "1.6% for March 1, 2026 – February 28, 2027",
-   "confidence": 0.75,
-   "conflict_flag": false,
-   "conflict_note": null,
-   "coverage": {
-    "min_units": null,
-    "max_units": null,
-    "co_on_or_before": "1979-06-13",
-    "co_after": null,
-    "exempt_if_newer_than_years": null,
-    "owner_fact_dependent": false,
-    "subsidy_dependent": false,
-    "other_unknown_fact": null,
-    "owner_fact_max_units": null
-   },
-   "yields_to_local": false,
-   "may_preempt_local": false,
-   "penalty": null,
-   "retrieved_at": "2026-10-01 22:37 UTC",
-   "extractor": "claude-opus-5-5",
-   "citation_basis": "supplied_corpus",
-   "corroborating_sources": [],
-   "alt_effective_dates": []
-  },
-  {
-   "team_rule_id": "r-0035",
+   "team_rule_id": "r-0033",
    "jurisdiction": "San Francisco, CA",
    "level": "city",
    "category": "rent_increase_limits",
@@ -1700,11 +1665,21 @@
    "retrieved_at": "2026-10-01 22:37 UTC",
    "extractor": "claude-opus-5-5",
    "citation_basis": "supplied_corpus",
-   "corroborating_sources": [],
-   "alt_effective_dates": []
+   "corroborating_sources": [
+    {
+     "source_doc_id": "D083",
+     "source_url": "https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit",
+     "citation": "S.F. Admin. Code ch. 37",
+     "quoted_span": "1.6% for March 1, 2026 – February 28, 2027",
+     "in_supplied_corpus": true
+    }
+   ],
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "current_version"
   },
   {
-   "team_rule_id": "r-0036",
+   "team_rule_id": "r-0034",
    "jurisdiction": "San Francisco, CA",
    "level": "city",
    "category": "screening_restrictions",
@@ -1742,10 +1717,12 @@
    "extractor": "claude-opus-5-5",
    "citation_basis": "supplied_corpus",
    "corroborating_sources": [],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0037",
+   "team_rule_id": "r-0035",
    "jurisdiction": "San Francisco, CA",
    "level": "city",
    "category": "security_deposits",
@@ -1783,10 +1760,12 @@
    "extractor": "claude-opus-5-5",
    "citation_basis": "supplied_corpus",
    "corroborating_sources": [],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "current_version"
   },
   {
-   "team_rule_id": "r-0038",
+   "team_rule_id": "r-0036",
    "jurisdiction": "Santa Ana, CA",
    "level": "city",
    "category": "algorithmic_rent_setting",
@@ -1846,10 +1825,12 @@
      "in_supplied_corpus": false
     }
    ],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0039",
+   "team_rule_id": "r-0037",
    "jurisdiction": "Santa Ana, CA",
    "level": "city",
    "category": "just_cause_eviction",
@@ -1860,8 +1841,7 @@
    "coverage_conditions": "Residential rental property, excluding housing produced in the last 15 years and other listed exempt types.",
    "exemptions": "Housing produced in the last 15 years; deed-restricted affordable housing; hotel and transient occupancy; hospital and care facilities; dormitories; other shared living quarters. Does not apply during the first 30 days of a tenancy.",
    "overrides": [
-    "r-0003",
-    "r-0004"
+    "r-0003"
    ],
    "interaction": null,
    "effective_date": "2021-11-19",
@@ -1890,10 +1870,12 @@
    "extractor": "claude-opus-5-5",
    "citation_basis": "supplied_corpus",
    "corroborating_sources": [],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0040",
+   "team_rule_id": "r-0038",
    "jurisdiction": "Santa Ana, CA",
    "level": "city",
    "category": "just_cause_eviction",
@@ -1904,8 +1886,7 @@
    "coverage_conditions": "Applies to rental units covered by the Santa Ana Rent Stabilization and Just Cause Eviction Ordinance. This page does not state coverage details.",
    "exemptions": "Not stated on this page.",
    "overrides": [
-    "r-0003",
-    "r-0004"
+    "r-0003"
    ],
    "interaction": null,
    "effective_date": null,
@@ -1934,10 +1915,12 @@
    "extractor": "claude-opus-5-5",
    "citation_basis": "supplied_corpus",
    "corroborating_sources": [],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0041",
+   "team_rule_id": "r-0039",
    "jurisdiction": "Santa Ana, CA",
    "level": "city",
    "category": "rent_increase_limits",
@@ -1977,10 +1960,12 @@
    "extractor": "claude-opus-5-5",
    "citation_basis": "supplied_corpus",
    "corroborating_sources": [],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0042",
+   "team_rule_id": "r-0040",
    "jurisdiction": "Santa Ana, CA",
    "level": "city",
    "category": "rent_increase_limits",
@@ -2020,51 +2005,12 @@
    "extractor": "claude-opus-5-5",
    "citation_basis": "supplied_corpus",
    "corroborating_sources": [],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0043",
-   "jurisdiction": "MA",
-   "level": "state",
-   "category": "algorithmic_rent_setting",
-   "status": "pending",
-   "title": "Massachusetts House bill H.1564 banning algorithmic rent-setting",
-   "requirement": "A House bill that would ban algorithmic rent-pricing practices in the rental market. The bill was pending as of the article date.",
-   "key_value": "Proposed statewide ban on algorithmic rent-setting",
-   "coverage_conditions": "Not described in document",
-   "exemptions": null,
-   "overrides": [],
-   "interaction": null,
-   "effective_date": null,
-   "citation": "H.1564 (194th Gen. Ct.)",
-   "source_doc_id": "D030",
-   "source_url": "https://www.cambridgeday.com/?p=158097",
-   "quoted_span": "Bills banning the practice in the rental market are also working their way through the Massachusetts state",
-   "confidence": 0.5,
-   "conflict_flag": true,
-   "conflict_note": "Status is taken from a June 2026 news article. The 194th General Court's formal sessions may have ended before the query date, so the bill may have died; verify its current status. Only research pages outside the supplied corpus describe this rule, so its quote is not a corpus citation. Verify against the official text before relying on it.",
-   "coverage": {
-    "min_units": null,
-    "max_units": null,
-    "co_on_or_before": null,
-    "co_after": null,
-    "exempt_if_newer_than_years": null,
-    "owner_fact_dependent": false,
-    "subsidy_dependent": false,
-    "other_unknown_fact": null,
-    "owner_fact_max_units": null
-   },
-   "yields_to_local": false,
-   "may_preempt_local": false,
-   "penalty": null,
-   "retrieved_at": "2026-10-03 18:07 UTC",
-   "extractor": "claude-opus-5-5",
-   "citation_basis": "research_only",
-   "corroborating_sources": [],
-   "alt_effective_dates": []
-  },
-  {
-   "team_rule_id": "r-0044",
+   "team_rule_id": "r-0042",
    "jurisdiction": "MA",
    "level": "state",
    "category": "algorithmic_rent_setting",
@@ -2102,10 +2048,12 @@
    "extractor": "claude-opus-5-5",
    "citation_basis": "supplied_corpus",
    "corroborating_sources": [],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0045",
+   "team_rule_id": "r-0043",
    "jurisdiction": "MA",
    "level": "state",
    "category": "algorithmic_rent_setting",
@@ -2158,10 +2106,12 @@
      "in_supplied_corpus": false
     }
    ],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0047",
+   "team_rule_id": "r-0045",
    "jurisdiction": "MA",
    "level": "state",
    "category": "application_screening_fees",
@@ -2207,10 +2157,12 @@
      "in_supplied_corpus": false
     }
    ],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0048",
+   "team_rule_id": "r-0046",
    "jurisdiction": "MA",
    "level": "state",
    "category": "application_screening_fees",
@@ -2256,10 +2208,12 @@
      "in_supplied_corpus": false
     }
    ],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "current_version"
   },
   {
-   "team_rule_id": "r-0049",
+   "team_rule_id": "r-0047",
    "jurisdiction": "MA",
    "level": "state",
    "category": "rent_increase_limits",
@@ -2297,10 +2251,12 @@
    "extractor": "claude-opus-5-5",
    "citation_basis": "supplied_corpus",
    "corroborating_sources": [],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0050",
+   "team_rule_id": "r-0048",
    "jurisdiction": "MA",
    "level": "state",
    "category": "rent_increase_limits",
@@ -2338,10 +2294,12 @@
    "extractor": "claude-opus-5-5",
    "citation_basis": "research_only",
    "corroborating_sources": [],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0051",
+   "team_rule_id": "r-0049",
    "jurisdiction": "MA",
    "level": "state",
    "category": "screening_restrictions",
@@ -2387,10 +2345,12 @@
      "in_supplied_corpus": false
     }
    ],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0052",
+   "team_rule_id": "r-0050",
    "jurisdiction": "MA",
    "level": "state",
    "category": "security_deposits",
@@ -2428,10 +2388,12 @@
    "extractor": "claude-opus-5-5",
    "citation_basis": "supplied_corpus",
    "corroborating_sources": [],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0053",
+   "team_rule_id": "r-0051",
    "jurisdiction": "Boston, MA",
    "level": "city",
    "category": "just_cause_eviction",
@@ -2469,10 +2431,12 @@
    "extractor": "claude-opus-5-5",
    "citation_basis": "supplied_corpus",
    "corroborating_sources": [],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0054",
+   "team_rule_id": "r-0052",
    "jurisdiction": "Boston, MA",
    "level": "city",
    "category": "rent_increase_limits",
@@ -2510,10 +2474,12 @@
    "extractor": "claude-opus-5-5",
    "citation_basis": "supplied_corpus",
    "corroborating_sources": [],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0055",
+   "team_rule_id": "r-0053",
    "jurisdiction": "Boston, MA",
    "level": "city",
    "category": "screening_restrictions",
@@ -2551,10 +2517,12 @@
    "extractor": "claude-opus-5-5",
    "citation_basis": "supplied_corpus",
    "corroborating_sources": [],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0056",
+   "team_rule_id": "r-0054",
    "jurisdiction": "Boston, MA",
    "level": "city",
    "category": "screening_restrictions",
@@ -2592,10 +2560,12 @@
    "extractor": "claude-opus-5-5",
    "citation_basis": "supplied_corpus",
    "corroborating_sources": [],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0057",
+   "team_rule_id": "r-0055",
    "jurisdiction": "Cambridge, MA",
    "level": "city",
    "category": "algorithmic_rent_setting",
@@ -2633,10 +2603,12 @@
    "extractor": "claude-opus-5-5",
    "citation_basis": "research_only",
    "corroborating_sources": [],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0058",
+   "team_rule_id": "r-0056",
    "jurisdiction": "Cambridge, MA",
    "level": "city",
    "category": "screening_restrictions",
@@ -2674,10 +2646,12 @@
    "extractor": "claude-opus-5-5",
    "citation_basis": "supplied_corpus",
    "corroborating_sources": [],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0059",
+   "team_rule_id": "r-0057",
    "jurisdiction": "NJ",
    "level": "state",
    "category": "algorithmic_rent_setting",
@@ -2688,8 +2662,8 @@
    "coverage_conditions": "Applies to all residential dwelling units used as a primary residence in NJ; no unit-count or construction-date limits.",
    "exemptions": "Excludes inpatient medical care, licensed long-term care, and detention facilities. A coordinating function excludes research or statistical use not used to set terms; free public rent estimates; equal-access real estate brokerage databases that do not set or recommend prices; and government affordability controls. Spreadsheets without AI that require human analysis, and simple query databases, are not algorithmic devices.",
    "overrides": [
-    "r-0065",
-    "r-0066"
+    "r-0063",
+    "r-0064"
    ],
    "interaction": "Supplements the New Jersey Antitrust Act (C.56:9-1 et seq.); remedies in C.56:9-6 through 9-17 apply. Municipalities are prohibited from enacting conflicting ordinances.",
    "effective_date": "2027-07-01",
@@ -2726,10 +2700,12 @@
      "in_supplied_corpus": false
     }
    ],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0060",
+   "team_rule_id": "r-0058",
    "jurisdiction": "NJ",
    "level": "state",
    "category": "application_screening_fees",
@@ -2767,10 +2743,12 @@
    "extractor": "claude-opus-5-5",
    "citation_basis": "supplied_corpus",
    "corroborating_sources": [],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0061",
+   "team_rule_id": "r-0059",
    "jurisdiction": "NJ",
    "level": "state",
    "category": "just_cause_eviction",
@@ -2816,10 +2794,12 @@
      "in_supplied_corpus": false
     }
    ],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0062",
+   "team_rule_id": "r-0060",
    "jurisdiction": "NJ",
    "level": "state",
    "category": "rent_increase_limits",
@@ -2857,10 +2837,12 @@
    "extractor": "claude-opus-5-5",
    "citation_basis": "supplied_corpus",
    "corroborating_sources": [],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0063",
+   "team_rule_id": "r-0061",
    "jurisdiction": "NJ",
    "level": "state",
    "category": "screening_restrictions",
@@ -2920,10 +2902,12 @@
      "in_supplied_corpus": false
     }
    ],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0064",
+   "team_rule_id": "r-0062",
    "jurisdiction": "NJ",
    "level": "state",
    "category": "security_deposits",
@@ -2969,10 +2953,12 @@
      "in_supplied_corpus": false
     }
    ],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0065",
+   "team_rule_id": "r-0063",
    "jurisdiction": "Hoboken, NJ",
    "level": "city",
    "category": "algorithmic_rent_setting",
@@ -2983,7 +2969,7 @@
    "coverage_conditions": null,
    "exemptions": null,
    "overrides": [
-    "r-0059"
+    "r-0057"
    ],
    "interaction": null,
    "effective_date": "2025-07",
@@ -3020,10 +3006,12 @@
      "in_supplied_corpus": false
     }
    ],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0066",
+   "team_rule_id": "r-0064",
    "jurisdiction": "Jersey City, NJ",
    "level": "city",
    "category": "algorithmic_rent_setting",
@@ -3034,7 +3022,7 @@
    "coverage_conditions": null,
    "exemptions": null,
    "overrides": [
-    "r-0059"
+    "r-0057"
    ],
    "interaction": null,
    "effective_date": "2025-06",
@@ -3078,10 +3066,12 @@
      "in_supplied_corpus": false
     }
    ],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0067",
+   "team_rule_id": "r-0065",
    "jurisdiction": "Jersey City, NJ",
    "level": "city",
    "category": "rent_increase_limits",
@@ -3119,7 +3109,9 @@
    "extractor": "claude-opus-5-5",
    "citation_basis": "supplied_corpus",
    "corroborating_sources": [],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   }
  ],
  "no_rule_findings": [

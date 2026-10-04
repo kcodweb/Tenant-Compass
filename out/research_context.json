@@ -39,10 +39,55 @@
    "extractor": "claude-opus-5-5",
    "citation_basis": "research_only",
    "corroborating_sources": [],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   },
   {
-   "team_rule_id": "r-0046",
+   "team_rule_id": "r-0041",
+   "jurisdiction": "MA",
+   "level": "state",
+   "category": "algorithmic_rent_setting",
+   "status": "pending",
+   "title": "Massachusetts House bill H.1564 banning algorithmic rent-setting",
+   "requirement": "A House bill that would ban algorithmic rent-pricing practices in the rental market. The bill was pending as of the article date.",
+   "key_value": "Proposed statewide ban on algorithmic rent-setting",
+   "coverage_conditions": "Not described in document",
+   "exemptions": null,
+   "overrides": [],
+   "interaction": null,
+   "effective_date": null,
+   "citation": "H.1564 (194th Gen. Ct.)",
+   "source_doc_id": "D030",
+   "source_url": "https://www.cambridgeday.com/?p=158097",
+   "quoted_span": "Bills banning the practice in the rental market are also working their way through the Massachusetts state",
+   "confidence": 0.5,
+   "conflict_flag": true,
+   "conflict_note": "Status is taken from a June 2026 news article. The 194th General Court's formal sessions may have ended before the query date, so the bill may have died; verify its current status. Only research pages outside the supplied corpus describe this rule, so its quote is not a corpus citation. Verify against the official text before relying on it.",
+   "coverage": {
+    "min_units": null,
+    "max_units": null,
+    "co_on_or_before": null,
+    "co_after": null,
+    "exempt_if_newer_than_years": null,
+    "owner_fact_dependent": false,
+    "subsidy_dependent": false,
+    "other_unknown_fact": null,
+    "owner_fact_max_units": null
+   },
+   "yields_to_local": false,
+   "may_preempt_local": false,
+   "penalty": null,
+   "retrieved_at": "2026-10-03 18:07 UTC",
+   "extractor": "claude-opus-5-5",
+   "citation_basis": "research_only",
+   "corroborating_sources": [],
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
+  },
+  {
+   "team_rule_id": "r-0044",
    "jurisdiction": "MA",
    "level": "state",
    "category": "application_screening_fees",
@@ -80,7 +125,9 @@
    "extractor": "claude-opus-5-5",
    "citation_basis": "research_only",
    "corroborating_sources": [],
-   "alt_effective_dates": []
+   "alt_effective_dates": [],
+   "applies_only_in": null,
+   "effective_date_basis": "law"
   }
  ]
 }

@@ -30,13 +30,13 @@ AS_OF = "2026-10-01"
 
 
 def load_schema():
-    return json.loads((HERE / "extract_schema.json").read_text())
+    return json.loads((HERE / "extract_schema.json").read_text(encoding="utf-8"))
 
 
 def build_prompt(doc_id, as_of=AS_OF):
     r = corpus.manifest()[doc_id]
     url, retrieved = corpus.doc_header(doc_id)
-    tmpl = (HERE / "extract_prompt.md").read_text()
+    tmpl = (HERE / "extract_prompt.md").read_text(encoding="utf-8")
     return (tmpl.replace("{as_of}", as_of).replace("{doc_id}", doc_id)
             .replace("{jurisdictions}", r["jurisdictions"]).replace("{url}", url)
             .replace("{retrieved}", retrieved or "unknown").replace("{text}", corpus.doc_text(doc_id)))
@@ -106,9 +106,9 @@ def extract_doc(client, doc_id, as_of=AS_OF, use_fallbacks=True):
         "output": out,
     }
     CACHE.mkdir(parents=True, exist_ok=True)
-    (CACHE / f"{doc_id}.json").write_text(json.dumps(record, indent=1, ensure_ascii=False))
+    (CACHE / f"{doc_id}.json").write_text(json.dumps(record, indent=1, ensure_ascii=False), encoding="utf-8")
     AUDIT.parent.mkdir(parents=True, exist_ok=True)
-    with open(AUDIT, "a") as f:
+    with open(AUDIT, "a", encoding="utf-8") as f:
         usage = getattr(msg, "usage", None)
         f.write(json.dumps({k: record[k] for k in ("doc_id", "extractor", "served_by", "as_of", "extracted_at",
                                                      "prompt_sha256", "repair_round")}

@@ -1,0 +1,7 @@
+{
+ "en": "Your landlord needs a legal reason (just cause) to evict you if your unit is fully or partly covered by Berkeley's Rent Ordinance, including new buildings. Eviction for unpaid rent is allowed only if you owe at least one month of HUD Fair Market Rent.",
+ "es": "Si su vivienda está cubierta total o parcialmente por la Ordenanza de Alquiler de Berkeley, incluidas las construcciones nuevas, el propietario necesita una causa justa para desalojarlo. Solo puede desalojarlo por falta de pago si usted debe al menos un mes del Alquiler Justo de Mercado de HUD.",
+ "model": "claude-opus-5-5",
+ "carried_from": "742de7cb138f8542",
+ "carry_note": "Same record except effective_date (2026-01-01 -> None), which this summary does not mention."
+}

@@ -57,8 +57,8 @@ def jaccard(a, b):
 def main():
     rules = ap.load_rules()
     byid = {r["team_rule_id"]: r for r in rules}
-    lookups = json.loads((OUT / "lookups.json").read_text())["lookups"]
-    changes = json.loads((OUT / "changes.json").read_text())
+    lookups = json.loads((OUT / "lookups.json").read_text(encoding="utf-8"))["lookups"]
+    changes = json.loads((OUT / "changes.json").read_text(encoding="utf-8"))
     addrs = {a["address_id"]: a for a in jurisdiction.resolve_all()}
     report = []
 
@@ -134,6 +134,10 @@ def main():
             checks.append(("MA: no local rent cap reported", not caps))
         if a["state"] == "NJ":
             checks.append(("NJ: deposit cap applies", "applies" in results_for(aid, "NJ", "security_deposits")))
+        if a["state"] == "CA" and a["city"] != "San Francisco":
+            checks.append(("CA outside SF: SF-only § 1947.9 not reported",
+                           not any(re.search(r"1947\.9\b", byid[e["team_rule_id"]]["citation"] + " " + e["explanation"])
+                                   for e in lookups[aid])))
     agg = {}
     for name, ok in checks:
         agg.setdefault(name, [0, 0])
@@ -147,12 +151,12 @@ def main():
                   f"  extraction (brief rules) {ext:.0%} · citations in supplied corpus {cit:.0%} · change tests {chg:.0%} · coverage spot checks {cov:.0%}\n"
                   "")
     txt = "\n".join(report)
-    (OUT / "selfcheck.txt").write_text(txt)
+    (OUT / "selfcheck.txt").write_text(txt, encoding="utf-8")
     (OUT / "selfcheck.json").write_text(json.dumps({
         "citations_detail": {"verified_in_supplied_corpus": cited, "applies_answers": len(applies), "research_only": research},
         "summary": {"extraction": ext, "citations": cit, "change_tests": chg, "coverage_spot_checks": cov},
         "change_tests": ch_detail,
-        "coverage_checks": {name: {"ok": ok, "n": n} for name, (ok, n) in agg.items()}}, indent=1))
+        "coverage_checks": {name: {"ok": ok, "n": n} for name, (ok, n) in agg.items()}}, indent=1), encoding="utf-8")
     print(txt)
 
 

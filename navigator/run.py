@@ -38,7 +38,7 @@ def write_manifest(a):
         "outputs": {n: h(root / "out" / n) for n in ("rules.json", "lookups.json", "changes.json")},
         "audit_log": "audit/extraction_log.jsonl (one line per model call: model, time, prompt hash, tokens, rules kept/dropped)",
     }
-    (root / "out" / "run_manifest.json").write_text(json.dumps(m, indent=1))
+    (root / "out" / "run_manifest.json").write_text(json.dumps(m, indent=1), encoding="utf-8")
 
 
 def main(argv=None):

@@ -15,6 +15,7 @@ the relevant dates and report the affected addresses and conflict flags.
 """
 import argparse
 import json
+import re
 
 from . import apply as ap
 from . import corpus, jurisdiction
@@ -41,6 +42,18 @@ def map_key_id(key_id, rules):
     return out
 
 
+_BILL = re.compile(r"\b(AB|SB|S|H)\.?\s?(\d{2,5})\b")
+
+
+def mapped_rules(t, rules):
+    """Our rules for a test. When the test title names bills ("S.2983 and H.5222") and some mapped rules cite them,
+    only those count: another pending bill on the same subject (MA H.1564) is not part of the test."""
+    mapped = list({r["team_rule_id"]: r for kid in t.get("rule_ids", []) for r in map_key_id(kid, rules)}.values())
+    bills = {(a.upper(), n) for a, n in _BILL.findall(t.get("title") or "")}
+    named = [r for r in mapped if {(a.upper(), n) for a, n in _BILL.findall(r["citation"])} & bills]
+    return named or mapped
+
+
 def _results(lookups, ids):
     return {aid: {e["team_rule_id"]: e for e in entries if e["team_rule_id"] in ids}
             for aid, entries in lookups.items()}
@@ -53,7 +66,7 @@ def run_test(t, rules, addresses, cache):
             cache[k] = ap.run(as_of, rs, addresses)["lookups"]
         return cache[k]
 
-    mapped = list({r["team_rule_id"]: r for kid in t.get("rule_ids", []) for r in map_key_id(kid, rules)}.values())
+    mapped = mapped_rules(t, rules)
     ids = {r["team_rule_id"] for r in mapped}
     res = {"title": t.get("title"), "mapped_rules": [f"{r['team_rule_id']} {r['citation']} ({r['jurisdiction']}, "
                                                     f"{r['status']}, eff. {r.get('effective_date')})" for r in mapped]}
@@ -126,9 +139,9 @@ def run_test(t, rules, addresses, cache):
 
 
 def load_tests():
-    tests = json.loads(STARTER_TESTS.read_text())
+    tests = json.loads(STARTER_TESTS.read_text(encoding="utf-8"))
     if EXTRA_TESTS.exists():
-        tests += json.loads(EXTRA_TESTS.read_text())
+        tests += json.loads(EXTRA_TESTS.read_text(encoding="utf-8"))
     return tests
 
 
@@ -146,7 +159,7 @@ def main(argv=None):
         r = out[t["test_id"]]
         print(f"{t['test_id']}: {len(r['affected_address_ids'])} affected, "
               f"{len(r['conflict_flag_address_ids'])} conflict flags | {r['notes']}")
-    (OUT / "changes.json").write_text(json.dumps(out, indent=1, ensure_ascii=False))
+    (OUT / "changes.json").write_text(json.dumps(out, indent=1, ensure_ascii=False), encoding="utf-8")
     return out
 
 

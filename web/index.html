@@ -1,53 +1,73 @@
 <title>Rental Housing Law Navigator</title>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,650&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: a single working column. Controls on top, the address's jurisdiction stack and facts, then one
-   section per rule category with a status chip per rule. Citations are set like a code book: mono, with §. */
+/* Layout: a statute-book working column. Answer first (category tiles + effective-date timeline), detail below,
+   one section per rule category with a status chip per rule. Citations are set like a code book: mono, with §.
+   Palette: the challenge brief's navy and teal on a cool grey-green paper; status colours are semantic, not accent. */
 :root {
-  --paper: #f5f7fa;
+  --paper: #eef2f1;
   --sheet: #ffffff;
-  --ink: #18212d;
-  --muted: #5a6677;
-  --rule: #d9dfe7;
-  --accent: #23498f;
-  --accent-soft: #e6ecf7;
-  --ok: #1d6b45;      --ok-bg: #e2f2e8;
+  --ink: #142235;
+  --muted: #566476;
+  --rule: #d5dde0;
+  --accent: #0f6f6b;
+  --accent-ink: #ffffff;
+  --accent-soft: #dcefed;
+  --navy: #17304f;
+  --navy-ink: #e9f1f7;
+  --mast-accent: #6fd0c6;
+  --ok: #1d6b45;      --ok-bg: #e0f1e6;
   --warn: #8a5a00;    --warn-bg: #fbefd2;
-  --sup: #4f5866;     --sup-bg: #e9ecf0;
+  --sup: #4f5866;     --sup-bg: #e7ebef;
   --future: #1f5a8a;  --future-bg: #e1edf8;
   --pend: #6a3d99;    --pend-bg: #efe6f8;
   --flag: #a3271f;    --flag-bg: #fbe4e1;
-  --quote-bg: #f0f3f7;
+  --none: #9aa5b1;
+  --quote-bg: #f1f5f4;
   --display: "Source Serif 4", Georgia, "Times New Roman", serif;
   --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
-  --paper: #10151c; --sheet: #171e27; --ink: #e4e9f0; --muted: #9aa6b6; --rule: #2a3442;
-  --accent: #8fb0ef; --accent-soft: #1d2a40;
-  --ok: #7fd3a4; --ok-bg: #173226; --warn: #f0c46b; --warn-bg: #3a2d12; --sup: #b4bcc8; --sup-bg: #262e39;
-  --future: #8ec3f0; --future-bg: #152d42; --pend: #c9a6f0; --pend-bg: #2c2140; --flag: #f39a90; --flag-bg: #3d1b18;
-  --quote-bg: #1d2530; color-scheme: dark; } }
+  --paper: #0d1417; --sheet: #142027; --ink: #e3eaee; --muted: #98a7b3; --rule: #263640;
+  --accent: #5cc5bc; --accent-ink: #0d1417; --accent-soft: #15302f; --navy: #0a1a2c; --navy-ink: #dfe9f2;
+  --ok: #7fd3a4; --ok-bg: #163126; --warn: #f0c46b; --warn-bg: #382c12; --sup: #b4bcc8; --sup-bg: #233039;
+  --future: #8ec3f0; --future-bg: #142c40; --pend: #c9a6f0; --pend-bg: #2a2140; --flag: #f39a90; --flag-bg: #3b1b18;
+  --none: #5d6b76; --quote-bg: #1a2830; color-scheme: dark; } }
 :root[data-theme="dark"] {
-  --paper: #10151c; --sheet: #171e27; --ink: #e4e9f0; --muted: #9aa6b6; --rule: #2a3442;
-  --accent: #8fb0ef; --accent-soft: #1d2a40;
-  --ok: #7fd3a4; --ok-bg: #173226; --warn: #f0c46b; --warn-bg: #3a2d12; --sup: #b4bcc8; --sup-bg: #262e39;
-  --future: #8ec3f0; --future-bg: #152d42; --pend: #c9a6f0; --pend-bg: #2c2140; --flag: #f39a90; --flag-bg: #3d1b18;
-  --quote-bg: #1d2530; color-scheme: dark; }
+  --paper: #0d1417; --sheet: #142027; --ink: #e3eaee; --muted: #98a7b3; --rule: #263640;
+  --accent: #5cc5bc; --accent-ink: #0d1417; --accent-soft: #15302f; --navy: #0a1a2c; --navy-ink: #dfe9f2;
+  --ok: #7fd3a4; --ok-bg: #163126; --warn: #f0c46b; --warn-bg: #382c12; --sup: #b4bcc8; --sup-bg: #233039;
+  --future: #8ec3f0; --future-bg: #142c40; --pend: #c9a6f0; --pend-bg: #2a2140; --flag: #f39a90; --flag-bg: #3b1b18;
+  --none: #5d6b76; --quote-bg: #1a2830; color-scheme: dark; }
 
 * { box-sizing: border-box; }
 body { background: var(--paper); color: var(--ink); font: 15px/1.55 var(--body); margin: 0; }
-.wrap { max-width: 980px; margin: 0 auto; padding-inline: 16px; padding-block: 0 48px; }
-.notice { background: var(--ink); color: var(--paper); font-size: 13px; padding: 8px 16px; text-align: center; }
-.notice strong { letter-spacing: .04em; }
-header.top { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; padding-block: 24px 8px; }
-h1 { font: 650 28px/1.15 var(--display); margin: 0; text-wrap: balance; }
-h1 span { color: var(--muted); font-weight: 500; }
-.tabs { display: flex; gap: 4px; flex-wrap: wrap; }
-.tabs button { font: 500 14px var(--body); background: none; border: 1px solid transparent; color: var(--muted); padding: 6px 12px; border-radius: 6px; cursor: pointer; }
-.tabs button[aria-selected="true"] { color: var(--accent); background: var(--accent-soft); }
+.wrap { max-width: 1000px; margin: 0 auto; padding-inline: 16px; padding-block: 0 48px; }
+.main { padding-block: 8px 48px; }
+.notice { background: var(--flag-bg); color: var(--flag); font-size: 13px; padding: 7px 16px; text-align: center; border-bottom: 1px solid var(--rule); }
+.notice strong { letter-spacing: .06em; }
+.mast { background: var(--navy); color: var(--navy-ink); }
+.mast .wrap { padding-block: 26px 0; display: grid; gap: 14px; }
+.brand { display: flex; align-items: flex-start; gap: 14px; }
+.sect { font: 650 44px/0.9 var(--display); color: var(--mast-accent); flex: none; margin-top: 2px; }
+h1 { font: 650 30px/1.12 var(--display); margin: 0; text-wrap: balance; letter-spacing: -.005em; }
+.lede { margin: 6px 0 0; max-width: 64ch; opacity: .82; font-size: 15px; }
+.figures { display: flex; flex-wrap: wrap; gap: 6px 22px; font: 500 12px var(--mono); letter-spacing: .02em; opacity: .78; }
+.figures b { font-weight: 600; font-variant-numeric: tabular-nums; opacity: 1; }
+.tabs { display: flex; gap: 2px; flex-wrap: wrap; align-items: end; margin-top: 6px; }
+.tabs button { font: 500 14px var(--body); background: none; border: 0; color: var(--navy-ink); opacity: .75; padding: 9px 14px; border-radius: 8px 8px 0 0; cursor: pointer; }
+.tabs button:hover { opacity: 1; }
+.tabs button[aria-selected="true"] { color: var(--ink); background: var(--paper); opacity: 1; font-weight: 600; }
+.tabs .spacer { flex: 1; }
+.lang { align-self: center; margin-bottom: 6px; display: inline-flex; border: 1px solid var(--mast-accent); border-radius: 7px; padding: 2px; gap: 2px; }
+.lang button { font: 500 12px var(--body); background: transparent; color: var(--navy-ink); border: 0; border-radius: 5px; padding: 4px 10px; cursor: pointer; opacity: .8; }
+.lang button:hover { opacity: 1; }
+.lang button[aria-pressed="true"] { background: var(--mast-accent); color: var(--navy); font-weight: 600; opacity: 1; }
+.lang button:focus-visible { outline: 2px solid var(--mast-accent); outline-offset: 2px; }
 .tabs button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 .controls { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: end; padding: 16px; background: var(--sheet); border: 1px solid var(--rule); border-radius: 10px; margin-block: 12px 20px; }
@@ -122,21 +142,70 @@ footer { color: var(--muted); font-size: 12px; margin-top: 24px; max-width: 80ch
 .verdict { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; margin: 8px 0; font-size: 13px; }
 .expect { font-size: 14px; border-left: 3px solid var(--rule); padding-left: 10px; margin: 6px 0; max-width: 72ch; }
 .scorebar { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
-#lang-btn { margin-left: 4px; }
+
+/* Answer-first strip: one tile per category, then the effective-date timeline */
+.glance-h { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 12px; margin: 4px 0 8px; }
+.glance-h h2, .tl-h { font: 600 12px var(--body); letter-spacing: .07em; text-transform: uppercase; color: var(--muted); margin: 0; }
+.glance { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 8px; margin-bottom: 14px; }
+.tile { text-align: left; font: inherit; color: var(--ink); background: var(--sheet); border: 1px solid var(--rule); border-radius: 10px; padding: 11px 13px 12px; cursor: pointer; display: grid; gap: 5px; align-content: start; min-width: 0; }
+.tile:hover { border-color: var(--accent); }
+.tile:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.tile .top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.tile .nm { font: 600 14px var(--body); }
+.tile .bdg { display: flex; gap: 4px; flex-wrap: wrap; justify-content: flex-end; }
+.tile .hd { font: 500 14px/1.4 var(--display); color: var(--ink); overflow-wrap: anywhere; }
+.tile .hd.dim { color: var(--muted); font-family: var(--body); font-size: 13px; }
+.tile .ct { font: 400 12px var(--mono); color: var(--muted); }
+.tl { background: var(--sheet); border: 1px solid var(--rule); border-radius: 10px; padding: 12px 16px 10px; margin-bottom: 18px; }
+.tl-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline; }
+.tl-next { font-size: 13px; color: var(--muted); }
+.tl-next b { color: var(--ink); font-weight: 600; }
+.track { position: relative; height: 46px; margin: 10px 6px 0; }
+.track .line { position: absolute; left: 0; right: 0; top: 16px; height: 2px; background: var(--rule); }
+.track .past { position: absolute; left: 0; top: 16px; height: 2px; background: var(--accent); }
+.track .yr { position: absolute; top: 26px; transform: translateX(-50%); font: 400 11px var(--mono); color: var(--muted); }
+.track .yr:first-of-type { transform: none; }
+.track .yr:first-of-type::before { left: 0; }
+.track .yr::before { content: ""; position: absolute; left: 50%; top: -12px; width: 1px; height: 7px; background: var(--rule); }
+.track .ev { position: absolute; top: 9px; width: 16px; height: 16px; margin-left: -8px; border-radius: 50%; border: 2px solid var(--sheet); background: var(--future); cursor: pointer; padding: 0; }
+.track .ev.in { background: var(--accent); }
+.track .ev.pend { background: var(--pend); }
+.track .ev:hover, .track .ev:focus-visible { transform: scale(1.25); outline: none; box-shadow: 0 0 0 2px var(--accent); }
+.track .now { position: absolute; top: 2px; width: 2px; height: 30px; margin-left: -1px; background: var(--ink); }
+.track .now span { position: absolute; top: -2px; left: 6px; font: 600 11px var(--mono); color: var(--ink); white-space: nowrap; background: var(--sheet); padding: 0 3px; }
+.track .now.right span { left: auto; right: 6px; }
+.tl-legend { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12px; color: var(--muted); margin-top: 2px; }
+.dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 5px; vertical-align: 0; }
+section.cat { scroll-margin-top: 12px; }
+.bar { display: inline-block; height: 8px; border-radius: 2px; background: var(--accent); vertical-align: middle; margin-right: 6px; }
+@media (prefers-reduced-motion: no-preference) { .tile, .track .ev { transition: border-color .15s, transform .15s; } }
+@media (max-width: 560px) { h1 { font-size: 24px; } .sect { font-size: 34px; } .tabs button { padding: 8px 10px; font-size: 13px; } }
 </style>
 
 <div class="notice" id="notice"><strong>NOT LEGAL ADVICE.</strong> Summaries of public law generated by software for information only. Check the cited source or ask a lawyer before acting.</div>
-<div class="wrap">
-  <header class="top">
-    <h1>Rental Housing Law Navigator <span>· which rules apply here</span></h1>
+<header class="mast">
+  <div class="wrap">
+    <div class="brand">
+      <span class="sect" aria-hidden="true">§</span>
+      <div>
+        <h1>Rental Housing Law Navigator</h1>
+        <p class="lede" id="lede">Pick an apartment address and a date. See which state and city housing rules cover it, each with its citation and the exact words of the law.</p>
+      </div>
+    </div>
+    <div class="figures" id="figures"></div>
     <nav class="tabs" role="tablist">
       <button role="tab" id="tab-lookup" aria-selected="true" data-view="lookup">Address lookup</button>
       <button role="tab" id="tab-changes" aria-selected="false" data-view="changes">Law changes</button>
       <button role="tab" id="tab-sources" aria-selected="false" data-view="sources">Sources &amp; audit</button>
-      <button type="button" id="lang-btn" class="chip-btn" aria-label="Switch language">Español</button>
+      <span class="spacer"></span>
+      <div class="lang" role="group" aria-label="Language / Idioma">
+        <button type="button" id="lang-en" data-lang="en" lang="en" aria-pressed="true">English</button>
+        <button type="button" id="lang-es" data-lang="es" lang="es" aria-pressed="false">Español</button>
+      </div>
     </nav>
-  </header>
-
+  </div>
+</header>
+<div class="wrap main">
   <div id="view-lookup">
     <form class="controls" id="controls" autocomplete="off">
       <label for="addr-input">Address
@@ -181,6 +250,11 @@ const I18N = {
         cats: {}, plain: "In plain language", plainNote: "machine-written summary of the rule record; the citation and quote below are the source",
         notice: "<strong>NOT LEGAL ADVICE.</strong> Summaries of public law generated by software for information only. Check the cited source or ask a lawyer before acting.",
         cases: "Try a case", toggle: "Español", answerAsOf: "ANSWER AS OF", why: "Why", none: "No rule found in the corpus for this address on this date.",
+        glance: "At a glance", glanceNote: "Strongest result per category. Select a category for the rules and sources.",
+        timeline: "When rules took effect at this address", nextChange: "Next change", lastChange: "Most recent change", noNext: "No later change in the corpus",
+        lede: "Pick an apartment address and a date. See which state and city housing rules cover it, each with its citation and the exact words of the law.",
+        nothing: "No rule", rulesN: n => `${n} rule${n === 1 ? "" : "s"}`,
+        unread: "Not read: the corpus lists these sources for this address but supplies no text for them (code publisher pages whose terms are under review), so any rule found only there is missing from this answer:",
         boundary: "What this answer checks: the address's legal city, year built, unit count and use code from the public assessor record, against each rule's coverage test on the date above. What it cannot see: who owns the building, the certificate-of-occupancy date, lease terms and anything about the tenant. Rules that turn on those facts say Unknown." },
   es: { applies: "Aplica", unknown: "Desconocido", superseded: "Desplazada", not_yet_effective: "Aún no vigente", pending: "Proyecto de ley",
         cats: { rent_increase_limits: "Aumentos de alquiler", just_cause_eviction: "Protección contra desalojos", security_deposits: "Depósitos de garantía",
@@ -188,6 +262,11 @@ const I18N = {
         plain: "En lenguaje sencillo", plainNote: "resumen escrito por máquina; la cita y el texto legal de abajo (en inglés) son la fuente",
         notice: "<strong>NO ES ASESORÍA LEGAL.</strong> Resúmenes de leyes públicas generados por software, solo con fines informativos. Revise la fuente citada o consulte a un abogado antes de actuar.",
         cases: "Pruebe un caso", toggle: "English", answerAsOf: "RESPUESTA A FECHA DE", why: "Por qué", none: "No se encontró ninguna regla en el corpus para esta dirección en esta fecha.",
+        glance: "Resumen", glanceNote: "El resultado más fuerte de cada categoría. Seleccione una para ver las reglas y fuentes.",
+        timeline: "Cuándo entraron en vigor las reglas en esta dirección", nextChange: "Próximo cambio", lastChange: "Cambio más reciente", noNext: "No hay cambios posteriores en el corpus",
+        lede: "Elija una dirección y una fecha. Vea qué reglas estatales y municipales de vivienda la cubren, cada una con su cita y el texto exacto de la ley.",
+        nothing: "Ninguna regla", rulesN: n => `${n} regla${n === 1 ? "" : "s"}`,
+        unread: "No leídas: el corpus menciona estas fuentes para esta dirección pero no incluye su texto (páginas de editoriales de códigos con términos en revisión), así que falta en esta respuesta cualquier regla que solo esté allí:",
         boundary: "Esta respuesta revisa la ciudad legal, el año de construcción, el número de unidades y el uso según el registro público del tasador, frente a la cobertura de cada regla en la fecha indicada. No puede ver quién es el dueño, la fecha del certificado de ocupación, los términos del contrato ni datos del inquilino. Las reglas que dependen de esos datos dicen Desconocido." },
 };
 const T = k => I18N[LANG][k] ?? I18N.en[k];
@@ -227,6 +306,8 @@ function renderLookup() {
   const byId = Object.fromEntries(RULES.map(r => [r.team_rule_id, r]));
   const tally = {};
   res.forEach(r => tally[r.result] = (tally[r.result] || 0) + 1);
+  const unread = (DATA.unread_sources || []).filter(u => u.source_type === "code publisher"
+    && a.city && u.jurisdictions.split(";").map(j => j.trim()).includes(`${a.city}, ${a.state}`));
   const units = a.units !== null ? `${a.units}` : a.units_min ? `${a.units_min}${a.units_max ? "–" + a.units_max : "+"} (from use code)` : "not recorded";
   let html = `<div class="summary">
     <p class="asof">${T("answerAsOf")} ${esc(fmtDate(asOf)).toUpperCase()} · ${esc(a.address_id)}</p>
@@ -236,13 +317,15 @@ function renderLookup() {
     <div class="facts"><span>Built <b>${a.year_built ?? "not recorded"}</b></span><span>Units <b>${esc(units)}</b></span>
       <span>Use <b>${esc(a.use)}</b></span><span>Jurisdiction: ${esc(a.jurisdiction_basis)}</span></div>
     ${a.notes.length ? `<div class="datanote">${a.notes.map(esc).join(" ")}</div>` : ""}
+    ${unread.length ? `<div class="datanote">${esc(T("unread"))} ${unread.map(u => `<a href="${esc(u.url)}" target="_blank" rel="noopener">${esc(u.doc_id)}</a>`).join(", ")}.</div>` : ""}
     <p class="boundary">${esc(T("boundary"))}</p>
     <div class="tally">${Object.entries(tally).map(([k, n]) => `<span class="badge b-${k}">${n} ${LABEL[k]}</span>`).join("")}</div>
   </div>`;
+  html += glance(res, byId) + timeline(a, asOf);
   for (const [cat, name] of CATS) {
     const entries = res.map(r => ({ res: r, rule: byId[r.team_rule_id] })).filter(e => e.rule.category === cat);
     const sum = catSummary(entries);
-    html += `<section class="cat"><h2>${esc(catName(cat, name))}</h2>${sum ? `<p class="catsum">${esc(sum)}</p>` : ""}`;
+    html += `<section class="cat" id="cat-${cat}"><h2>${esc(catName(cat, name))}</h2>${sum ? `<p class="catsum">${esc(sum)}</p>` : ""}`;
     const failed = RULES.filter(r => r.status === "failed" && r.category === cat
       && (r.jurisdiction === a.state || (a.city && r.jurisdiction.startsWith(a.city + ","))));
     const failedHtml = failed.map(r => `<div class="failed"><span class="badge b-failed">${LANG === "es" ? "Fallida" : "Failed"}</span>
@@ -258,7 +341,7 @@ function renderLookup() {
           <h3>${esc(rule.title)}</h3>
           <p class="req">${esc(rule.requirement)}${rule.key_value ? ` <span class="kv">${esc(rule.key_value)}</span>` : ""}</p>
           <div class="meta"><span class="cite">${esc(rule.citation)}</span><span>Source ${esc(rule.source_doc_id)} · retrieved ${esc(String(rule.retrieved_at || "").slice(0, 10))}</span><span>${esc(rule.level === "state" ? "State" : "City")} · ${esc(rule.jurisdiction)}</span>
-            <span>Effective ${esc(fmtDate(rule.effective_date))}</span>${rule.confidence != null ? `<span>Confidence ${Math.round(rule.confidence * 100)}%</span>` : ""}</div>
+            <span>${rule.effective_date_basis === "current_version" ? "Current rate or version from" : "Effective"} ${esc(fmtDate(rule.effective_date))}</span>${rule.confidence != null ? `<span>Confidence ${Math.round(rule.confidence * 100)}%</span>` : ""}</div>
           ${rule.plain ? `<p class="plain"><span class="lbl">${esc(T("plain"))} · ${esc(T("plainNote"))}</span>${esc(rule.plain[LANG] || rule.plain.en)}</p>` : ""}
           <p class="why"><b>${esc(T("why"))}:</b> ${esc(r.explanation)}</p>
           <details><summary>Source text</summary>
@@ -280,6 +363,70 @@ function renderLookup() {
     html += failedHtml + `</section>`;
   }
   box.innerHTML = html;
+  box.querySelectorAll(".tile").forEach(t => t.addEventListener("click", () => {
+    const smooth = !matchMedia("(prefers-reduced-motion: reduce)").matches;
+    document.getElementById("cat-" + t.dataset.cat).scrollIntoView({ behavior: smooth ? "smooth" : "auto", block: "start" });
+  }));
+  box.querySelectorAll(".ev").forEach(b => b.addEventListener("click", () => {
+    document.getElementById("asof-input").value = b.dataset.date; renderLookup();
+  }));
+}
+
+const RANK = ["applies", "unknown", "superseded", "not_yet_effective", "pending"];
+const clip = (t, n) => t.length > n ? t.slice(0, n - 1).trimEnd() + "…" : t;
+
+function glance(res, byId) {
+  const tiles = CATS.map(([cat, name]) => {
+    const es = res.filter(r => byId[r.team_rule_id].category === cat);
+    const best = RANK.find(k => es.some(e => e.result === k));
+    let hd, dim = false;
+    if (best === "applies") {
+      const r = byId[es.find(e => e.result === "applies").team_rule_id];
+      hd = clip(r.key_value || r.title, 110);
+    } else if (best === "unknown") { hd = LANG === "es" ? "Depende de datos que el registro no tiene." : "Depends on facts the property record does not contain."; dim = true; }
+    else if (best === "superseded") { hd = LANG === "es" ? "La regla estatal cede ante una regla local." : "The state rule yields to a local rule."; dim = true; }
+    else if (best === "not_yet_effective") {
+      const r = byId[es.find(e => e.result === "not_yet_effective").team_rule_id];
+      hd = (LANG === "es" ? "Aprobada; entra en vigor " : "Enacted; takes effect ") + fmtDate(r.effective_date); dim = true;
+    } else if (best === "pending") { hd = LANG === "es" ? "Solo proyectos de ley, que no son ley." : "Only proposed bills, which are not law."; dim = true; }
+    else { hd = LANG === "es" ? "Ninguna regla del corpus cubre esta dirección." : "No rule in the corpus covers this address."; dim = true; }
+    const badge = best ? `<span class="badge b-${best}">${esc(LABEL[best])}</span>` : `<span class="badge b-superseded">${esc(T("nothing"))}</span>`;
+    return `<button type="button" class="tile" data-cat="${cat}"><span class="top"><span class="nm">${esc(catName(cat, name))}</span><span class="bdg">${es.some(e => e.conflict_flag) ? `<span class="badge b-flag">${LANG === "es" ? "Revisar" : "Review"}</span>` : ""}${badge}</span></span>
+      <span class="hd${dim ? " dim" : ""}">${esc(hd)}</span><span class="ct">${esc(T("rulesN")(es.length))}</span></button>`;
+  }).join("");
+  return `<div class="glance-h"><h2>${esc(T("glance"))}</h2><span class="meta">${esc(T("glanceNote"))}</span></div><div class="glance">${tiles}</div>`;
+}
+
+function timeline(a, asOf) {
+  const full = d => d.length === 7 ? d + "-01" : d.length === 4 ? d + "-01-01" : d;
+  const ms = d => Date.parse(full(d) + "T00:00:00Z");
+  const evs = {};
+  RULES.filter(r => r.effective_date && r.status !== "failed" && NavigatorEngine.inJurisdiction(r, a))
+    .forEach(r => (evs[full(r.effective_date)] = evs[full(r.effective_date)] || []).push(r));
+  const dates = Object.keys(evs).sort();
+  if (!dates.length) return "";
+  const lo = Math.min(ms("2024-01-01"), ms(asOf)), hi = Math.max(ms("2027-12-31"), ms(asOf));
+  const pct = d => Math.max(0, Math.min(100, (ms(d) - lo) / (hi - lo) * 100));
+  const shown = dates.filter(d => ms(d) >= lo);
+  const earlier = dates.length - shown.length;
+  const yrs = [];
+  for (let y = new Date(lo).getUTCFullYear(); Date.UTC(y, 0, 1) <= hi; y++) if (Date.UTC(y, 0, 1) >= lo) yrs.push(y);
+  const desc = d => evs[d].map(r => r.title + (r.effective_date_basis === "current_version" ? (LANG === "es" ? " (nueva tarifa o versión)" : " (new rate or version)") : "")).join("; ");
+  const next = dates.find(d => d > asOf), last = [...dates].reverse().find(d => d <= asOf);
+  const p = pct(asOf);
+  return `<div class="tl"><div class="tl-top"><h2 class="tl-h">${esc(T("timeline"))}</h2>
+    <span class="tl-next">${next ? `${esc(T("nextChange"))}: <b>${esc(fmtDate(next))}</b> · ${esc(clip(desc(next), 90))}` : esc(T("noNext"))}</span></div>
+    <div class="track">
+      <div class="line"></div><div class="past" style="width:${p}%"></div>
+      ${yrs.map(y => `<span class="yr" style="left:${pct(y + "-01-01")}%">${y}</span>`).join("")}
+      ${shown.map(d => `<button type="button" class="ev ${d <= asOf ? "in" : ""}" style="left:${pct(d)}%" data-date="${d}" title="${esc(fmtDate(d) + ": " + desc(d))}" aria-label="${esc(fmtDate(d) + ": " + desc(d))}"></button>`).join("")}
+      <div class="now ${p > 70 ? "right" : ""}" style="left:${p}%"><span>${esc(fmtDate(asOf))}</span></div>
+    </div>
+    <div class="tl-legend"><span><span class="dot" style="background:var(--accent)"></span>${LANG === "es" ? "Vigente en la fecha" : "In force on the date"}</span>
+      <span><span class="dot" style="background:var(--future)"></span>${LANG === "es" ? "Posterior a la fecha" : "After the date"}</span>
+      ${last ? `<span>${esc(T("lastChange"))}: ${esc(fmtDate(last))}</span>` : ""}
+      ${earlier ? `<span>${LANG === "es" ? `${earlier} fecha(s) anteriores a 2024 no se muestran` : `${earlier} earlier date${earlier === 1 ? "" : "s"} before 2024 not shown`}</span>` : ""}
+      <span>${LANG === "es" ? "Seleccione un punto para ver esa fecha." : "Select a dot to answer as of that date."}</span></div></div>`;
 }
 
 function pickCases(d) {
@@ -309,7 +456,8 @@ function renderCases() {
 function applyLang() {
   document.documentElement.lang = LANG;
   document.getElementById("notice").innerHTML = T("notice");
-  document.getElementById("lang-btn").textContent = T("toggle");
+  document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === LANG));
+  document.getElementById("lede").textContent = T("lede");
   if (DATA) { renderLookup(); renderCases(); }
 }
 
@@ -328,7 +476,7 @@ function renderChanges() {
         ${sc[id] ? `<span class="badge ${sc[id].overlap === 1 ? "b-applies" : "b-unknown"}">${sc[id].overlap === 1 ? "Matches" : "Overlap " + Math.round(sc[id].overlap * 100) + "%"} expected set · ${sc[id].got}/${sc[id].expected}</span>` : ""}</div>
       <div class="meta">${(t.mapped_rules || []).map(m => `<span class="cite">${esc(m)}</span>`).join("")}</div>
       <div class="tablewrap"><table><thead><tr><th>City</th><th class="num">Affected addresses</th></tr></thead><tbody>
-      ${Object.entries(cities).map(([c, n]) => `<tr><td>${esc(c)}</td><td class="num">${n}</td></tr>`).join("") || `<tr><td>None</td><td class="num">0</td></tr>`}
+      ${Object.entries(cities).map(([c, n]) => `<tr><td>${esc(c)}</td><td class="num"><span class="bar" style="width:${Math.round(n / Math.max(...Object.values(cities)) * 120)}px"></span>${n}</td></tr>`).join("") || `<tr><td>None</td><td class="num">0</td></tr>`}
       </tbody></table></div>
       <p class="meta">${t.affected_address_ids.length} affected · ${t.conflict_flag_address_ids.length} flagged for review</p>
       ${t.affected_address_ids.length ? `<details><summary>Address IDs</summary><p class="ids">${t.affected_address_ids.join(" ")}</p></details>` : ""}
@@ -394,9 +542,13 @@ function showView(name) {
 
 fetch("data.json").then(r => r.json()).then(d => {
   DATA = d; RULES = d.rules;
+  const states = new Set(d.addresses.map(a => a.state)), cities = new Set(d.addresses.map(a => a.city).filter(Boolean));
+  document.getElementById("figures").innerHTML = [[d.addresses.length, "sample addresses"], [cities.size, "cities"], [states.size, "states"],
+    [RULES.length, "rules"], [d.meta.documents, "documents read"], [Object.keys(d.changes || {}).length, "law-change tests"]]
+    .map(([n, l]) => `<span><b>${n}</b> ${l}</span>`).join("");
   d.addresses.forEach(a => BYADDR[a.address_id] = a);
   document.getElementById("addr-list").innerHTML = d.addresses.map(a => `<option value="${esc(a.address_id + " · " + a.address)}">`).join("");
-  const presets = [["Today", d.meta.default_as_of], ["12/31/2025", "2025-12-31"], ["1/2/2026", "2026-01-02"], ["7/2/2027", "2027-07-02"]];
+  const presets = [["Oct 1, 2026", d.meta.default_as_of], ["Dec 31, 2025", "2025-12-31"], ["Jan 2, 2026", "2026-01-02"], ["Jul 2, 2027", "2027-07-02"]];
   document.getElementById("presets").innerHTML = presets.map(([l, v]) => `<button type="button" class="chip-btn" data-date="${v}">${l}</button>`).join("");
   document.querySelectorAll("[data-date]").forEach(b => b.addEventListener("click", () => { document.getElementById("asof-input").value = b.dataset.date; renderLookup(); }));
   let start = "A0001";
@@ -410,11 +562,12 @@ fetch("data.json").then(r => r.json()).then(d => {
 }).catch(e => { document.getElementById("result").innerHTML = `<p class="datanote">Could not load data.json (${esc(e.message)}). Serve this folder over HTTP, for example: python -m http.server -d web</p>`; });
 
 document.getElementById("addr-input").addEventListener("change", e => pickAddress(e.target.value));
-document.getElementById("lang-btn").addEventListener("click", () => {
-  LANG = LANG === "en" ? "es" : "en";
+document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => {
+  if (LANG === b.dataset.lang) return;
+  LANG = b.dataset.lang;
   try { localStorage.setItem("nav-lang", LANG); } catch (e) {}
   applyLang();
-});
+}));
 document.getElementById("asof-input").addEventListener("change", renderLookup);
 document.getElementById("controls").addEventListener("submit", e => { e.preventDefault(); pickAddress(document.getElementById("addr-input").value); });
 document.querySelectorAll(".tabs button[data-view]").forEach(b => b.addEventListener("click", () => showView(b.dataset.view)));

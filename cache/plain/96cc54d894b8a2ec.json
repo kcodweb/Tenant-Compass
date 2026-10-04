@@ -1,0 +1,7 @@
+{
+ "en": "If you rent an RSO unit in Los Angeles, your landlord can raise your rent only once every 12 months, by the city's published percentage. Since February 2, 2026, no extra utilities increase is allowed. This mainly covers rentals built on or before October 1, 1978.",
+ "es": "Si alquila una unidad RSO en Los Ángeles, el propietario solo puede subirle la renta una vez cada 12 meses, según el porcentaje que publica la ciudad. Desde el 2 de febrero de 2026, ya no se permite cobrar un aumento adicional por servicios públicos. Esta regla cubre principalmente viviendas construidas hasta el 1 de octubre de 1978.",
+ "model": "claude-opus-5-5",
+ "carried_from": "7eae54b5b02e9773",
+ "carry_note": "Same record except effective_date (2025-07-01 -> None), which this summary does not mention."
+}

@@ -31,7 +31,7 @@ def main(argv=None):
     new = a.doc_id or sorted(set(corpus.text_docs()) - before)[-1]
     extract.main([new, "--force"])
     run.main(["--new-doc", new])
-    ch = json.loads((corpus.ROOT / "out" / "changes.json").read_text())[f"NEW-{new}"]
+    ch = json.loads((corpus.ROOT / "out" / "changes.json").read_text(encoding="utf-8"))[f"NEW-{new}"]
     print(f"\n=== {new} ({a.jurisdiction}) processed in {time.time() - t0:.0f}s ===")
     for r in ch["mapped_rules"] or ["no in-scope rule extracted (see audit/extraction_log.jsonl)"]:
         print("  rule:", r)

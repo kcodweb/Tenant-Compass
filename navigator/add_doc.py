@@ -68,7 +68,7 @@ def main(argv=None):
     extra = corpus.EXTRA_CORPUS
     (extra / "text").mkdir(parents=True, exist_ok=True)
     man = extra / "corpus_manifest.csv"
-    rows = list(csv.DictReader(open(man))) if man.exists() else []
+    rows = list(csv.DictReader(open(man, encoding="utf-8"))) if man.exists() else []
     doc_id = a.doc_id or f"X{len([r for r in rows if r['doc_id'].startswith('X')]) + 1:02d}"
     now = dt.datetime.now(dt.timezone.utc)
     if a.jurisdiction not in SCOPE:
@@ -87,7 +87,7 @@ def main(argv=None):
         "doc_id": doc_id, "jurisdictions": a.jurisdiction, "url": a.url or Path(a.path).name, "source_type": "official",
         "capture": "added", "retrieved_at": f"{now:%Y-%m-%dT%H:%MZ}", "sha256": hashlib.sha256(dest.read_bytes()).hexdigest(),
         "text_file": f"text/{doc_id}.txt", "status": "ok"}]
-    with open(man, "w", newline="") as f:
+    with open(man, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=FIELDS, extrasaction="ignore")
         w.writeheader()
         w.writerows(rows)

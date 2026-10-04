@@ -2273,8 +2273,8 @@
  "T2": {
   "title": "Hoboken vs Jersey City local algorithmic bans",
   "mapped_rules": [
-   "r-0065 Hoboken City Code ch. 158-2 (Hoboken, NJ, in_force, eff. 2025-07)",
-   "r-0066 Jersey City Code § 218-12 (Jersey City, NJ, in_force, eff. 2025-06)"
+   "r-0063 Hoboken City Code ch. 158-2 (Hoboken, NJ, in_force, eff. 2025-07)",
+   "r-0064 Jersey City Code § 218-12 (Jersey City, NJ, in_force, eff. 2025-06)"
   ],
   "type": "boundary",
   "expected_behavior": "HOB-ALG-01 only for Hoboken addresses; JC-ALG-01 only for Jersey City addresses; neither for Newark.",
@@ -2465,12 +2465,12 @@
    "A0490",
    "A0495"
   ],
-  "notes": "r-0065: 40 addresses; r-0066: 50 addresses"
+  "notes": "r-0063: 40 addresses; r-0064: 50 addresses"
  },
  "T3": {
   "title": "NJ FAIR Act: enacted, not yet effective; possible preemption",
   "mapped_rules": [
-   "r-0059 P.L.2026, c.43 (NJ, not_yet_effective, eff. 2027-07-01)"
+   "r-0057 P.L.2026, c.43 (NJ, not_yet_effective, eff. 2027-07-01)"
   ],
   "type": "as_of",
   "expected_behavior": "not_yet_effective on 2026-10-01, applies on 2027-07-02 for every NJ address; Jersey City and Hoboken addresses carry a conflict flag for human review.",
@@ -2715,1126 +2715,1126 @@
   "before_after": {
    "A0002": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0003": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0008": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0011": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0012": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0013": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0017": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0020": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0026": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0028": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0029": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0032": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0040": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0042": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0044": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0047": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0049": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0051": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0057": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0059": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0076": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0078": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0087": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0089": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0090": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0099": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0101": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0102": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0104": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0108": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0110": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0116": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0119": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0120": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0125": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0129": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0130": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0131": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0132": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0136": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0137": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0139": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0146": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0148": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0159": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0160": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0161": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0163": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0168": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0171": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0177": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0181": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0182": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0185": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0186": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0187": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0190": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0204": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0208": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0223": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0227": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0241": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0243": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0244": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0249": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0250": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0254": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0256": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0261": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0264": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0265": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0266": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0269": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0270": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0279": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0287": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0288": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0296": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0297": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0299": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0307": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0308": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0311": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0313": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0320": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0321": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0325": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0326": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0329": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0331": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0337": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0338": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0343": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0344": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0348": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0350": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0352": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0358": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0359": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0360": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0371": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0372": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0377": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0381": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0388": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0389": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0390": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0393": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0394": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0399": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0400": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0404": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0410": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0412": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0415": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0416": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0418": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0424": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0428": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0435": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0436": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0438": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0447": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0448": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0449": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0450": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0455": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0459": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0460": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0462": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0471": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0472": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0475": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0476": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0482": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0489": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0490": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0491": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0495": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    },
    "A0498": {
     "before": {
-     "r-0059": "not_yet_effective"
+     "r-0057": "not_yet_effective"
     },
     "after": {
-     "r-0059": "applies"
+     "r-0057": "applies"
     }
    }
   },
-  "notes": "Result of r-0059 changes between 2026-10-01 and 2027-07-02 at 140 addresses.",
+  "notes": "Result of r-0057 changes between 2026-10-01 and 2027-07-02 at 140 addresses.",
   "transitions": {
    "not_yet_effective -> applies": 140
   }
@@ -3842,9 +3842,8 @@
  "T4": {
   "title": "Massachusetts pending bills S.2983 and H.5222",
   "mapped_rules": [
-   "r-0043 H.1564 (194th Gen. Ct.) (MA, pending, eff. None)",
-   "r-0044 H.5222 (194th Gen. Ct.) (MA, pending, eff. None)",
-   "r-0045 S.2983 (194th Gen. Ct.) (MA, pending, eff. None)"
+   "r-0042 H.5222 (194th Gen. Ct.) (MA, pending, eff. None)",
+   "r-0043 S.2983 (194th Gen. Ct.) (MA, pending, eff. None)"
   ],
   "type": "pending",
   "expected_behavior": "Reported as pending (not in force) for every Boston and Cambridge address; affected set = all MA addresses if enacted.",
@@ -3969,7 +3968,7 @@
  "T5": {
   "title": "Massachusetts rent-control ballot question struck",
   "mapped_rules": [
-   "r-0050 High court derails rent control ballot question, citing mention of religion (MA, failed, eff. None)"
+   "r-0048 High court derails rent control ballot question, citing mention of religion (MA, failed, eff. None)"
   ],
   "type": "negative",
   "expected_behavior": "No rent cap reported for any Boston or Cambridge address; IP 25-21 recorded as failed. Affected set is empty.",

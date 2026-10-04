@@ -3,32 +3,32 @@ SELF-CHECK (our own validation; the official scoring is done by the judges). Not
 
 EXTRACTION (rules named in the brief)
   ok       CA                 rent_increase_limits        r-0006 Cal. Civ. Code § 1947.12 | in_force eff 2020-01-01
-  ok       San Francisco, CA  rent_increase_limits        r-0034 S.F. Admin. Code ch. 37 | in_force eff 2026-03-01
-  ok       Los Angeles, CA    rent_increase_limits        r-0026 L.A. Mun. Code ch. XV, art. 1 | in_force eff 2025-07-01
-  ok       MA                 rent_increase_limits        r-0049 G.L. c.40P § 4 | in_force eff None
+  ok       San Francisco, CA  rent_increase_limits        r-0033 S.F. Admin. Code § 37.3 | in_force eff 2026-03-01
+  ok       Los Angeles, CA    rent_increase_limits        r-0025 L.A. Mun. Code ch. XV, art. 1 | in_force eff None
+  ok       MA                 rent_increase_limits        r-0047 G.L. c.40P § 4 | in_force eff None
   ok       CA                 just_cause_eviction         r-0003 Cal. Civ. Code § 1946.2 | in_force eff 2024-04-01
-  ok       NJ                 just_cause_eviction         r-0061 N.J.S.A. 2A:18-61.1 | in_force eff None
+  ok       NJ                 just_cause_eviction         r-0059 N.J.S.A. 2A:18-61.1 | in_force eff None
   ok       CA                 security_deposits           r-0010 Cal. Civ. Code § 1950.5 | in_force eff 2024-07-01
-  ok       NJ                 security_deposits           r-0064 N.J.S.A. 46:8-21.2; N.J.S.A. 46:8-19 et  | in_force eff None
-  ok       MA                 security_deposits           r-0052 G.L. c.186 § 15B | in_force eff None
+  ok       NJ                 security_deposits           r-0062 N.J.S.A. 46:8-21.2; N.J.S.A. 46:8-19 et  | in_force eff None
+  ok       MA                 security_deposits           r-0050 G.L. c.186 § 15B | in_force eff None
   ok       CA                 application_screening_fees  r-0002 Cal. Civ. Code § 1950.6 | in_force eff None
-  ok       NJ                 application_screening_fees  r-0060 N.J.S.A. 46:8-18.1 (P.L.2025, c.405) | in_force eff 2026-05-01
-  ok       MA                 application_screening_fees  r-0048 G.L. c.186 § 15B(1)(b), as amended by St | in_force eff 2025-08-01
-  ok       MA                 application_screening_fees  r-0047 G.L. c.112 § 87DDD1/2 | in_force eff 2025-08-01
-  ok       NJ                 screening_restrictions      r-0063 P.L.2021, c.110 (N.J.S.A. 46:8-52 to -64 | in_force eff 2022-01-01
+  ok       NJ                 application_screening_fees  r-0058 N.J.S.A. 46:8-18.1 (P.L.2025, c.405) | in_force eff 2026-05-01
+  ok       MA                 application_screening_fees  r-0046 G.L. c.186 § 15B(1)(b), as amended by St | in_force eff 2025-08-01
+  ok       MA                 application_screening_fees  r-0045 G.L. c.112 § 87DDD1/2 | in_force eff 2025-08-01
+  ok       NJ                 screening_restrictions      r-0061 P.L.2021, c.110 (N.J.S.A. 46:8-52 to -64 | in_force eff 2022-01-01
   ok       CA                 screening_restrictions      r-0009 Cal. Gov. Code § 12955 | in_force eff 2024-01-01
   ok       CA                 algorithmic_rent_setting    r-0001 Cal. Bus. & Prof. Code § 16729 (AB 325,  | in_force eff 2026-01-01
-  ok       San Francisco, CA  algorithmic_rent_setting    r-0030 S.F. Admin. Code § 37.10C | in_force eff 2024-10
-  ok       San Diego, CA      algorithmic_rent_setting    r-0028 San Diego Mun. Code §§ 98.1101–98.1104 | in_force eff 2025-06
+  ok       San Francisco, CA  algorithmic_rent_setting    r-0029 S.F. Admin. Code § 37.10C | in_force eff 2024-10
+  ok       San Diego, CA      algorithmic_rent_setting    r-0027 San Diego Mun. Code §§ 98.1101–98.1104 | in_force eff 2025-06
   ok       Berkeley, CA       algorithmic_rent_setting    r-0011 Berkeley Mun. Code ch. 13.63 | in_force eff 2026-01
-  ok       Santa Ana, CA      algorithmic_rent_setting    r-0038 Santa Ana Ordinance No. NS-3090 | in_force eff 2026-04-02
-  ok       Jersey City, NJ    algorithmic_rent_setting    r-0066 Jersey City Code § 218-12 | in_force eff 2025-06
-  ok       Hoboken, NJ        algorithmic_rent_setting    r-0065 Hoboken City Code ch. 158-2 | in_force eff 2025-07
-  ok       NJ                 algorithmic_rent_setting    r-0059 P.L.2026, c.43 | not_yet_effective eff 2027-07-01
-  ok       MA                 algorithmic_rent_setting    r-0045 S.2983 (194th Gen. Ct.) | pending eff None
-  ok       MA                 algorithmic_rent_setting    r-0044 H.5222 (194th Gen. Ct.) | pending eff None
+  ok       Santa Ana, CA      algorithmic_rent_setting    r-0036 Santa Ana Ordinance No. NS-3090 | in_force eff 2026-04-02
+  ok       Jersey City, NJ    algorithmic_rent_setting    r-0064 Jersey City Code § 218-12 | in_force eff 2025-06
+  ok       Hoboken, NJ        algorithmic_rent_setting    r-0063 Hoboken City Code ch. 158-2 | in_force eff 2025-07
+  ok       NJ                 algorithmic_rent_setting    r-0057 P.L.2026, c.43 | not_yet_effective eff 2027-07-01
+  ok       MA                 algorithmic_rent_setting    r-0043 S.2983 (194th Gen. Ct.) | pending eff None
+  ok       MA                 algorithmic_rent_setting    r-0042 H.5222 (194th Gen. Ct.) | pending eff None
 CITATIONS (applies answers whose quote is found word for word in supplied corpus text)
-  4045/4135 verified in supplied corpus; 90 rest on research pages outside it (rules: r-0065, r-0066)
+  3804/3894 verified in supplied corpus; 90 rest on research pages outside it (rules: r-0063, r-0064)
 CHANGE TESTS (expected sets from change_tests.json)
   T1: overlap 1.00 (250 vs 250 expected)
   T2: overlap 1.00 (90 vs 90 expected)
@@ -37,6 +37,7 @@ CHANGE TESTS (expected sets from change_tests.json)
   T5: overlap 1.00 (0 vs 0 expected)
 COVERAGE SPOT CHECKS
     47/47   LA pre-1978: RSO applies
+   170/170  CA outside SF: SF-only § 1947.9 not reported
    140/140  NJ: deposit cap applies
     90/90   SD/Berkeley: CA rent cap not 'applies' (no year built)
    110/110  MA: no local rent cap reported

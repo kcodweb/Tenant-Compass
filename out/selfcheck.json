@@ -1,12 +1,12 @@
 {
  "citations_detail": {
-  "verified_in_supplied_corpus": 4045,
-  "applies_answers": 4135,
+  "verified_in_supplied_corpus": 3804,
+  "applies_answers": 3894,
   "research_only": 90
  },
  "summary": {
   "extraction": 1.0,
-  "citations": 0.9782345828295043,
+  "citations": 0.9768875192604006,
   "change_tests": 1.0,
   "coverage_spot_checks": 1.0
  },
@@ -41,6 +41,10 @@
   "LA pre-1978: RSO applies": {
    "ok": 47,
    "n": 47
+  },
+  "CA outside SF: SF-only \u00a7 1947.9 not reported": {
+   "ok": 170,
+   "n": 170
   },
   "NJ: deposit cap applies": {
    "ok": 140,

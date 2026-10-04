@@ -18,7 +18,7 @@ def check(doc_id):
     path = CACHE / f"{doc_id}.json"
     if not path.exists():
         return [f"{doc_id}: no cache file"]
-    data = json.loads(path.read_text())
+    data = json.loads(path.read_text(encoding="utf-8"))
     out = data.get("output", {})
     problems = []
     if jsonschema:

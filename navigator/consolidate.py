@@ -70,7 +70,7 @@ def source_rank(doc_id):
 def load_records():
     recs = []
     for p in sorted(CACHE.glob("*.json")):
-        d = json.loads(p.read_text())
+        d = json.loads(p.read_text(encoding="utf-8"))
         doc_id = d["doc_id"]
         url, retrieved = corpus.doc_header(doc_id)
         for i, r in enumerate(d["output"]["rules"]):
@@ -102,6 +102,14 @@ def consolidate(recs):
         same = [k for k in groups if k[:2] == key[:2] and k != key and coded(k) and enacted(k) == enacted(key)]
         if len(same) == 1:
             groups[same[0]] += groups.pop(key)
+    # A city code section joins the one group citing its whole chapter for the same jurisdiction and category
+    # (S.F. Admin. Code § 37.3 -> ch. 37). Sibling sections such as § 37.9A and § 37.9C stay separate.
+    for key in sorted((k for k in groups if k[2].startswith("city:")), key=lambda k: -len(k[2])):
+        num = key[2].split(":", 1)[1]
+        parents = [k for k in groups if k[:2] == key[:2] and k != key and k[2].startswith("city:")
+                   and num.startswith(k[2].split(":", 1)[1] + ".") and enacted(k) == enacted(key)]
+        if len(parents) == 1:
+            groups[parents[0]] += groups.pop(key)
     # Third pass: a group backed only by secondary sources (news, law-firm notes) joins the one group
     # for the same jurisdiction and category that has an official source, if there is exactly one.
     official = lambda k: any(source_rank(g["source_doc_id"]) > 0 for g in groups[k])
@@ -150,8 +158,11 @@ def consolidate(recs):
                 f"{g['effective_date']} ({g['source_doc_id']})" for g in grp if g.get("effective_date")))
         if len(statuses) > 1:
             notes.append("Sources disagree on status: " + ", ".join(sorted(statuses)))
-        if not best.get("effective_date") and dates:
-            best["effective_date"] = sorted(dates)[0]
+        # Borrow a date from another source of the same law only when it is when the law took effect, not when a rate
+        # period or amendment began (Berkeley's 2026 AGA date is not the rent ordinance's effective date).
+        law_dates = {g["effective_date"] for g in grp if g.get("effective_date") and not _is_current_version(g)}
+        if not best.get("effective_date") and law_dates:
+            best["effective_date"] = sorted(law_dates)[0]
         best["conflict_note"] = " ".join(notes) or None
         best["conflict_flag"] = bool(notes) or bool(best.get("may_preempt_local"))
         # Only disagreement across *different* documents counts as a date conflict.
@@ -215,8 +226,67 @@ def consolidate(recs):
             "alt_effective_dates": r["alt_effective_dates"],
         }
         final.append(rec)
+    limit_to_named_city(final)
+    mark_effective_date_basis(final)
     link_overrides(final)
     return final
+
+
+_MONTHS = {m: i for i, m in enumerate(("jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"), 1)}
+_D = r"(?:\d{1,2}/\d{1,2}/\d{2,4}|\d{4}-\d{2}-\d{2}|[A-Z][a-z]{2,8}\.? \d{1,2}, \d{4})"
+_RANGE = re.compile(rf"({_D})\s*(?:–|—|-|through|to)\s*{_D}")
+_CURRENT_VERSION = re.compile(r"current rate period|prior (?:period|rate)s?\b|annual general adjustment|indexed to inflation"
+                              r"|original .{0,40}effective date is not stated|predates|latest amendment|most recently amended"
+                              r"|gives no effective date", re.I)
+
+
+def _parse_date(s):
+    m = re.match(r"(\d{1,2})/(\d{1,2})/(\d{2,4})$", s)
+    if m:
+        y = int(m.group(3))
+        return f"{y + 2000 if y < 100 else y:04d}-{int(m.group(1)):02d}-{int(m.group(2)):02d}"
+    if re.match(r"\d{4}-\d{2}-\d{2}$", s):
+        return s
+    m = re.match(r"([A-Z][a-z]{2,8})\.? (\d{1,2}), (\d{4})$", s)
+    if m and m.group(1)[:3].lower() in _MONTHS:
+        return f"{m.group(3)}-{_MONTHS[m.group(1)[:3].lower()]:02d}-{int(m.group(2)):02d}"
+
+
+def mark_effective_date_basis(rules):
+    """Set `effective_date_basis`: "law" when the date is when the law took effect, "current_version" when it is only
+    when the current rate period or latest amendment began (SF's annual increase for 3/1/26-2/28/27, an indexed
+    relocation amount, a statute whose page shows only its latest amendment). The engine keeps a current_version rule
+    in force before that date, so a query for 2025-12-31 does not report SF rent control as not yet effective."""
+    for r in rules:
+        r["effective_date_basis"] = "current_version" if _is_current_version(r) else "law"
+
+
+def _is_current_version(r):
+    """True when the record's effective date only starts its current rate period or latest amendment."""
+    eff = r.get("effective_date") or ""
+    if len(eff) != 10 or r["status"] != "in_force":
+        return False
+    text = " ".join(filter(None, (r["title"], r["requirement"], r.get("key_value"), r.get("conflict_note"))))
+    return any(_parse_date(a) == eff for a in _RANGE.findall(text)) or bool(_CURRENT_VERSION.search(text))
+
+
+def limit_to_named_city(rules):
+    """Set `applies_only_in` on a state rule written for one city. A city page can describe a state statute that only
+    covers that city (Cal. Civ. Code § 1947.9 covers San Francisco only); the extractor records it at state level, and
+    without a limit it would apply, and flag preemption, statewide. The limit is set when the rule's title or coverage
+    conditions name exactly one in-scope city of the same state."""
+    cities = {r["jurisdiction"] for r in rules if r["level"] == "city"}
+    for r in rules:
+        r["applies_only_in"] = None
+        if r["level"] != "state":
+            continue
+        text = f"{r['title']} {r.get('coverage_conditions') or ''}"
+        named = sorted(c for c in cities if c.endswith(", " + r["jurisdiction"])
+                       and re.search(rf"\b{re.escape(c.split(',')[0])}\b", text))
+        if len(named) == 1:
+            r["applies_only_in"] = named
+            r["interaction"] = (r["interaction"] or "") + (" " if r["interaction"] else "") + \
+                f"The source describes this state law for {named[0]} only, so it is applied there only."
 
 
 def link_overrides(rules):
@@ -226,7 +296,8 @@ def link_overrides(rules):
             continue
         for c in rules:
             if c["level"] == "city" and c["jurisdiction"].endswith(s["jurisdiction"]) and c["category"] == s["category"] \
-                    and c["status"] in ("in_force", "not_yet_effective"):
+                    and c["status"] in ("in_force", "not_yet_effective") \
+                    and (not s["applies_only_in"] or c["jurisdiction"] in s["applies_only_in"]):
                 s["overrides"].append(c["team_rule_id"])
                 c["overrides"].append(s["team_rule_id"])
         if s["yields_to_local"] and s["overrides"]:
@@ -237,7 +308,7 @@ def link_overrides(rules):
 def no_rule_findings():
     out = []
     for p in sorted(CACHE.glob("*.json")):
-        d = json.loads(p.read_text())
+        d = json.loads(p.read_text(encoding="utf-8"))
         for f in d["output"].get("no_rule_findings", []):
             out.append(dict(f, source_doc_id=d["doc_id"], source_url=corpus.doc_header(d["doc_id"])[0]))
     return out
@@ -250,8 +321,7 @@ def split_research(rules):
     is link-only in the manifest). Otherwise it stays out of rules.json and lookups.json and is shown in the demo as
     research context."""
     from . import changes
-    tested = {r["team_rule_id"] for t in changes.load_tests() for kid in t.get("rule_ids", [])
-              for r in changes.map_key_id(kid, rules)}
+    tested = {r["team_rule_id"] for t in changes.load_tests() for r in changes.mapped_rules(t, rules)}
     covered = {(r["jurisdiction"], r["category"]) for r in rules if r["citation_basis"] == "supplied_corpus"}
     keep = lambda r: (r["citation_basis"] == "supplied_corpus" or r["team_rule_id"] in tested
                       or (r["jurisdiction"], r["category"]) not in covered)
@@ -262,8 +332,8 @@ def main():
     rules, research = split_research(consolidate(load_records()))
     OUT.mkdir(exist_ok=True)
     (OUT / "rules.json").write_text(json.dumps({"rules": rules, "no_rule_findings": no_rule_findings()},
-                                               indent=1, ensure_ascii=False))
-    (OUT / "research_context.json").write_text(json.dumps({"rules": research}, indent=1, ensure_ascii=False))
+                                               indent=1, ensure_ascii=False), encoding="utf-8")
+    (OUT / "research_context.json").write_text(json.dumps({"rules": research}, indent=1, ensure_ascii=False), encoding="utf-8")
     print(f"{len(rules)} rules -> out/rules.json; {len(research)} research-only rules -> out/research_context.json")
     return rules
 

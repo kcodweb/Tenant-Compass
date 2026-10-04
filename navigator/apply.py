@@ -109,8 +109,9 @@ def temporal_status(rule, as_of):
     if st in ("pending", "failed"):
         return st
     eff = _date(rule.get("effective_date"))
+    # A rate period or latest amendment starting later does not mean the law itself is not yet in force.
     if eff:
-        return "in_force" if eff <= as_of else "not_yet_effective"
+        return "in_force" if eff <= as_of or rule.get("effective_date_basis") == "current_version" else "not_yet_effective"
     return st
 
 
@@ -122,7 +123,9 @@ def _date_conflict(rule, as_of):
 
 def in_jurisdiction(rule, a):
     if rule["level"] == "state":
-        return rule["jurisdiction"] == a["state"]
+        only = rule.get("applies_only_in")  # a state law written for named cities (Cal. Civ. Code § 1947.9: SF only)
+        return rule["jurisdiction"] == a["state"] and (
+            not only or (a["city"] is not None and f"{a['city']}, {a['state']}" in only))
     return a["city"] is not None and rule["jurisdiction"] == f"{a['city']}, {a['state']}"
 
 
@@ -150,6 +153,10 @@ def lookup(a, rules, as_of):
             notes.append(f"Enacted; takes effect {r.get('effective_date') or 'on a future date'}.")
         else:
             result = "applies" if cov is TRUE else "unknown"
+        eff = _date(r.get("effective_date"))
+        if ts == "in_force" and eff and as_of < eff:
+            notes.append(f"The amount or text shown takes effect {r['effective_date']}; on {as_of.isoformat()} this law was "
+                         "already in force under an earlier rate or version.")
         # State rule that yields to a covering local rule of the same category.
         if r["level"] == "state" and r.get("yields_to_local") and result in ("applies", "unknown"):
             locals_ = [(l, lts, lcov) for l, lts, lcov, _ in evaluated.values()
@@ -190,7 +197,7 @@ def lookup(a, rules, as_of):
 
 
 def load_rules():
-    return json.loads((OUT / "rules.json").read_text())["rules"]
+    return json.loads((OUT / "rules.json").read_text(encoding="utf-8"))["rules"]
 
 
 def run(as_of=DEFAULT_AS_OF, rules=None, addresses=None):
@@ -201,7 +208,7 @@ def run(as_of=DEFAULT_AS_OF, rules=None, addresses=None):
 
 def main(as_of=DEFAULT_AS_OF):
     res = run(as_of)
-    (OUT / "lookups.json").write_text(json.dumps(res, indent=1, ensure_ascii=False))
+    (OUT / "lookups.json").write_text(json.dumps(res, indent=1, ensure_ascii=False), encoding="utf-8")
     print(f"lookups for {len(res['lookups'])} addresses as of {as_of} -> out/lookups.json")
     return res
 

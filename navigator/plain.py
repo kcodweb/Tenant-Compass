@@ -46,7 +46,7 @@ def key(rule):
 
 def cached(rule):
     p = CACHE / f"{key(rule)}.json"
-    return json.loads(p.read_text()) if p.exists() else None
+    return json.loads(p.read_text(encoding="utf-8")) if p.exists() else None
 
 
 def summarize(client, rule):
@@ -57,12 +57,12 @@ def summarize(client, rule):
         messages=[{"role": "user", "content": PROMPT.format(record=record)}])
     out = json.loads(next(b.text for b in msg.content if b.type == "text"))
     out["model"] = getattr(msg, "model", MODEL)
-    (CACHE / f"{key(rule)}.json").write_text(json.dumps(out, ensure_ascii=False, indent=1))
+    (CACHE / f"{key(rule)}.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     return rule["team_rule_id"]
 
 
 def main(argv=None):
-    rules = json.loads((corpus.ROOT / "out" / "rules.json").read_text())["rules"]
+    rules = json.loads((corpus.ROOT / "out" / "rules.json").read_text(encoding="utf-8"))["rules"]
     todo = [r for r in rules if not cached(r)]
     if not todo:
         print("plain-language summaries: all cached")

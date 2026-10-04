@@ -118,7 +118,7 @@ def _geocode_one(addr):
 
 def geocode_all(addresses, refresh=False):
     """Fill cache/geocode.json from the Census Geocoder. Safe to rerun; skips cached rows."""
-    cache = json.loads(GEOCACHE.read_text()) if GEOCACHE.exists() else {}
+    cache = json.loads(GEOCACHE.read_text(encoding="utf-8")) if GEOCACHE.exists() else {}
     todo = [a for a in addresses if refresh or a["address_id"] not in cache]
     for i, a in enumerate(todo):
         try:
@@ -127,10 +127,10 @@ def geocode_all(addresses, refresh=False):
             print(f"geocoder unavailable ({e.__class__.__name__}); using postal-city fallback")
             break
         if i % 25 == 0:
-            GEOCACHE.write_text(json.dumps(cache, indent=0))
+            GEOCACHE.write_text(json.dumps(cache, indent=0), encoding="utf-8")
         time.sleep(0.05)
     GEOCACHE.parent.mkdir(parents=True, exist_ok=True)
-    GEOCACHE.write_text(json.dumps(cache, indent=0))
+    GEOCACHE.write_text(json.dumps(cache, indent=0), encoding="utf-8")
     return cache
 
 
@@ -181,7 +181,7 @@ def resolve(addr, geocache):
 
 def resolve_all():
     addrs = load_addresses()
-    cache = json.loads(GEOCACHE.read_text()) if GEOCACHE.exists() else {}
+    cache = json.loads(GEOCACHE.read_text(encoding="utf-8")) if GEOCACHE.exists() else {}
     return [resolve(a, cache) for a in addrs]
 
 
