@@ -3,7 +3,7 @@
 HackNation 7th Global AI Hackathon · Challenge 2 (RealPage) · Team Tenant Compass (Karan, sole member). For any sample apartment address: which housing rules apply on a
 given date, with citations and exact source quotes, and which addresses a law change affects.
 
-**Live demo: https://kcodweb.github.io/Tenant-Compass/**
+**Live demo: https://tenant-compass-lilac.vercel.app/**
 
 **Not legal advice.** Every interface says so.
 
@@ -67,8 +67,8 @@ tracking is evaluated on T1–T5 only.
 
 ## Submission
 
-- Live demo: https://kcodweb.github.io/Tenant-Compass/ (the `web/` folder on GitHub Pages; also runs locally, see above).
-  To redeploy after `python -m navigator.run`: `git subtree split --prefix web -b gh-pages` then `git push -f origin gh-pages`.
+- Live demo: https://tenant-compass-lilac.vercel.app/ (the `web/` folder on Vercel; also runs locally, see above).
+  To redeploy after `python -m navigator.run`: `vercel deploy --prod --cwd web`.
 - `out/rules.json`, `out/lookups.json`, `out/changes.json`: the three required files.
 - `submission/method_note.md`: one-page method note.
 
