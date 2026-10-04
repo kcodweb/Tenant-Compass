@@ -1,0 +1,46 @@
+{
+ "doc_id": "D028",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:47:15+00:00",
+ "prompt_sha256": "81c27d550075e6a1d45a8386655ec7d19364a7146ab3ff5addfb30764977adec",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "CA",
+    "level": "state",
+    "category": "algorithmic_rent_setting",
+    "status": "in_force",
+    "title": "Cartwright Act amendments (AB 325): prohibition on common pricing algorithms",
+    "requirement": "Prohibits using or distributing a common pricing algorithm as part of an agreement or conspiracy to restrain trade. Also prohibits using or distributing a common pricing algorithm while coercing another person to adopt its recommended price or commercial term for the same or similar products or services in California. A common pricing algorithm is any methodology, including software or other technology, that has two or more users and uses competitor data to recommend or influence prices or commercial terms. The ban is not limited to nonpublic data. Single-firm algorithms that use only the business's own data are not covered. Plaintiffs now need only plead facts making their claims plausible (§ 16756.1).",
+    "key_value": "Ban on using or distributing common pricing algorithms (2+ users, competitor data) in restraint of trade or with coercion to adopt recommendations",
+    "coverage_conditions": "Applies to any business, including residential rental housing providers, that uses or distributes a common pricing algorithm; not limited by building size or age.",
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": null
+    },
+    "exemptions": "Proprietary or single-firm algorithms that use only the business's own data are not covered. No express exemption for public competitor data.",
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": "General antitrust law; it applies alongside any local ordinances on algorithmic rent setting. Fines are cumulative with those under other state statutes.",
+    "effective_date": "2026-01-01",
+    "citation": "Cal. Bus. & Prof. Code § 16729",
+    "quoted_span": "Businesses are expressly prohibited from using or distributing common pricing algorithms as part of an agreement to restrain trade.",
+    "penalty": "Criminal fines per violation of up to $6 million or twice the gain or loss for corporations, and up to $1 million or twice the gain or loss for individuals. Civil penalties of up to $1 million in actions brought by the Attorney General or a district attorney (SB 763; Cal. Bus. & Prof. Code §§ 16755, 16755.1). Private plaintiffs may recover treble damages, injunctive relief and attorneys' fees.",
+    "confidence": 0.85,
+    "conflict_note": null
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

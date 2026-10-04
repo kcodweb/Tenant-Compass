@@ -1,0 +1,46 @@
+{
+ "doc_id": "D069",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:48:53+00:00",
+ "prompt_sha256": "111833923b6d4c81c91292ee43efeb15402503159737eb55b9a8bb4d1a29c440",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "NJ",
+    "level": "state",
+    "category": "algorithmic_rent_setting",
+    "status": "not_yet_effective",
+    "title": "Forbidding the Algorithmic Inflation of Rent (FAIR) Act",
+    "requirement": "Makes it unlawful under the New Jersey Antitrust Act for a rental property owner (or its agent) to pay for or use the services of a coordinator. A coordinator is an operator of algorithmic revenue management software or an algorithmic device that performs a coordinating function: using two or more owners' nonpublic competitively sensitive information to set or recommend rents, lease terms or occupancy, or setting or recommending rents for multiple owners through the same algorithm. Coordinators may not facilitate anticompetitive agreements, and no person may engage in parallel pricing coordination or perform a coordinating function. Exclusions cover research, free public rent estimates, equal-access brokerage listing databases that do not set or recommend prices, and government affordability controls. The Attorney General must set up a complaint portal and may adopt rules.",
+    "key_value": "Ban on rental property owners using algorithmic rent-setting/coordinating services (nonpublic competitor data or common algorithm); violation of NJ Antitrust Act",
+    "coverage_conditions": "Applies to all residential dwelling units used as a primary residence in NJ; no unit-count or construction-date limits.",
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": null
+    },
+    "exemptions": "Excludes inpatient medical care, licensed long-term care, and detention facilities. A coordinating function excludes research or statistical use not used to set terms; free public rent estimates; equal-access real estate brokerage databases that do not set or recommend prices; and government affordability controls. Spreadsheets without AI that require human analysis, and simple query databases, are not algorithmic devices.",
+    "yields_to_local": false,
+    "may_preempt_local": true,
+    "interaction": "Supplements the New Jersey Antitrust Act (C.56:9-1 et seq.); remedies in C.56:9-6 through 9-17 apply. Municipalities are prohibited from enacting conflicting ordinances.",
+    "effective_date": "2027-07-01",
+    "citation": "P.L.2026, c.43",
+    "quoted_span": "to receive, subscribe to, contract\nfor, or otherwise exchange any form of consideration in return for the use of,\nthe services of a coordinator",
+    "penalty": "Violation of the New Jersey Antitrust Act; enforcement and remedies under C.56:9-6 through 9-17 apply.",
+    "confidence": 0.88,
+    "conflict_note": "Effective date computed from section 9 ('first day of the twelfth month next following the date of enactment') and the approval date of July 20, 2026. Section 6b prohibits municipalities from enacting ordinances that conflict with this act, so local algorithmic rent ordinances (e.g., in Jersey City or Hoboken) may be preempted to the extent they conflict."
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

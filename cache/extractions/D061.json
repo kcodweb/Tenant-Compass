@@ -1,0 +1,46 @@
+{
+ "doc_id": "D061",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:48:34+00:00",
+ "prompt_sha256": "d31154ca668760fd0a2a65f838847d67dcad42e38ef357f556eaf592277bd0fc",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "NJ",
+    "level": "state",
+    "category": "screening_restrictions",
+    "status": "in_force",
+    "title": "NJ Law Against Discrimination: housing discrimination, including source of lawful income",
+    "requirement": "Owners, landlords, managing agents, and real estate brokers or agents may not refuse to rent, lease, or sublease, or otherwise deny or withhold real property, because of the source of any lawful income received by the person or the source of any lawful rent payment, such as housing vouchers. They also may not discriminate in rental terms, conditions, or privileges on that basis. They may not use application forms, inquiries, records, or advertisements that express any limitation based on source of lawful income or other protected traits. Rental screening based on protected traits, including familial status (children under 18), is also prohibited.",
+    "key_value": "Rental denial or screening based on source of lawful income or source of lawful rent payment is prohibited.",
+    "coverage_conditions": null,
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": null
+    },
+    "exemptions": "Sex-based qualifications are allowed for rooms or apartments in residential facilities planned exclusively for, and occupied by, one sex, with individuals qualified based on gender identity or expression. The familial-status (children) provision does not apply to housing for older persons as defined in N.J.S.A. 10:5-5(mm).",
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": null,
+    "effective_date": null,
+    "citation": "N.J.S.A. 10:5-12",
+    "quoted_span": "To refuse to sell, rent, lease, assign, or sublease or otherwise to deny to or withhold from any person or group of persons any real property or part or portion thereof because of the source of any lawful income received by the person or the source of any lawful rent payment to be paid for the real property",
+    "penalty": null,
+    "confidence": 0.85,
+    "conflict_note": null
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

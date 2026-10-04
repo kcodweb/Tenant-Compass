@@ -1,0 +1,66 @@
+{
+ "citations_detail": {
+  "verified_in_supplied_corpus": 4045,
+  "applies_answers": 4135,
+  "research_only": 90
+ },
+ "summary": {
+  "extraction": 1.0,
+  "citations": 0.9782345828295043,
+  "change_tests": 1.0,
+  "coverage_spot_checks": 1.0
+ },
+ "change_tests": {
+  "T1": {
+   "overlap": 1.0,
+   "got": 250,
+   "expected": 250
+  },
+  "T2": {
+   "overlap": 1.0,
+   "got": 90,
+   "expected": 90
+  },
+  "T3": {
+   "overlap": 1.0,
+   "got": 140,
+   "expected": 140
+  },
+  "T4": {
+   "overlap": 1.0,
+   "got": 110,
+   "expected": 110
+  },
+  "T5": {
+   "overlap": 1.0,
+   "got": 0,
+   "expected": 0
+  }
+ },
+ "coverage_checks": {
+  "LA pre-1978: RSO applies": {
+   "ok": 47,
+   "n": 47
+  },
+  "NJ: deposit cap applies": {
+   "ok": 140,
+   "n": 140
+  },
+  "SD/Berkeley: CA rent cap not 'applies' (no year built)": {
+   "ok": 90,
+   "n": 90
+  },
+  "MA: no local rent cap reported": {
+   "ok": 110,
+   "n": 110
+  },
+  "SF pre-1979: SF rent ordinance applies": {
+   "ok": 71,
+   "n": 71
+  },
+  "SF pre-1979: state cap superseded": {
+   "ok": 71,
+   "n": 71
+  }
+ }
+}

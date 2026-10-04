@@ -1,0 +1,46 @@
+{
+ "doc_id": "D022",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:47:02+00:00",
+ "prompt_sha256": "ca746eb6e33f3ea9d7410ae322c61e7ed5a69f954b6c036dc9da37c3ef175ee2",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "CA",
+    "level": "state",
+    "category": "algorithmic_rent_setting",
+    "status": "in_force",
+    "title": "AB 325 (Cartwright Act): ban on use or distribution of common pricing algorithms in restraint of trade",
+    "requirement": "It is unlawful to use or distribute a common pricing algorithm as part of a contract, trust, or conspiracy to restrain trade. It is also unlawful to use or distribute one while coercing another person to set or adopt a price or commercial term the algorithm recommends for the same or similar products or services in California. A common pricing algorithm is any methodology, including software, used by two or more persons that uses competitor data to recommend, align, stabilize, set, or otherwise influence a price or commercial term. Commercial terms include level of service, availability, and output. Distribution includes selling, licensing, or providing access, including by subscription. The end consumer is not a covered person. A companion section (B&P § 16756.1) relaxes pleading: a Cartwright Act complaint only needs plausible factual allegations of a conspiracy and need not exclude the possibility of independent action. The rule applies to all products and services, including rental housing pricing.",
+    "key_value": "Ban on using/distributing a common pricing algorithm (uses competitor data, used by 2+ persons) as part of a conspiracy, or while coercing adoption of its recommended price/terms",
+    "coverage_conditions": "Applies to any person using or distributing such an algorithm in California; not limited by building size or age.",
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": null
+    },
+    "exemptions": "Does not apply to the end consumer of a product or service (excluded from the definition of 'person').",
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": "Does not impair or limit the applicability of other antitrust laws (B&P Code § 16729(c)).",
+    "effective_date": "2026-01-01",
+    "citation": "Cal. Bus. & Prof. Code § 16729 (AB 325, Stats. 2025, ch. 338)",
+    "quoted_span": "(a) It shall be unlawful for a person to use or distribute a common pricing algorithm as part of a contract, combination in the form of a trust, or conspiracy to restrain trade or commerce in violation of this chapter.",
+    "penalty": "Violation of the Cartwright Act, which the document describes as punishable as a crime; Cartwright Act enforcement provisions apply.",
+    "confidence": 0.85,
+    "conflict_note": "Effective date derived from the CA default rule: the bill was approved October 6, 2025 and has no urgency clause, so it takes effect January 1, 2026."
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

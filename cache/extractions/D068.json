@@ -1,0 +1,46 @@
+{
+ "doc_id": "D068",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:48:50+00:00",
+ "prompt_sha256": "4f9843778d26e7ffb48b1cad488c3b624a022f033bccdcf263fac2a5bd3c311d",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "NJ",
+    "level": "state",
+    "category": "screening_restrictions",
+    "status": "in_force",
+    "title": "NJ Law Against Discrimination: source of lawful income protection in housing",
+    "requirement": "Landlords may not discriminate in housing based on the source of lawful income or source of lawful rent payment a tenant uses. For example, a landlord cannot refuse to rent to a Section 8 HUD voucher holder based solely on that source of income.",
+    "key_value": "Source-of-income discrimination (including Section 8 vouchers) prohibited",
+    "coverage_conditions": "Applies to the rental of all real property, with exceptions for renting one unit of an owner-occupied two-family dwelling and renting rooms in an owner-occupied one-family dwelling.",
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": true,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": 2
+    },
+    "exemptions": "Rental of a single apartment in a two-family dwelling where the owner occupies the other unit; rental of rooms by the owner or occupant of a one-family dwelling they occupy; religious-organization preference for same-religion persons; familial-status protection does not apply to housing for older persons (N.J.S.A. 10:5-5mm).",
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": null,
+    "effective_date": null,
+    "citation": "N.J.S.A. 10:5-1 et seq. (Law Against Discrimination)",
+    "quoted_span": "means, for example, that a landlord cannot deny the\nlawful recipient of a Section 8 HUD voucher the right to\nrent an apartment based solely on that source of lawful\nincome.",
+    "penalty": "Complaint to the Division on Civil Rights within 180 days of the violation, or a Superior Court action within two years.",
+    "confidence": 0.75,
+    "conflict_note": null
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

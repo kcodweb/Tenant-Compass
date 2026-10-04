@@ -1,0 +1,46 @@
+{
+ "doc_id": "D046",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:47:54+00:00",
+ "prompt_sha256": "4b095f7997775cb93f0aa33074452c89e143ac600e9a98aad92eb05c5c1dfb34",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "MA",
+    "level": "state",
+    "category": "algorithmic_rent_setting",
+    "status": "pending",
+    "title": "An Act prohibiting algorithmic rent setting (S.2983)",
+    "requirement": "Proposed bill to prohibit algorithmic rent setting in Massachusetts rental housing. It is a committee new draft of S.994 (Friedman/Cyr) and S.1016 (Moore/Jehlen/Eldridge, 'Preventing Algorithmic Rent Fixing in the Rental Housing Market Act'). The Housing committee reported it favorably on 3/12/2026, and it was referred to Senate Ways and Means. The document does not include the bill text, so the substantive terms are not stated. It is not enacted as of the query date.",
+    "key_value": "Proposed prohibition on algorithmic rent setting (pending in Senate Ways and Means)",
+    "coverage_conditions": null,
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": null
+    },
+    "exemptions": null,
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": "New draft of S.994 and S.1016.",
+    "effective_date": null,
+    "citation": "S.2983 (194th Gen. Ct.)",
+    "quoted_span": "Bill reported favorably by committee and referred to the committee on\nSenate Ways and Means",
+    "penalty": null,
+    "confidence": 0.8,
+    "conflict_note": null
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

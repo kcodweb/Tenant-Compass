@@ -1,0 +1,46 @@
+{
+ "doc_id": "D020",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:46:56+00:00",
+ "prompt_sha256": "e793bf8772f9e4bf53ea06a9378b6e87d68a0e5ac87bae868e487d3bb04dbbf2",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "CA",
+    "level": "state",
+    "category": "security_deposits",
+    "status": "in_force",
+    "title": "California security deposit limits and return rules",
+    "requirement": "A landlord may not demand or receive security deposits above one month's rent, in addition to first month's rent. Small landlords may charge up to two months' rent, but not to service members. Within 21 calendar days after the tenant vacates, the landlord must return the remaining deposit with an itemized statement and supporting receipts or invoices. Deductions are limited to unpaid rent, damage beyond ordinary wear and tear, cleaning, and restoring personal property. The tenant may request a pre-move-out inspection. Landlords must photograph the unit at move-in (tenancies beginning on or after July 1, 2025) and at move-out (from April 1, 2025). Deposits may not be labeled nonrefundable. If the tenant paid electronically, the deposit must be returned electronically. Higher deposits charged to service members require a written explanation, and the extra amount must be returned after 6 months if rent is current.",
+    "key_value": "Max deposit = 1 month's rent (2 months for qualifying small landlords); return within 21 days",
+    "coverage_conditions": "Residential rental property used as the tenant's dwelling. The two-month small-landlord exception applies only if the landlord is a natural person (or an LLC whose members are all natural persons) owning no more than two residential rental properties with no more than four units total.",
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": true,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": 4
+    },
+    "exemptions": "An advance payment of at least six months' rent is allowed for leases of six months or longer. The small-landlord exception allows two months' rent (not for service members). The cap does not apply to security collected or demanded before July 1, 2024. Itemization documentation is not required if deductions total $125 or less or the tenant validly waived it, unless the tenant requests documentation within 14 days.",
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": null,
+    "effective_date": "2024-07-01",
+    "citation": "Cal. Civ. Code § 1950.5",
+    "quoted_span": "a landlord shall not demand or receive security, however denominated, in an amount or value in excess of an amount equal to one month’s rent, in addition to any rent for the first month paid on or before initial occupancy.",
+    "penalty": "Bad-faith retention or claim may subject the landlord to statutory damages of up to twice the amount of the security, plus actual damages. A landlord who in bad faith fails to comply with the return and itemization rules forfeits any claim to the security.",
+    "confidence": 0.88,
+    "conflict_note": "The one-month cap date of 2024-07-01 is derived from subdivision (c)(6), which exempts security collected before July 1, 2024. The section was later amended (photo rules effective 2025-04-01 and 2025-07-01; Stats. 2025, Ch. 340 (AB 414) effective 2026-01-01)."
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "doc_id": "D066",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:48:47+00:00",
+ "prompt_sha256": "c05bc784cb5cd10cca4ab0fb7f09f0e33d2c2bf3d7339cb3f2409c1079c953f1",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "NJ",
+    "level": "state",
+    "category": "application_screening_fees",
+    "status": "in_force",
+    "title": "Residential rental property application fee cap ($50)",
+    "requirement": "A landlord or its agent may not require an application or similar fee to apply to lease or sublease a residential rental property that exceeds $50. The cap is adjusted annually for CPI (NY-Northern NJ-Long Island CPI-U) starting January 1 of the year after enactment, increases only, and is published by the Division of Consumer Affairs. The wrongfully charged amount is refunded to the applicant out of the collected penalty.",
+    "key_value": "$50 maximum application fee (CPI-adjusted annually from 2027-01-01)",
+    "coverage_conditions": "Residential rental dwelling units other than units in one-family or two-family dwellings",
+    "coverage": {
+     "min_units": 3,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": null
+    },
+    "exemptions": "Dwelling units in a one-family or two-family dwelling offered for rent; licensees of the New Jersey Real Estate Commission, unless the licensee is the landlord of the property.",
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": null,
+    "effective_date": "2026-05-01",
+    "citation": "N.J.S.A. 46:8-18.1 (P.L.2025, c.405)",
+    "quoted_span": "A landlord, or\nagent thereof, shall not require an application or other similar fee to apply\nto lease or sublease a residential rental property for dwelling purposes, which\nexceeds $50.",
+    "penalty": "Up to $500 for a first offense, up to $750 for a second offense, and up to $1,000 for each subsequent offense, collected through summary proceedings under the Penalty Enforcement Law of 1999 on complaint of the Director of Consumer Affairs or the Attorney General. The amount wrongfully charged is remitted to the applicant.",
+    "confidence": 0.9,
+    "conflict_note": "Effective date computed from the act's section 3 ('first day of the fourth month next following the date of enactment') and the approval date of January 20, 2026."
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

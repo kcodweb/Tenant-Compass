@@ -1,0 +1,46 @@
+{
+ "doc_id": "D049",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:48:06+00:00",
+ "prompt_sha256": "d7bee7d23e254acba4bb2bd437fd594b961b2eaf940fb2986a6ffa1521780848",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "MA",
+    "level": "state",
+    "category": "screening_restrictions",
+    "status": "in_force",
+    "title": "Massachusetts ban on source-of-income discrimination in rental housing (public assistance / housing subsidy recipients)",
+    "requirement": "Anyone furnishing rental accommodations may not discriminate against an applicant or tenant because they receive federal, state or local public assistance (including medical assistance) or housing subsidies (including rental assistance or rental supplements), or because of any requirement of such a program. Rental advertising may not state a preference or limitation based on public assistance recipiency (subsection 7B).",
+    "key_value": "No refusal or discrimination based on receipt of public assistance or housing subsidies (e.g., rental vouchers) or program requirements",
+    "coverage_conditions": "Applies to any person furnishing rental accommodations; no unit-count threshold stated in subsection 10.",
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": null
+    },
+    "exemptions": null,
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": "Part of the general Massachusetts anti-discrimination statute (c.151B § 4), which also bars inquiries about protected characteristics of rental applicants under subsections 6 and 7.",
+    "effective_date": null,
+    "citation": "G.L. c.151B § 4(10)",
+    "quoted_span": "For any person furnishing credit, services or rental accommodations to discriminate against any individual who is a recipient of federal, state, or local public assistance, including medical assistance, or who is a tenant receiving federal, state, or local housing subsidies, including rental assistance or rental supplements",
+    "penalty": null,
+    "confidence": 0.85,
+    "conflict_note": null
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

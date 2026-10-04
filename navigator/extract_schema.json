@@ -1,0 +1,226 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "rules",
+    "no_rule_findings"
+  ],
+  "properties": {
+    "rules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "jurisdiction",
+          "level",
+          "category",
+          "status",
+          "title",
+          "requirement",
+          "key_value",
+          "coverage_conditions",
+          "coverage",
+          "exemptions",
+          "yields_to_local",
+          "may_preempt_local",
+          "interaction",
+          "effective_date",
+          "citation",
+          "quoted_span",
+          "penalty",
+          "confidence",
+          "conflict_note"
+        ],
+        "properties": {
+          "jurisdiction": {
+            "type": "string",
+            "description": "'CA','NJ','MA' or 'City, ST'"
+          },
+          "level": {
+            "type": "string",
+            "enum": [
+              "state",
+              "city"
+            ]
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "rent_increase_limits",
+              "just_cause_eviction",
+              "security_deposits",
+              "application_screening_fees",
+              "screening_restrictions",
+              "algorithmic_rent_setting"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "in_force",
+              "not_yet_effective",
+              "pending",
+              "failed"
+            ]
+          },
+          "title": {
+            "type": "string"
+          },
+          "requirement": {
+            "type": "string"
+          },
+          "key_value": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "coverage_conditions": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "coverage": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "min_units",
+              "max_units",
+              "co_on_or_before",
+              "co_after",
+              "exempt_if_newer_than_years",
+              "owner_fact_dependent",
+              "owner_fact_max_units",
+              "subsidy_dependent",
+              "other_unknown_fact"
+            ],
+            "properties": {
+              "min_units": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "max_units": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "co_on_or_before": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "co_after": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "exempt_if_newer_than_years": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "owner_fact_dependent": {
+                "type": "boolean"
+              },
+              "subsidy_dependent": {
+                "type": "boolean"
+              },
+              "other_unknown_fact": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "owner_fact_max_units": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              }
+            }
+          },
+          "exemptions": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "yields_to_local": {
+            "type": "boolean"
+          },
+          "may_preempt_local": {
+            "type": "boolean"
+          },
+          "interaction": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "effective_date": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "citation": {
+            "type": "string"
+          },
+          "quoted_span": {
+            "type": "string"
+          },
+          "penalty": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "confidence": {
+            "type": "number"
+          },
+          "conflict_note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "no_rule_findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "jurisdiction",
+          "category",
+          "finding",
+          "quoted_span"
+        ],
+        "properties": {
+          "jurisdiction": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "finding": {
+            "type": "string"
+          },
+          "quoted_span": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

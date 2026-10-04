@@ -1,0 +1,46 @@
+{
+ "doc_id": "D017",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:46:45+00:00",
+ "prompt_sha256": "d60eb96677414bdefb186ec92296d31c2a999c962fa5e7ddc15cb108648e4064",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "CA",
+    "level": "state",
+    "category": "application_screening_fees",
+    "status": "in_force",
+    "title": "California application screening fee cap and refund/receipt rules",
+    "requirement": "Landlords may charge an applicant an application screening fee no greater than actual out-of-pocket screening costs and in no case more than $30 per applicant (CPI-adjusted annually beginning January 1, 1998). No fee may be charged when no unit is or will reasonably be available. A fee may be charged only if the landlord offers either (A) a first-come screening process: written screening criteria provided with the application, completed applications considered in order received, the first qualified applicant approved, and no fee charged until the application is actually considered, with a refund within 7 days for fees inadvertently collected from applications not considered; or (B) a full refund to every applicant not selected, within 7 days of selecting a tenant or 30 days of submission, whichever is first. The landlord must give an itemized receipt, refund any unused portion if no reference check or credit report is obtained, and give the applicant a copy of the credit report within 7 days of receiving it. Reusable screening reports may be accepted. The fee is not an advance fee or security.",
+    "key_value": "$30 per applicant maximum, CPI-adjusted annually since 1998; not more than actual out-of-pocket costs",
+    "coverage_conditions": "Applies to residential rental property statewide; applicants include guarantors/cosigners.",
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": null
+    },
+    "exemptions": "Does not preempt provisions or regulations governing deposits and fees under federal or state housing assistance programs. No refund is required for an applicant denied after consideration for failing the landlord's established screening criteria (option A).",
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": "Applies notwithstanding Cal. Civ. Code § 1950.5; the fee is not 'security' under § 1950.5. Landlords may accept reusable screening reports under Cal. Civ. Code § 1950.1.",
+    "effective_date": null,
+    "citation": "Cal. Civ. Code § 1950.6",
+    "quoted_span": "In no case shall the amount of the application screening fee charged by the landlord or their agent be greater than thirty dollars ($30) per applicant.",
+    "penalty": null,
+    "confidence": 0.85,
+    "conflict_note": "Document does not state when the $30 cap took effect (only that CPI adjustment began January 1, 1998); the page notes the section text was updated Jan. 1, 2026, indicating later amendments (e.g., screening-process and refund provisions) whose effective dates are not given."
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

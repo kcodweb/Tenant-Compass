@@ -1,0 +1,46 @@
+{
+ "doc_id": "D019",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:46:56+00:00",
+ "prompt_sha256": "86720d344034e04177774612544e2b7df6e2c5ce3ff414c4ce3896bff5814800",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "CA",
+    "level": "state",
+    "category": "rent_increase_limits",
+    "status": "in_force",
+    "title": "California Tenant Protection Act statewide rent cap",
+    "requirement": "Owners may not raise the gross rental rate over any 12-month period by more than 5% plus the percentage change in the cost of living (regional CPI-U), or 10%, whichever is lower. The base is the lowest gross rent charged in the prior 12 months, excluding accepted discounts, incentives, concessions or credits. For a continuing tenant, rent may be raised in no more than two increments in any 12 months. Owners may set the initial rent on a new tenancy when no prior tenant remains (vacancy decontrol). Tenants may not sublease for more than the allowable rent. Increase notices must follow Civ. Code § 827. Waivers are void.",
+    "key_value": "Max annual increase: 5% + CPI, capped at 10% (lower of the two); max 2 increases per 12 months",
+    "coverage_conditions": "Applies to residential real property except: units with a certificate of occupancy issued within the previous 15 years (non-mobilehome); units under local rent control stricter than the state cap; deed-restricted or subsidized affordable housing; school dormitories; separately alienable units (single-family homes, condos) not owned by a REIT, corporation or LLC with a corporate member, where the statutory exemption notice was given; and owner-occupied two-unit properties without an ADU or JADU.",
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": 15,
+     "owner_fact_dependent": true,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": 2
+    },
+    "exemptions": "Deed-restricted or subsidized affordable housing (H&S Code § 50093); dormitories of higher-education institutions or K-12 schools; housing under local rent control that restricts increases below the state cap; housing with a certificate of occupancy within the previous 15 years (except mobilehomes); separately alienable dwellings (SFH or condo) not owned by a REIT, corporation, or LLC with a corporate member, provided the required written exemption notice was given; owner-occupied duplex where the owner lived in one unit at the start of the tenancy and continues to do so (neither unit an ADU or JADU); homeowners of mobilehomes; initial rent on a new tenancy after vacancy.",
+    "yields_to_local": true,
+    "may_preempt_local": false,
+    "interaction": "Does not apply to housing subject to local rent control consistent with Costa-Hawkins (Civ. Code § 1954.50 et seq.) that restricts annual increases below the state cap. The Legislature states the section neither expands nor limits local authority to regulate rents.",
+    "effective_date": "2020-01-01",
+    "citation": "Cal. Civ. Code § 1947.12",
+    "quoted_span": "an owner of residential real property shall not, over the course of any 12-month period, increase the gross rental rate for a dwelling or a unit more than 5 percent plus the percentage change in the cost of living, or 10 percent, whichever is lower",
+    "penalty": "Civil action by tenant for injunctive relief, damages equal to the overcharge, discretionary attorney's fees and costs, and up to treble damages for willful, oppressive, fraudulent or malicious conduct. Enforcement by the Attorney General and city attorney or county counsel. Three-year limitations period.",
+    "confidence": 0.82,
+    "conflict_note": "The rule applies to increases on or after 2019-03-15, with rents reset as of 2020-01-01 per subdivision (h); the 2020-01-01 effective date is derived from that text. The current version was repealed and re-added by Stats. 2023, Ch. 290 (SB 567), effective 2024-01-01 and operative 2024-04-01. For mobilehome tenancies the rule applies to increases on or after 2021-02-18. The section sunsets on 2030-01-01."
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

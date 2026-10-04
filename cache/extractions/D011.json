@@ -1,0 +1,77 @@
+{
+ "doc_id": "D011",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:46:36+00:00",
+ "prompt_sha256": "679cc37a302b920297443ab7a927ed5f0d07faca95bd2abc859b48fbe17281ac",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "Boston, MA",
+    "level": "city",
+    "category": "rent_increase_limits",
+    "status": "failed",
+    "title": "Home rule petition authorizing Boston to implement rent stabilization (H.3744, 193rd Gen. Ct.)",
+    "requirement": "Proposed special law that would have authorized the City of Boston to implement rent stabilization. It was not enacted: it was sent to a study order on 9/9/2024 and the 2023-2024 session ended. No Boston rent stabilization rule exists under this bill.",
+    "key_value": "No rent cap enacted; bill sent to study order",
+    "coverage_conditions": null,
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": null
+    },
+    "exemptions": null,
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": "A home rule petition needs enactment by the General Court because state law (G.L. c.40P) bars local rent control without legislative authorization.",
+    "effective_date": null,
+    "citation": "H.3744 (193rd Gen. Ct.)",
+    "quoted_span": "that the city of Boston be authorized to implement rent stabilization and tenant eviction protections",
+    "penalty": null,
+    "confidence": 0.75,
+    "conflict_note": "The document does not say 'failed' outright. Failed status is inferred from the 9/9/2024 'Accompanied a study order' action (H5035) and the end of the 193rd session. A refiled version in a later session could have a different status."
+   },
+   {
+    "jurisdiction": "Boston, MA",
+    "level": "city",
+    "category": "just_cause_eviction",
+    "status": "failed",
+    "title": "Home rule petition authorizing Boston to implement tenant eviction protections (H.3744, 193rd Gen. Ct.)",
+    "requirement": "Proposed special law that would have authorized the City of Boston to implement tenant eviction protections. It was not enacted: it was sent to a study order on 9/9/2024 and the 2023-2024 session ended. No Boston just-cause eviction rule exists under this bill.",
+    "key_value": "No eviction protections enacted; bill sent to study order",
+    "coverage_conditions": null,
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": null
+    },
+    "exemptions": null,
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": null,
+    "effective_date": null,
+    "citation": "H.3744 (193rd Gen. Ct.)",
+    "quoted_span": "An Act petition for a special law authorizing the city of Boston to implement rent stabilization and tenant eviction protections",
+    "penalty": null,
+    "confidence": 0.65,
+    "conflict_note": "The document does not detail the eviction protections, so whether they were just-cause limits is inferred from the title. Failed status is inferred from the 9/9/2024 study-order action and the end of the 193rd session."
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

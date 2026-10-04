@@ -1,0 +1,46 @@
+{
+ "doc_id": "D063",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:48:32+00:00",
+ "prompt_sha256": "37eb234ea63b8094306898ac97dc269206c252b8214ed737bf7594455af4cfe5",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "NJ",
+    "level": "state",
+    "category": "security_deposits",
+    "status": "in_force",
+    "title": "New Jersey security deposit limit (Security Deposit Act)",
+    "requirement": "An owner or lessee may not require a security deposit greater than 1.5 times one month's rent for property used for dwelling purposes. Any additional security deposit collected annually may not exceed 10 percent of the current security deposit.",
+    "key_value": "Max deposit 1.5 months' rent; annual increase in deposit max 10% of current deposit",
+    "coverage_conditions": "Real property used for dwelling purposes",
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": null
+    },
+    "exemptions": null,
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": null,
+    "effective_date": null,
+    "citation": "N.J.S.A. 46:8-21.2",
+    "quoted_span": "An owner or lessee may not require more than a sum equal to 1 1/2 times 1 month's rental according to the terms of contract, lease, or agreement as a security for the use or rental of real property used for dwelling purposes.",
+    "penalty": null,
+    "confidence": 0.85,
+    "conflict_note": null
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

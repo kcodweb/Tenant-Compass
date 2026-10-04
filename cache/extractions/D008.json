@@ -1,0 +1,46 @@
+{
+ "doc_id": "D008",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:46:20+00:00",
+ "prompt_sha256": "4c4c5a608fd648b680dbbae1e7473ccde5655a2bb48469cd0121244274978754",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "Berkeley, CA",
+    "level": "city",
+    "category": "rent_increase_limits",
+    "status": "in_force",
+    "title": "Berkeley Rent Stabilization 2026 Annual General Adjustment (AGA)",
+    "requirement": "For 2026, eligible landlords may raise 2025 permanent rent ceilings by no more than 1.0% (65% of Bay Area CPI change July 2024 to June 2025), and no earlier than January 1, 2026. Landlords must meet the eligibility conditions and give tenants the notice required by Rent Board Regulation 1148. The AGA does not apply to tenancies that began on or after January 1, 2025 with rents set under Costa-Hawkins.",
+    "key_value": "1.0% annual general adjustment for 2026 (65% of CPI)",
+    "coverage_conditions": "Applies to units subject to Berkeley permanent rent ceilings under the Rent Stabilization Ordinance. Landlords must qualify under Regulation 1148. This notice does not state which buildings are covered.",
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": false,
+     "other_unknown_fact": "Whether the unit is subject to Berkeley rent ceilings (this notice does not state the construction-date cutoff) and whether the landlord meets Regulation 1148 eligibility conditions",
+     "owner_fact_max_units": null
+    },
+    "exemptions": "Does not adjust rents for tenancies that began on or after January 1, 2025 whose rents were set under the Costa-Hawkins Rental Housing Act. Other eligibility conditions are in Regulation 1148.",
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": "Costa-Hawkins Rental Housing Act (state) allows vacancy-decontrol rent setting for some tenancies; those tenancies are excluded from the 2026 AGA.",
+    "effective_date": "2026-01-01",
+    "citation": "Berkeley Mun. Code § 13.76.110; Berkeley Rent Bd. Reg. 1148",
+    "quoted_span": "eligible landlords to increase the 2025 permanent rent ceilings by 1.0% no earlier than",
+    "penalty": null,
+    "confidence": 0.85,
+    "conflict_note": null
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

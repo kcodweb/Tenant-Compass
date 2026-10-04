@@ -1,0 +1,46 @@
+{
+ "doc_id": "D045",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:47:53+00:00",
+ "prompt_sha256": "a58c809d5cbc326f0a7048bf3452d9f2becda7a3fd65ecdeaa7709ac7a0dbbb2",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "MA",
+    "level": "state",
+    "category": "algorithmic_rent_setting",
+    "status": "pending",
+    "title": "An Act relative to preventing algorithmic rent fixing in the rental housing market (H.5222)",
+    "requirement": "Proposed bill to prevent algorithmic rent fixing in the rental housing market. The page does not include the bill text, so its specific prohibitions are not stated. On 3/12/2026 the Joint Committee on Housing reported it favorably as a new draft of H1564 and referred it to House Ways and Means. It has not been enacted.",
+    "key_value": null,
+    "coverage_conditions": null,
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": null
+    },
+    "exemptions": null,
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": "New draft of H1564.",
+    "effective_date": null,
+    "citation": "H.5222 (194th Gen. Ct.)",
+    "quoted_span": "An Act relative to preventing algorithmic rent fixing in the rental housing market",
+    "penalty": null,
+    "confidence": 0.6,
+    "conflict_note": null
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

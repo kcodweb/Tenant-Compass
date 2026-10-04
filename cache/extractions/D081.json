@@ -1,0 +1,46 @@
+{
+ "doc_id": "D081",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:49:06+00:00",
+ "prompt_sha256": "46926ba2141c359b3890df594747793dd63bebdf56c762a9b77261c6299ee8b9",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "San Francisco, CA",
+    "level": "city",
+    "category": "algorithmic_rent_setting",
+    "status": "in_force",
+    "title": "San Francisco ban on algorithmic rent-setting devices (Rent Ordinance § 37.10C)",
+    "requirement": "Prohibits the sale or use of algorithmic devices to set rents or manage occupancy levels for residential units in San Francisco. An 'algorithmic device' is a device, such as a software program, that uses algorithms to analyze nonpublic competitor rental data to recommend to a landlord what rent to charge for a vacant unit.",
+    "key_value": "Ban on sale or use of algorithmic devices using nonpublic competitor data to set rents or manage occupancy",
+    "coverage_conditions": "Residential units in San Francisco; the page states no unit-count or construction-date limits.",
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": null
+    },
+    "exemptions": null,
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": null,
+    "effective_date": "2024-10-14",
+    "citation": "S.F. Admin. Code § 37.10C",
+    "quoted_span": "adding Section 37.10C to the Rent Ordinance went into effect on October 14, 2024. The law prohibits the sale or use of algorithmic devices to set rents or manage occupancy levels for residential units in San Francisco.",
+    "penalty": "A tenant or the City Attorney may bring a civil action against an entity believed to be in violation.",
+    "confidence": 0.85,
+    "conflict_note": null
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "doc_id": "D029",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:47:25+00:00",
+ "prompt_sha256": "a8bcc95d77005d2353fd25a842eb80771ae8b2abcb972ef5148d2b6d386efb85",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "Cambridge, MA",
+    "level": "city",
+    "category": "screening_restrictions",
+    "status": "in_force",
+    "title": "Cambridge Fair Housing Ordinance – source-of-income and protected-class protections in rental housing",
+    "requirement": "Landlords, sellers and rental agents may not discriminate in viewing or renting an apartment, or in the terms and conditions of tenancy, based on protected categories, including source of income (Section 8 and public benefits). They may use any reasonable selection standard, such as ability to pay rent or care for the apartment, only if it is applied equally and uniformly to all applicants.",
+    "key_value": "Source-of-income discrimination (incl. Section 8 and public benefits) prohibited in rental screening",
+    "coverage_conditions": "Rental housing in Cambridge; exemption for owner-occupied 2-family dwellings",
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": true,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": 2
+    },
+    "exemptions": "2-family dwellings where the owner lives there",
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": "Protected categories also include race, color, national origin, disability, family status, marital status, sex, gender identity, sexual orientation, age, religious creed, military status, relationship status and family structure. On a probable cause finding, either party may remove the case to Massachusetts Superior Court or to the Attorney General's Office.",
+    "effective_date": null,
+    "citation": "Cambridge Mun. Code ch. 14.04",
+    "quoted_span": "Source of Income, includes Section 8 and public benefits",
+    "penalty": "After a hearing: criminal complaint in District Court, civil fines up to $300 per violation, injunctive relief via Superior Court, and damages, expenses and other relief",
+    "confidence": 0.6,
+    "conflict_note": null
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "doc_id": "D086",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:49:20+00:00",
+ "prompt_sha256": "45aceabc3c1cc7b04cecf79d42ef5f474e57fee147d2d6b38564f398216ec6f9",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "Santa Ana, CA",
+    "level": "city",
+    "category": "algorithmic_rent_setting",
+    "status": "in_force",
+    "title": "Santa Ana ban on algorithmic rent-pricing devices",
+    "requirement": "Prohibits the sale, licensing and use of algorithmic devices (automated or AI software that sets rental prices) by landlords and apartment owners in Santa Ana. Enforced mainly through the city's existing code enforcement system.",
+    "key_value": "Ban on sale, licensing and use of algorithmic rent-setting devices; $1,000 fine",
+    "coverage_conditions": null,
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": null
+    },
+    "exemptions": null,
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": "Article notes California has recently adopted state regulations on the same subject; the industry group argues the local ordinance duplicates them.",
+    "effective_date": null,
+    "citation": "Santa Ana Bans Landlords From Using AI Apartment Rent Pricing Software",
+    "quoted_span": "to protect the residents of Santa Ana from artificially inflated rental rates and unfair rent increases by prohibiting the sale, licensing and use of Algorithmic Devices",
+    "penalty": "Fine of $1,000 for landlords caught using the banned software",
+    "confidence": 0.6,
+    "conflict_note": "The news article gives no ordinance number and no effective date. The final council vote was on a Tuesday shortly before March 9, 2026 (first vote Feb. 17, 2026). In_force status assumes the ordinance took effect before the 2026-10-01 query date. The ordinance text should be verified."
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

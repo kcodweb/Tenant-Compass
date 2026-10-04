@@ -1,0 +1,46 @@
+{
+ "doc_id": "D062",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:48:38+00:00",
+ "prompt_sha256": "1faee7c72895a5a8281f1990ae7d1c2954a34322adebd23a2e4063fd85c77e65",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "NJ",
+    "level": "state",
+    "category": "just_cause_eviction",
+    "status": "in_force",
+    "title": "New Jersey Anti-Eviction Act – Grounds for removal of tenants",
+    "requirement": "A residential tenant may be removed by the Superior Court only on one of the enumerated good-cause grounds. These grounds are: nonpayment of rent; disorderly conduct after written notice; willful or grossly negligent damage; continued substantial violation of reasonable rules or lease covenants after written notice; failure to pay a lawful, non-unconscionable rent increase; code-violation board-up, demolition or compliance; correcting an illegal occupancy; permanent retirement from residential use; refusal of reasonable lease changes; habitual late payment; condominium or cooperative conversion; owner or buyer personal occupancy in limited cases (condo or co-op owners of 3 or fewer units, or buildings of 3 or fewer units); termination of employment-based tenancy; certain drug, assault/terroristic-threat or theft convictions or civil findings; and human trafficking. Lease expiration alone is not a ground. Some grounds require prior written notice to cease. Some grounds (g, k) bar a warrant for possession until relocation and conversion statutes are complied with.",
+    "key_value": "Eviction only for enumerated good causes (subsections a–r); no termination without cause",
+    "coverage_conditions": "Applies to residential rental premises, including mobile homes and mobile home park land. Excluded: owner-occupied premises with not more than two rental units; hotels, motels and guest houses rented to transient or seasonal guests; certain units held in trust for, or occupied by, an immediate family member with a developmental disability.",
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": true,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": 3
+    },
+    "exemptions": "Excluded: owner-occupied premises with not more than two rental units; hotels, motels or guest houses rented to transient guests or seasonal tenants; a unit held in trust for, or permanently occupied by, an immediate family member of the owner who has a developmental disability. Senior citizen and disabled protected tenants, and qualified tenants under the Tenant Protection Act of 1992, have additional protection against conversion evictions.",
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": "The rent-increase ground (f) requires that the increase not be unconscionable and comply with any municipal rent ordinances.",
+    "effective_date": null,
+    "citation": "N.J.S.A. 2A:18-61.1",
+    "quoted_span": "No lessee or tenant or the assigns, under-tenants or legal representatives of such lessee or tenant may be removed by the Superior Court from any house, building, mobile home or land in a mobile home park or tenement leased for residential purposes, other than (1) owner-occupied premises with not more than two rental units",
+    "penalty": null,
+    "confidence": 0.88,
+    "conflict_note": null
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

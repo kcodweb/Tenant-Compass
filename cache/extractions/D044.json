@@ -1,0 +1,46 @@
+{
+ "doc_id": "D044",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:47:50+00:00",
+ "prompt_sha256": "f8edfe97c5fec249ab766078f1b4b4e931eb1c03863cd489b83a798721646a63",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "Los Angeles, CA",
+    "level": "city",
+    "category": "security_deposits",
+    "status": "in_force",
+    "title": "LA RSO security deposit interest requirement",
+    "requirement": "Landlords of units subject to the Los Angeles Rent Stabilization Ordinance must pay tenants interest on security deposits at the rate set annually by the City. Interest has accrued monthly since November 1, 1990. The landlord pays the accrued interest either monthly or yearly, as a direct payment or as a credit against rent. The landlord must choose one method and notify the tenant of the choice in writing. Waiting until the end of the tenancy to pay accumulated interest does not comply.",
+    "key_value": "Interest at the City-set annual rate, paid monthly or annually as direct payment or rent credit. The 2025 rate was 4.320%; this source does not give the 2026 rate.",
+    "coverage_conditions": "Units subject to the LA Rent Stabilization Ordinance (generally buildings with a certificate of occupancy on or before October 1, 1978).",
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": "1978-10-01",
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": null
+    },
+    "exemptions": "Units not subject to the RSO.",
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": null,
+    "effective_date": null,
+    "citation": "L.A. Mun. Code § 151.06.02",
+    "quoted_span": "A tenant shall be given the unpaid accrued interest in the form of either a direct payment or a credit against the tenant’s rent. The landlord shall choose between these two methods of payment and notify the tenant in writing of his or her choice.",
+    "penalty": "No statutory penalty is stated. The article warns that non-compliance is commonly used as a tenant defense and can cause landlords to lose eviction cases.",
+    "confidence": 0.75,
+    "conflict_note": null
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

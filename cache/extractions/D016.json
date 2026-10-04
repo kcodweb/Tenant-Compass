@@ -1,0 +1,46 @@
+{
+ "doc_id": "D016",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:46:48+00:00",
+ "prompt_sha256": "65a3688774b9a56300cf63bcac8a7c9433d718951607bb19203ecb2548fb76a9",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "CA",
+    "level": "state",
+    "category": "screening_restrictions",
+    "status": "in_force",
+    "title": "FEHA screening limits: source of income (incl. Section 8) and criminal history",
+    "requirement": "Housing providers, including tenant screening companies, may not refuse to rent or set different terms based on source of income. This covers Housing Choice (Section 8) vouchers and other rental assistance, and includes refusing to complete program paperwork or advertising 'No Section 8.' Providers may check criminal history but may not consider arrests that did not lead to a conviction, sealed or expunged records, or juvenile records. Blanket bans on applicants with any criminal history are prohibited. A denial based on a conviction must rest on a conviction directly related to tenancy, considering the nature and severity of the offense and the time elapsed.",
+    "key_value": "No source-of-income (incl. Section 8) discrimination; no blanket criminal-history bans; no use of non-conviction arrests, sealed/expunged or juvenile records",
+    "coverage_conditions": "Applies to most housing accommodations and housing providers in California, including landlords and tenant screening companies.",
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": null
+    },
+    "exemptions": "An owner occupying a home and renting to one additional person may exclude applicants based on protected characteristics, but may not publish discriminatory statements or ads. Shared living areas in a single dwelling may be limited to one sex. Qualifying senior housing may be limited by age.",
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": "Local ordinances may impose stricter criminal-history or source-of-income screening limits.",
+    "effective_date": null,
+    "citation": "Cal. Gov. Code § 12900 et seq. (Fair Employment and Housing Act)",
+    "quoted_span": "California law protects tenants from discrimination based on how a tenant will be paying rent (“source of income”). This includes the State of California’s COVID-19 Rent Relief Program, Housing Choice (Section 8) vouchers",
+    "penalty": "Remedies include out-of-pocket losses, injunction, access to the denied housing, emotional distress damages, civil penalties or punitive damages, and attorney's fees. Complaint to CRD within one year, or court action within two years.",
+    "confidence": 0.7,
+    "conflict_note": null
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

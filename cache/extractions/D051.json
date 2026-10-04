@@ -1,0 +1,21 @@
+{
+ "doc_id": "D051",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:48:07+00:00",
+ "prompt_sha256": "41239adadaf0c10a3d672fbf1c699d966e40d8105fbd6f11d20c4ad3321cefe0",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [],
+  "no_rule_findings": [
+   {
+    "jurisdiction": "MA",
+    "category": "just_cause_eviction",
+    "finding": "Under G.L. c.186 § 12, a tenancy at will in Massachusetts may be ended by either party with written notice, and the statute lists no required grounds. At the state level it therefore permits termination without cause; it sets only notice periods and a nonpayment cure right. This section creates no state just-cause rule. Local ordinances are not addressed in this document.",
+    "quoted_span": "Estates at will may be determined by either party by three months' notice in writing for that purpose given to the other party"
+   }
+  ]
+ }
+}

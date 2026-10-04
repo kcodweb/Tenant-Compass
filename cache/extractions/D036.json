@@ -1,0 +1,46 @@
+{
+ "doc_id": "D036",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:47:31+00:00",
+ "prompt_sha256": "1ddaba74af23e4173405211ba53175c2238a09a8c02ab20202b67d3181578f2b",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "Jersey City, NJ",
+    "level": "city",
+    "category": "rent_increase_limits",
+    "status": "in_force",
+    "title": "Jersey City Rent Control Ordinance (Chapter 260)",
+    "requirement": "Rent on covered units is regulated under the Jersey City Rent Control Ordinance, administered and enforced by the Office of Landlord/Tenant Relations. Properties with 1-4 units are exempt. Increases beyond the ordinary limit require landlord applications (capital improvement, vacancy capital improvement, hardship). Tenants may file Illegal Rent Petitions or Failure to Maintain Service Petitions for rent reductions.",
+    "key_value": "Rent control applies to properties with 5 or more units. The page references a CPI chart but does not state the allowable annual increase.",
+    "coverage_conditions": "Properties with 5 or more units, unless an exemption is granted under the ordinance.",
+    "coverage": {
+     "min_units": 5,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": false,
+     "other_unknown_fact": "whether the property qualifies for or holds an approved Rent Control Exemption under ch. 260 (criteria not stated on page)",
+     "owner_fact_max_units": null
+    },
+    "exemptions": "All 1-4 unit properties are exempt. The ordinance provides other exemptions, available through a Rent Control Exemption Request; the criteria are not listed on this page.",
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": null,
+    "effective_date": null,
+    "citation": "Jersey City Mun. Code ch. 260",
+    "quoted_span": "(Please Note: All 1-4 Unit Properties are exempt from rent control)",
+    "penalty": "Tenant may file an Illegal Rent Petition with the Office of Landlord/Tenant Relations; rent reduction via Failure to Maintain Service Petition.",
+    "confidence": 0.6,
+    "conflict_note": null
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

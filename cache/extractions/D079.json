@@ -1,0 +1,46 @@
+{
+ "doc_id": "D079",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:49:02+00:00",
+ "prompt_sha256": "a0f65d242a5efcdf9a01565120cd01a6fb8a67407f28cf70e821cbd187a5adcb",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "San Francisco, CA",
+    "level": "city",
+    "category": "just_cause_eviction",
+    "status": "in_force",
+    "title": "San Francisco Rent Ordinance just cause eviction requirement",
+    "requirement": "To evict a tenant from a rental unit covered by the Rent Ordinance, a landlord must have one of 17 listed just cause reasons, and it must be the dominant motive for the eviction. The listed causes include nonpayment or habitual late payment, an uncured substantial breach, nuisance, illegal use, refusal to renew on like terms, refusal of access, an unapproved subtenant, owner or family move-in, condo conversion sale, demolition or permanent removal, temporary capital improvements, substantial rehabilitation, Ellis Act withdrawal, lead remediation, a development agreement, an expired Good Samaritan tenancy, and a Planning Code Sec. 317 development project. Expiration of the lease or a change in ownership is not just cause. A just cause reason is also needed to remove housing services such as parking, storage or laundry, except temporary removal for mandatory soft-story seismic retrofit under Sec. 37.2(r). Eviction protections cover units built after June 13, 1979 that are exempt from the rent increase limits, Costa-Hawkins-exempt tenancies, and some government-regulated tenancies.",
+    "key_value": "17 enumerated just cause reasons; just cause must be the dominant motive; covers post-1979 new construction",
+    "coverage_conditions": "Rental units covered by the SF Rent Ordinance, including units exempt from rent increase limits (post-June 13, 1979 certificate of occupancy, Costa-Hawkins units).",
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": null
+    },
+    "exemptions": "Units not covered by the Rent Ordinance (exemption categories are not detailed in this document).",
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": "Applies to units exempt from the city's rent increase limits under Costa-Hawkins and to new construction.",
+    "effective_date": null,
+    "citation": "S.F. Admin. Code § 37.9(a)",
+    "quoted_span": "In order to evict a tenant from a rental unit covered by the Rent Ordinance, a landlord must have a \"just cause\" reason that is the dominant motive for pursuing the eviction.",
+    "penalty": "Landlord who evicts or tries to evict unlawfully may be subject to substantial civil and/or criminal liability.",
+    "confidence": 0.8,
+    "conflict_note": null
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

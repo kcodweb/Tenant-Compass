@@ -1,0 +1,445 @@
+SOURCE: https://www.mass.gov/doc/803-cmr-5-criminal-offender-record-information-cori-housing/download
+RETRIEVED: 2026-10-03 18:09 UTC
+
+## 803 CMR 5.00:
+
+## CRIMINAL OFFENDER RECORD INFORMATION (CORI) - HOUSING
+
+## Section
+
+5.01: Scope and Purpose
+
+5.02: Definitions
+
+5.03: iCORI Registration
+
+5.04: Access to CORI by Landlords, Property Management Companies, and Real Estate Agents to Evaluate
+Housing Applicants for Market Rate Housing
+
+5.05: Access to CORI by Public Housing Authorities and Certain Property Management Companies to
+Evaluate Housing Applicants for Subsidized Housing
+
+5.06: Procedures for Requesting CORI to Evaluate a Housing Applicant
+
+5.07: CORI Policy Requirement for Certain Requestors and Need to Know Requirements
+
+5.08: Storage and Retention of CORI
+
+5.09: Destruction of CORI
+
+5.10: Required Dissemination of CORI or Other Criminal History Information by a Landlord, Property
+Management Company, Real Estate Agent, or Public Housing Authority
+
+5.11: Permissive Dissemination of CORI by a Landlord, Property Management Company, Real Estate
+Agent, or Public Housing Authority
+
+5.12: Requirement to Maintain a Secondary Dissemination Log
+
+5.13: Limitation on Dissemination and Use of CORI
+
+5.14: Adverse Housing Decision Based on CORI or Criminal History Information
+
+5.15: Use of a Consumer Reporting Agency (CRA) to Make Housing Decisions
+
+5.16: Audits by the Department of Criminal Justice Information Services (DCJIS)
+
+5.17: Landlord, Property Management Company, Real Estate Agent, or Public Housing Authority Access
+to CORI for Purposes Other than the Evaluation of a Housing Applicant
+
+5.18: Waiver of Certain Fees for Veterans Organizations
+
+5.19: Severability
+
+## 5.01: Scope and Purpose
+
+(1) 803 CMR 5.00 sets forth requirements for the use of CORI for evaluating applicants for the
+rental or lease of housing, as well as for the storage and dissemination of CORI.
+
+(2) 803 CMR 5.00 applies to landlords, real estate agents, public housing authorities, and
+property management companies that request CORI for the purpose of screening applicants for
+the rental or lease of housing.
+
+(3) Nothing contained in 803 CMR 5.00 shall be interpreted to limit the authority granted to the
+Criminal Record Review Board (CRRB) or to DCJIS by the Massachusetts General Laws.
+
+## 5.02: Definitions
+
+All definitions set forth in 803 CMR 2.00: _Criminal Offender Record Information (CORI)_,
+7.00: _Criminal Justice Information System (CJIS)_, 8.00: _Obtaining Criminal Offender Record_ _Information (CORI) for Research Purposes_, 9.00: _Victim Notification Registry (VNR)_,
+10.00: _Gun Transaction Recording_ and 11.00: _Consumer Reporting Agency (CRA)_ are
+incorporated by reference in 803 CMR 5.02. The following additional words and phrases as
+used in 803 CMR 5.00 shall have the following meanings:
+
+Copy or Hard Copy. A physical or electronic version of the CORI that is available to a subject
+or subject’s attorney or legally designated representative. This shall not include a summary of
+the CORI. Allowing a subject or his or her attorney or legally designated representative to view
+and/or copy down the subject’s CORI does not qualify as providing a copy of the CORI.
+
+Housing Applicant. An individual who applies to rent or lease housing, including market rate
+and subsidized housing.
+
+Landlord. An individual that owns and rents or leases housing to another individual or business
+entity.
+
+6/11/21
+
+* * *
+
+# 803 CMR: DEPARTMENT OF CRIMINAL JUSTICE INFORMATION SERVICES
+
+5.02: continued
+
+Market Rate Housing. Housing that is privately owned and not subsidized by any federal or state
+housing program. Market rate housing shall include housing for which the landlord or property
+management company receives a subsidized housing voucher.
+
+Public Housing Authority. A federal, state, or local governmental entity charged with
+administering any federal or state-funded subsidized housing program.
+
+Property Management Company. A business entity that owns housing property to rent or lease
+or acts on behalf of an owner of housing to rent or lease housing property. Property Management
+Company, as referenced in 803 CMR 5.00 shall include, but not be limited to, a condo
+association where such condo association self-manages the rental or lease of housing.
+
+Real Estate Agent. An individual or business entity that acts as an agent on behalf of a landlord
+or property management company to rent or lease housing.
+
+Subsidized Housing. Any program of rental assistance funded by the state or federal
+government. However, subsidized housing shall not include market rate housing for which the
+landlord or property management company receives a subsidized housing voucher.
+
+## 5.03: iCORI Registration
+
+To access the iCORI system, a requestor must first register for an iCORI account as outlined
+in 803 CMR 2.04: _iCORI Registration_.
+
+## 5.04: Access to CORI by Landlords, Property Management Companies, and Real Estate Agents to Evaluate Housing Applicants for Market Rate Housing
+
+(1) A landlord, property management company, or real estate agent may request standard access
+CORI, as defined in 803 CMR 2.05(4),on a housing applicant who is applying for market rate
+housing owned or controlled by the landlord, property management company, or real estate agent
+for the purpose of evaluating the housing applicant for housing.
+
+(2) CORI shall only be requested for a housing applicant as the final step in the application
+process.
+
+(3) No landlord, property management company, or real estate agent shall use standard access
+CORI, accessed pursuant to 803 CMR 2.05(4), to evaluate an individual seeking to buy or sell
+real property or for the purpose of screening other household members.
+
+(4) A landlord, property management company, or real estate agent may request open access
+CORI, as defined in 803 CMR 2.05(5), for the purpose of screening an individual other than the
+housing applicant.
+
+## 5.05: Access to CORI by Public Housing Authorities and Certain Property Management Companies to Evaluate Housing Applicants for Subsidized Housing
+
+(1) Prior to accessing CORI to evaluate a housing applicant for subsidized housing, each public
+housing authority and property management company that administers a subsidized housing
+program for qualifying subsidized housing units shall register for an iCORI account pursuant to
+803 CMR 5.03.
+
+(2) A public housing authority or property management company that administers a subsidized
+housing program for qualifying subsidized housing units may request required CORI access, as
+defined in 803 CMR 2.05(3), regarding a housing applicant who is applying for subsidized
+housing owned or controlled by the public housing authority or property management company
+that administers a subsidized housing program for qualifying subsidized housing units for the
+purpose of evaluating a housing applicant.
+
+6/11/21
+
+* * *
+
+# 803 CMR: DEPARTMENT OF CRIMINAL JUSTICE INFORMATION SERVICES
+
+5.05: continued
+
+(3) Public housing authorities and property management companies that administer a subsidized
+housing program for qualifying subsidized housing units shall screen housing applicants for
+subsidized housing only as provided by state and federal law. CORI shall only be requested for
+a housing applicant as the final step in the application process.
+
+(4) A property management company that administers a subsidized housing program for
+qualifying subsidized housing units that also manages or owns market rate housing shall not use
+required access CORI to evaluate housing applicants for market rate housing. Said entities may
+access standard or open CORI access, as provided in 803 CMR 5.04, for this purpose.
+
+(5) A public housing authority may qualify to receive national criminal history information
+from the Federal Bureau of Investigation by executing a memorandum of understanding with the
+local police department.
+
+(a) National criminal history information received under 803 CMR 5.05(5) shall be used
+only as permitted by federal and state laws for the purpose of determining suitability for
+subsidized housing programs.
+
+(b) Improper access to, or dissemination of, national criminal history information may result
+in both criminal and civil sanctions.
+
+## 5.06: Procedures for Requesting CORI to Evaluate a Housing Applicant
+
+(1) Prior to submitting a CORI request to evaluate a housing applicant, a landlord, property
+management company, real estate agent, or public housing authority shall obtain a signed CORI
+Acknowledgment Form and follow all procedures related to the CORI acknowledgment form and
+verification of identity procedures as set forth in 803 CMR 2.11: _Requirements for Requestors_ _to Request CORI_.
+
+(2) A CORI Acknowledgment Form may be collected electronically in accordance with the
+provisions of 803 CMR 2.12: _Electronic Submission of CORI Acknowledgment Forms_.
+
+(3) Nothing in 803 CMR 5.00 shall be construed to prohibit a landlord, property management
+company, real estate agent, or public housing authority from making an adverse housing decision
+on the basis of a subject’s refusal to consent to a lawful request for CORI.
+
+(4) CORI Acknowledgment Forms must be retained for a minimum of one year from the date
+of the housing applicant's signature.
+
+(5) Subsequent CORI requests for a housing applicant's CORI may only be submitted as
+authorized by applicable state or federal law.
+
+When subsequent CORI requests are authorized under applicable state or federal law,
+procedures related to subsequent verification of identity are set forth in 803 CMR 2.13: _Identity_ _Verification Exemption for Subsequent CORI Checks_ shall apply to the request.
+
+## 5.07: CORI Policy Requirement for Certain Requestors and Need to Know Requirements
+
+(1) Any landlord, property management company, real estate agent, or public housing authority
+shall maintain a CORI policy and need to know list as provided in 803 CMR 2.18: _CORI Policy_ _Requirement for Certain Requestors and the Need to Know Requirements_.
+
+## 5.08: Storage and Retention of CORI
+
+(1) Hard copies and electronic copies of CORI shall only be retained and stored as provided in
+803 CMR 2.14: _Storage and Retention of CORI_.
+
+(2) CORI shall not be retained for longer than seven years from the last date of residency of the
+housing applicant in the housing unit or the date of a housing decision regarding the housing
+applicant, whichever is later.
+
+6/11/21
+
+* * *
+
+## 5.09: Destruction of CORI
+
+Hard and electronic copies of CORI shall only be destroyed in accordance with the provisions
+of 803 CMR 2.15: _Destruction of CORI and CORI Acknowledgment Forms_.
+
+## 5.10: Required Dissemination of CORI or other Criminal History Information by a Landlord, Property
+
+## Management Company, Real Estate Agent, or Public Housing Authority
+
+(1) Each landlord, property management company, real estate agent, or public housing authority
+shall provide a copy of a housing applicant's CORI or other criminal history information, and
+shall disclose the source of the information, to him or her:
+
+(a) before asking the applicant any questions about the criminal history; and
+
+(b) before making an adverse housing decision based on the housing applicant's CORI or
+other criminal history information.
+
+(2) Each property management company or public housing authority that is overseen, regulated,
+or supervised by a governmental entity shall, upon request, disseminate CORI to that
+governmental entity's staff.
+
+## 5.11: Permissive Dissemination of CORI by a Landlord, Property Management Company, Real Estate Agent, or Public Housing Authority
+
+(1) A landlord, property management company, or real estate agent may disseminate a housing
+applicant’s CORI to the housing applicant.
+
+(2) If a landlord, property management company, real estate agent, or public housing authority
+is a party to a complaint or legal action as a result of any decision based on CORI, the landlord,
+property management company, real estate agent, or public housing authority may disseminate
+CORI in the tenant appeals process or to an administrative agency or court for the purpose of
+defending its decision.
+
+(3) A property management company or real estate agent may disseminate a housing applicant’s
+CORI to the owner of the housing unit for which the housing applicant is applying. A public
+housing authority may disseminate a housing applicant’s CORI to the owner of the housing unit
+for which the housing applicant is applying unless the public housing authority, in _lieu_ of the
+owner of the housing unit, is responsible for determining compliance with CORI requirements
+for renting or leasing such housing.
+
+(5) Each public housing authority may disseminate a housing applicant’s CORI to the
+applicant’s attorney or legally designated representative. However, before receiving the housing
+applicant's CORI, an applicant’s attorney or legally designated representative shall provide a
+release, signed by the housing applicant, authorizing the attorney or legally designated
+representative to receive or review the CORI.
+
+(4) A property management company or public housing authority may disseminate a housing
+applicant’s CORI to its staff who have been authorized to request, receive, or review CORI for
+the purposes of determining whether to rent or lease housing.
+
+## 5.12: Requirement to Maintain a Secondary Dissemination Log
+
+(1) CORI shall not be disseminated except as otherwise provided in 803 CMR 5.11 and 5.12,
+or as otherwise authorized by the law, regulation, or accreditation requirement that allows for
+CORI access.
+
+(2) In the limited circumstances under which CORI may be lawfully disseminated outside of
+the landlord, property management company, real estate agent, or public housing authority's
+organization, the entity shall record such dissemination in a secondary dissemination log.
+
+(3) The dissemination of information must be logged in accordance with the requirements set
+forth in 803 CMR 2.19: _Requirement to Maintain a Secondary Dissemination Log_.
+
+6/11/21
+
+* * *
+
+# 803 CMR: DEPARTMENT OF CRIMINAL JUSTICE INFORMATION SERVICES
+
+## 5.13: Limitation on Dissemination and Use of CORI
+
+(1) CORI accessed pursuant to 803 CMR 5.04 by a landlord, property management company,
+or real estate agent shall be used solely for determining whether torent or lease real property to
+the housing applicant.
+
+(2) CORI accessed pursuant to 803 CMR 5.05 by a property management company or public
+housing authority shall be used solely to determine whether the housing applicant qualifies for
+a subsidized housing program.
+
+(3) Except as provided in 803 CMR 5.11 and 5.12, a landlord, property management company,
+real estate agent, or public housing authority shall not disseminate CORI received pursuant to
+803 CMR 5.04 or 5.05.
+
+## 5.14: Adverse Housing Decision Based on CORI or Other Criminal History Information
+
+(1) Before taking adverse action on an individual's application for housing based on CORI or
+criminal history information, a landlord, property management company, or real estate agent
+shall:
+
+(a) comply with applicable federal and state laws and regulations;
+
+(b) notify the housing applicant in person, by telephone, fax, or electronic or hard copy
+correspondence of the potential adverse housing action.
+
+(c) if the CORI or other criminal history information was received from a CRA, provide the
+housing applicant with a pre-adverse action disclosure that includes a copy of the housing
+applicant's consumer report and a copy of A Summary of Your Rights Under the Fair Credit
+Reporting Act, published by the Federal Trade Commission and obtained from the CRA, by
+meeting the housing applicant in person, by telephone, by electronic communication, by fax,
+or by hard copy correspondence.
+
+(d) provide the applicant with a copy of his or her CORI or other criminal history, and
+disclose the source of the criminal history information;
+
+(e) provide a copy of the entity's CORI Policy, if applicable;
+
+(f) identify the information that is the basis for the potential adverse action;
+
+(g) provide the applicant with the opportunity to dispute the accuracy of the information;
+
+(h) when CORI is considered as a part of a potential adverse action, provide the applicant
+
+with a copy of DCJIS information regarding the process for correcting CORI; and
+
+(i) document all steps taken to comply with 803 CMR 5.14(1).
+
+(2) A public housing authority or property management company that administers asubsidized
+housing program for qualifying subsidized housing units that takes an adverse housing action
+based on CORI or criminal history information shall:
+
+(a) comply with applicable federal and state laws and regulations pertaining to suitability
+for subsidized housing;
+
+(b) notify the housing applicant in person, by telephone, fax, or electronic or hard copy
+correspondence of the adverse housing action.
+
+(c) if the CORI or other criminal history information was received from a CRA, provide the
+housing applicant with a pre-adverse action disclosure that includes a copy of the housing
+applicant's consumer report and a copy of A Summary of Your Rights Under the Fair Credit
+Reporting Act, published by the Federal Trade Commission and obtained from the CRA, by
+meeting the housing applicant in person, by telephone, by electronic communication, by fax,
+or by hard copy correspondence.
+
+(d) provide a copy of the housing applicant's CORI or criminal history information and
+disclose the source of the criminal history information;
+
+(e) provide a copy of the entity's CORI Policy, if applicable;
+
+(f) identify the information that is the basis for the potential adverse action;
+
+(g) provide information regarding the process to appeal the adverse decision;
+
+(h) when CORI is considered as a part of a potential adverse action, provide DCJIS
+
+information concerning the process for correcting a criminal record; and
+
+(i) document all steps taken to comply with 803 CMR 5.14(2).
+
+6/11/21
+
+* * *
+
+# 803 CMR: DEPARTMENT OF CRIMINAL JUSTICE INFORMATION SERVICES
+
+## 5.15: Use of a Consumer Reporting Agency (CRA) to Make Housing Decisions
+
+(1) A landlord, property management company, real estate agent, or public housing authority
+may utilize the services of a CRA to request CORI regarding a housing applicant.
+
+(a) Before a CRA can request CORI from DCJIS on behalf of a landlord, property
+management company, real estate agent, or public housing authority, the housing entity shall:
+
+1. Register for an iCORI account and designate the CRA as an entity authorized to
+   perform CORI checks on its behalf;
+
+2. Notify the housing applicant, in writing and in a separate document consisting solely
+   of this notice, that a consumer report may be used in the housing decision making
+   process;
+
+3. Obtain the housing applicant's separate written authorization to conduct background
+   screening before asking a CRA for the report about the subject. A landlord, property
+   management company, real estate agent, or public housing authority shall not substitute
+   the CORI Acknowledgment Form for this written authorization; and
+
+4. Obtain a signed CORI Acknowledgment Form and follow all requirements pertaining
+   to verification of identity as set forth in 803 CMR 2.11: _Requirements for Requestors to_ _Request CORI_.
+
+
+(b) A landlord, property management company, real estate agent, or public housing
+authority shall also provide required information to the CRA before requesting CORI through
+the CRA.
+
+1. The housing entity shall certify to the CRA that it is in compliance with the Federal
+   Fair Credit Reporting Act (FCRA), 15 U.S.C. § 1681;
+
+2. The housing entity shall certify to the CRA that it will not misuse any information
+   in the report in violation of federal or state laws or regulations; and
+
+3. The housing entity shall provide accurate identifying information for the housing
+   applicant to the CRA and the purpose for which the subject's CORI is being requested.
+
+
+## 5.16: Audits by the Department of Criminal Justice Information Services (DCJIS)
+
+Any landlord, property management company, real estate agent, or public housing authority
+that obtains CORI from DCJIS shall be subject to audit as described in 803 CMR 2.23: _Audits_ _by DCJIS_.
+
+## 5.17: Landlord, Property Management Company, Real Estate Agent, or Public Housing Authority Access to CORI for Purposes Other than the Evaluation of a Housing Applicant
+
+Nothing in 803 CMR 5.00 shall limit the ability of a landlord, property management
+company, real estate agent, or public housing authority to access CORI pursuant to any other
+section of 803 CMR 2.00: _Criminal Offender Record Information (CORI)_ including, but not
+limited to, access as an employer or member of the general public.
+
+## 5.18: Waiver of Certain Fees for Veterans Organizations
+
+Pursuant to M.G.L. c. 6, § 172A, and 803 CMR 2.04(10), no fee shall be assessed for a CORI
+or self-audit where any veterans organization is requesting information relative to employees,
+volunteers, or veterans for which such organization provides housing.
+
+6/11/21
+
+* * *
+
+# 803 CMR: DEPARTMENT OF CRIMINAL JUSTICE INFORMATION SERVICES
+
+## 5.19: Severability
+
+If any provision of 803 CMR 5.00, or the application thereof, is held to be invalid, such
+invalidity shall not affect the other provisions or the application of any other part of 803 CMR
+5.00 not specifically held invalid and, to this end, the provisions of 803 CMR 5.00 and various
+applications thereof are declared to be severable.
+
+## REGULATORY AUTHORITY
+
+803 CMR 5.00: M.G.L. c. 6, §§ 167A and 172.
+
+6/11/21

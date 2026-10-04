@@ -1,0 +1,46 @@
+{
+ "doc_id": "D012",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:46:36+00:00",
+ "prompt_sha256": "f3e5ab3f43800b8894eb4029200ebea7c95d9afe78d322efb363418e5cce2871",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "Boston, MA",
+    "level": "city",
+    "category": "screening_restrictions",
+    "status": "in_force",
+    "title": "Boston fair housing protection for renters using rental assistance (source of income)",
+    "requirement": "In Boston, housing providers may not discriminate against applicants or tenants because they use rental assistance. Refusing to accept rental assistance, including Section 8 vouchers, social security disability vouchers and veterans vouchers, counts as housing discrimination. Complaints can be filed with the Boston Fair Housing Commission, which investigates and tries to resolve them.",
+    "key_value": "Cannot refuse tenants because they use rental assistance (Section 8, disability or veterans vouchers)",
+    "coverage_conditions": "Housing in the City of Boston; the page states no unit-count or other coverage conditions.",
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": null
+    },
+    "exemptions": null,
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": "The Commission enforces local, state and federal fair housing laws. Discrimination outside Boston must be filed with the state.",
+    "effective_date": null,
+    "citation": "Boston Fair Housing Regulations (Boston.gov)",
+    "quoted_span": "The landlord tells you they don't accept rental assistance.",
+    "penalty": "Complaint investigated by the Boston Fair Housing Commission; if discrimination is found, the Commission tries to resolve the complaint.",
+    "confidence": 0.6,
+    "conflict_note": null
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

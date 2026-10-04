@@ -1,0 +1,46 @@
+{
+ "doc_id": "D065",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:48:49+00:00",
+ "prompt_sha256": "46b00871662f72e4e6ce290f17ef0df4b8bfe7919c32fde2a3d450aef63f95e4",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "NJ",
+    "level": "state",
+    "category": "screening_restrictions",
+    "status": "in_force",
+    "title": "Fair Chance in Housing Act",
+    "requirement": "Housing providers may not ask about an applicant's criminal record, orally, in writing or on an application, until after a conditional offer. Exceptions: lifetime sex-offender registration and methamphetamine production on federally assisted housing premises. Providers may never consider arrests or charges without conviction, expunged, pardoned, vacated or sealed records, or juvenile adjudications. After a conditional offer, they may consider only: listed serious convictions (murder, aggravated sexual assault, kidnapping, arson, human trafficking, etc.) or lifetime sex-offender registration; first-degree offenses within 6 years; second- or third-degree offenses within 4 years; and fourth-degree offenses within 1 year. A conditional offer may be withdrawn only if, after an individualized assessment of listed factors, withdrawal is necessary to fulfill a substantial, legitimate, nondiscriminatory interest (preponderance of the evidence). Withdrawal requires a written notice stating the reasons and giving an opportunity to appeal. On request within 30 days, the provider must give the applicant a free copy of the information it relied on within 10 days. Before accepting any application fee, the provider must disclose in writing whether criminal history is considered and that the applicant may submit evidence of inaccuracy or rehabilitation. Ads stating that people with arrests or convictions will not be considered are prohibited. Requiring drug or alcohol tests, or consent to obtain drug-treatment records, is prohibited.",
+    "key_value": "Ban on criminal-history inquiry before conditional offer; post-offer lookback limited to 6 yrs (1st degree) / 4 yrs (2nd-3rd degree) / 1 yr (4th degree), plus listed serious offenses",
+    "coverage_conditions": "Applies to rental dwelling units other than units in owner-occupied premises of not more than four dwelling units.",
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": true,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": 4
+    },
+    "exemptions": "Dwelling units in owner-occupied premises of not more than four dwelling units. Inquiry is allowed on lifetime sex-offender registration and on methamphetamine manufacture on federally assisted housing premises.",
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": "Enforced only through complaints to the NJ Division on Civil Rights; no private court action. Rights under the NJ Law Against Discrimination (C.10:5-1 et seq.) are preserved.",
+    "effective_date": "2022-01-01",
+    "citation": "P.L.2021, c.110 (N.J.S.A. 46:8-52 to -64)",
+    "quoted_span": "A housing\nprovider\nshall not make any oral or written inquiry\nregarding an applicant’s criminal record prior to making a conditional offer.",
+    "penalty": "Civil penalties set by the DCR Director: up to $1,000 for a first violation; up to $5,000 if one prior violation within 5 years; up to $10,000 if two or more prior violations within 7 years. Other remedies: cease and desist order, reissuing the offer or unit, refund of the application fee, and up to $1,000 paid to the applicant. A 14-day mediation opportunity is offered before any penalty.",
+    "confidence": 0.88,
+    "conflict_note": "Effective date computed from the act's section 14: first day of the seventh month after approval on June 18, 2021, giving 2022-01-01."
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

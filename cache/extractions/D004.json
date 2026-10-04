@@ -1,0 +1,77 @@
+{
+ "doc_id": "D004",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:46:08+00:00",
+ "prompt_sha256": "8be6c1271cd0f7c15ce1c49105c5f67adb29598e8a605b491e1250998500ae15",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "Berkeley, CA",
+    "level": "city",
+    "category": "just_cause_eviction",
+    "status": "in_force",
+    "title": "Berkeley Rent Stabilization and Good Cause for Eviction Ordinance – owner move-in relocation assistance (2026 inflation adjustment)",
+    "requirement": "Owners who evict a tenant for owner move-in must pay relocation assistance. The amount is indexed to inflation and adjusted each year by the Rent Board. From January 1, 2026 the standard payment is $19,413, and qualifying households receive an additional $6,471. This reflects a 1.5% CPI adjustment.",
+    "key_value": "$19,413 standard OMI relocation payment; +$6,471 for qualifying households (effective 2026-01-01)",
+    "coverage_conditions": "Units covered by Berkeley's Rent Stabilization and Good Cause for Eviction Ordinance where the tenant is evicted for owner move-in",
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": null
+    },
+    "exemptions": null,
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": "The Ellis Implementation Ordinance requires the same payment amounts for Ellis Act withdrawals.",
+    "effective_date": "2026-01-01",
+    "citation": "Berkeley Mun. Code ch. 13.76",
+    "quoted_span": "The Rent Stabilization and Good Cause for Eviction Ordinance requires owners to pay tenants relocation assistance in the event of an owner move-in eviction.",
+    "penalty": null,
+    "confidence": 0.75,
+    "conflict_note": null
+   },
+   {
+    "jurisdiction": "Berkeley, CA",
+    "level": "city",
+    "category": "just_cause_eviction",
+    "status": "in_force",
+    "title": "Berkeley Ellis Implementation Ordinance – relocation assistance for Ellis Act withdrawals (2026 inflation adjustment)",
+    "requirement": "Owners who evict tenants to remove a property from the rental market under the Ellis Act must pay the same relocation assistance as for owner move-in evictions. The amount is indexed to inflation. From January 1, 2026 the standard payment is $19,413, and qualifying households receive an additional $6,471.",
+    "key_value": "$19,413 standard Ellis relocation payment; +$6,471 for qualifying households (effective 2026-01-01)",
+    "coverage_conditions": "Tenants evicted so the owner can withdraw the property from the rental housing market (Ellis Act)",
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": null
+    },
+    "exemptions": null,
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": "Payment amounts mirror the owner move-in relocation payments under the Rent Stabilization and Good Cause for Eviction Ordinance.",
+    "effective_date": "2026-01-01",
+    "citation": "Berkeley Mun. Code ch. 13.77",
+    "quoted_span": "The Ellis Implementation Ordinance requires the same relocation assistance payments for tenants evicted so the owner can remove a property from the rental housing market.",
+    "penalty": null,
+    "confidence": 0.7,
+    "conflict_note": null
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

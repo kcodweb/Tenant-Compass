@@ -1,0 +1,14 @@
+{
+ "doc_id": "D053",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:48:08+00:00",
+ "prompt_sha256": "75d32068f7bcfd2d80ec02d4cb9c5329675878581be0bc432e14331026e6a099",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [],
+  "no_rule_findings": []
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "doc_id": "D078",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:48:58+00:00",
+ "prompt_sha256": "1d2af9fec361b04cf6849ea22b05ec7a303cf1194447c51ab7fb7251c0ee82b4",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "San Francisco, CA",
+    "level": "city",
+    "category": "screening_restrictions",
+    "status": "in_force",
+    "title": "San Francisco Fair Chance Ordinance (housing)",
+    "requirement": "Limits how housing providers may use arrest or conviction history when making decisions about affordable housing. This page gives only a one-line summary and does not state the specific procedures or limits.",
+    "key_value": "Restricts use of arrest/conviction history in affordable housing decisions",
+    "coverage_conditions": "Applies to affordable housing decisions only, per this page's summary.",
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": true,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": null
+    },
+    "exemptions": null,
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": null,
+    "effective_date": null,
+    "citation": "S.F. Police Code art. 49",
+    "quoted_span": "San Francisco's Fair Chance Ordinance protects residents with arrest or conviction history in affordable housing decisions.",
+    "penalty": null,
+    "confidence": 0.55,
+    "conflict_note": null
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

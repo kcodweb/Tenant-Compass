@@ -1,0 +1,53 @@
+{
+ "doc_id": "D059",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:48:23+00:00",
+ "prompt_sha256": "05ea0da0ca33a8cadf5f4b0e84dc83dc028db8d04b3cf85e3f2a187daa700954",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "MA",
+    "level": "state",
+    "category": "rent_increase_limits",
+    "status": "failed",
+    "title": "2026 statewide rent control ballot question (struck by Supreme Judicial Court)",
+    "requirement": "Proposed initiative petition would have limited annual rent increases for residences statewide. The Supreme Judicial Court ruled in June 2026 that it cannot go on the November 2026 ballot because its religious exemption makes it 'relate to religion,' which the state Constitution bars from initiative petitions. No statewide rent cap results from this proposal.",
+    "key_value": "Proposed annual rent increase limit (amount not stated); struck from ballot, not enacted",
+    "coverage_conditions": "Would have applied to residences generally, with exemptions for several types of units",
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": null
+    },
+    "exemptions": "Proposal carved out several types of units, including ones operated solely for religious purposes, plus other secular exemptions (not detailed in the article).",
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": "Proponents indicated they may file another rent control petition for the 2028 statewide ballot. A compromise bill urged on lawmakers before July 1 did not advance, per the article.",
+    "effective_date": null,
+    "citation": "High court derails rent control ballot question, citing mention of religion",
+    "quoted_span": "The state’s Supreme Judicial Court ruled a ballot question seeking to bring rent control back to Massachusetts cannot go forward this November, because it includes a religious exemption.",
+    "penalty": null,
+    "confidence": 0.8,
+    "conflict_note": null
+   }
+  ],
+  "no_rule_findings": [
+   {
+    "jurisdiction": "MA",
+    "category": "rent_increase_limits",
+    "finding": "The article indicates Massachusetts currently has no rent control: the ballot question sought to bring it back, and that question was struck from the 2026 ballot.",
+    "quoted_span": "a ballot question seeking to bring rent control back to Massachusetts cannot go forward this November"
+   }
+  ]
+ }
+}

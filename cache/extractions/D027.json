@@ -1,0 +1,46 @@
+{
+ "doc_id": "D027",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:47:19+00:00",
+ "prompt_sha256": "5a437fa9dbec3cb3671eb3ae7f0e17d3843e328143212fbcf1eac7b1330ea3dd",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "CA",
+    "level": "state",
+    "category": "screening_restrictions",
+    "status": "in_force",
+    "title": "California FEHA housing discrimination: source-of-income protection and credit-history alternatives for subsidized applicants",
+    "requirement": "Owners may not discriminate against applicants or tenants based on source of income. Source of income means lawful, verifiable income, including public assistance and housing subsidies such as Section 8 vouchers and HUD-VASH vouchers. Owners may not publish ads stating a source-of-income preference or limitation. Income standards must count the combined income of people who will live together, on the same basis as married couples. Where there is a government rent subsidy, owners must apply income standards only to the tenant's share of the rent. They also may not use credit history unless they offer the applicant the option of providing alternative evidence of ability to pay that share, such as benefit payments, pay records, or bank statements. They must give reasonable time to provide that evidence and must reasonably consider it in place of credit history. Owners may still ask about the level or source of income, verify employment, request landlord references, and verify identity.",
+    "key_value": "Source-of-income discrimination (including Section 8/HUD-VASH vouchers) prohibited; for subsidized applicants, income tests apply only to the tenant's rent portion and alternative evidence must be accepted in lieu of credit history",
+    "coverage_conditions": "Applies to owners of housing accommodations in California. The subsidy-specific provisions apply where the applicant has a government rent subsidy.",
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": null
+    },
+    "exemptions": "An inquiry about the level or source of income is not source-of-income discrimination. Owners may still verify employment, request landlord references, and verify identity. A landlord is not considered a tenant's representative unless the income is a HUD-VASH voucher.",
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": null,
+    "effective_date": "2024-01-01",
+    "citation": "Cal. Gov. Code § 12955",
+    "quoted_span": "including federal, state, or local public assistance, and federal, state, or local housing subsidies, including, but not limited to, federal housing assistance vouchers issued under Section 8 of the United States Housing Act of 1937 (42 U.S.C. Sec. 1437f).",
+    "penalty": null,
+    "confidence": 0.8,
+    "conflict_note": "The document shows only the latest amendment (Stats. 2023, Ch. 776, SB 267, effective January 1, 2024), which applies to the credit-history alternative-evidence provision. The underlying source-of-income protection predates that amendment, but this document does not give its original effective date."
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

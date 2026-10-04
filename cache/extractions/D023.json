@@ -1,0 +1,46 @@
+{
+ "doc_id": "D023",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:47:14+00:00",
+ "prompt_sha256": "9070a3e72047e3a1cc950f74211580997d4412d3d5de51edb266d346922dd144",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "CA",
+    "level": "state",
+    "category": "just_cause_eviction",
+    "status": "in_force",
+    "title": "California Tenant Protection Act – just cause for termination of tenancy",
+    "requirement": "After a tenant has continuously and lawfully occupied the unit for 12 months (or, if adult tenants were added before 24 months, all tenants for 12 months or one tenant for 24 months), the owner may not terminate the tenancy without an at-fault or no-fault just cause, which must be stated in the written termination notice. Curable lease violations require a notice and opportunity to cure first. For no-fault terminations (owner/relative move-in, withdrawal from rental market, government order, demolition or substantial remodel), the owner must either pay relocation assistance equal to one month's rent within 15 calendar days of service of the notice or waive the final month's rent, and must tell the tenant of this right in the notice. Owner move-in requires that the intended occupant move in within 90 days and live there 12 months, or the unit must be re-offered at the same rent with reimbursement of moving expenses. Substantial remodel notices must include specified statements, a description of the work and permits. Owners must give tenants a specified notice of these protections in at least 12-point type. Waivers are void.",
+    "key_value": "Just cause required after 12 months of occupancy; no-fault terminations require relocation assistance or rent waiver equal to one month's rent",
+    "coverage_conditions": "Residential real property where the tenant has occupied 12+ months; excludes housing with a certificate of occupancy within the previous 15 years and property covered by a local just cause ordinance (pre-9/1/2019, or later and more protective).",
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": 15,
+     "owner_fact_dependent": true,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": 2
+    },
+    "exemptions": "Transient/tourist hotels; nonprofit hospitals, religious, extended care, licensed elder/adult residential facilities; school/university dormitories; units where tenant shares bath or kitchen with resident owner; single-family owner-occupied residences renting no more than two units or bedrooms (including ADU/JADU) and mobilehomes; owner-occupied duplex (owner occupied one unit at start of tenancy and continues); housing with certificate of occupancy within previous 15 years (unless a mobilehome); separately alienable units (e.g., single-family homes, condos) not owned by a REIT, corporation, or LLC with a corporate member, if tenants received the statutory exemption notice; deed-restricted or subsidized affordable housing; homeowners of mobilehomes; property subject to a qualifying local just cause ordinance.",
+    "yields_to_local": true,
+    "may_preempt_local": true,
+    "interaction": "Does not apply where a local just cause ordinance adopted on or before September 1, 2019 applies, or where a later-adopted or amended local ordinance is more protective (with a binding local finding), in which case the local ordinance applies. A property cannot be subject to both. Local ordinances adopted after September 1, 2019 that are less protective may not be enforced unless this section is repealed. Relocation assistance under this section is credited against relocation required by other law.",
+    "effective_date": "2024-04-01",
+    "citation": "Cal. Civ. Code § 1946.2",
+    "quoted_span": "Notwithstanding any other law, after a tenant has continuously and lawfully occupied a residential real property for 12 months, the owner of the residential real property shall not terminate a tenancy without just cause, which shall be stated in the written notice to terminate tenancy.",
+    "penalty": "Termination notice void for noncompliance (and for failure to strictly comply with relocation rules); owner who attempts to recover possession in material violation is liable for actual damages, discretionary attorney's fees and costs, up to treble damages for willful/oppressive/fraudulent/malicious conduct, and punitive damages; Attorney General, city attorney or county counsel may seek injunctive relief.",
+    "confidence": 0.85,
+    "conflict_note": "The document states this version of the section became operative April 1, 2024, and was most recently amended by Stats. 2025, Ch. 203 (AB 1529), effective January 1, 2026. The core 12-month just cause requirement dates from the original Tenant Protection Act (2020), but the document does not state that date. The section sunsets and is repealed as of January 1, 2030. Subdivision (i)(3) bars enforcement of local just cause ordinances adopted after September 1, 2019 that are less protective than this section. That is a partial preemption of weaker local rules, which a reviewer should verify against each city ordinance."
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "doc_id": "D087",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:49:31+00:00",
+ "prompt_sha256": "702a665eb9f0d29854f28bd2911d44ae4f3c1cb08e65ff06b484f9cfb1b32ec1",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "Santa Ana, CA",
+    "level": "city",
+    "category": "algorithmic_rent_setting",
+    "status": "pending",
+    "title": "Santa Ana ordinance banning algorithmic rent-setting software",
+    "requirement": "Prohibits the sale, licensing, provision and use of algorithmic rent-setting software that sets rental rates using nonpublic competitor data (e.g., real-time rents, lease renewals, occupancy levels) for residential rental property within Santa Ana city limits. Tenants may sue directly and need only prove the landlord used prohibited technology, not intentional collusion.",
+    "key_value": "Ban on sale, licensing, provision and use of rent-setting software using nonpublic competitor data",
+    "coverage_conditions": "Residential rental property within Santa Ana city limits",
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": null
+    },
+    "exemptions": "Does not apply to pricing software that relies solely on publicly available data, aggregate historical data, or tools used to comply with affordable housing program requirements.",
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": "Structured to operate alongside existing and proposed state antitrust laws while providing stronger local protections.",
+    "effective_date": null,
+    "citation": "Santa Ana City Council continues to strengthen tenant protections by banning anticompetitive rent-setting software",
+    "quoted_span": "prohibits the sale, licensing, provision and use of certain algorithmic rent-setting software for residential rental properties",
+    "penalty": "Affected tenant may seek injunctive relief, damages, or civil penalties of up to $1,000 per violation, plus attorney's fees.",
+    "confidence": 0.5,
+    "conflict_note": "Article (Feb. 24, 2026) reports only first-reading approval on Feb. 17, 2026 with final vote set for March 3, 2026; document does not confirm final adoption or an effective date, so status is recorded as pending. Verify whether the ordinance was adopted and its ordinance number/effective date."
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

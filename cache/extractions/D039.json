@@ -1,0 +1,77 @@
+{
+ "doc_id": "D039",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:47:37+00:00",
+ "prompt_sha256": "7a4cd3c94b1be2102705274393d3b8fb3844be97d3eaf97ae82b76ab3c502ee4",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "Los Angeles, CA",
+    "level": "city",
+    "category": "algorithmic_rent_setting",
+    "status": "pending",
+    "title": "Motion requesting report on feasibility of banning algorithm-based rent-setting software (Council File 24-1031)",
+    "requirement": "No ban is enacted. The motion asks the City Council to instruct the Los Angeles Housing Department to report on how many ownership and management entities use algorithm-based software to set rents, and on whether a ban on using such software to set rents in the City is feasible.",
+    "key_value": "Proposed study of a ban on algorithmic rent-setting software; no rule adopted",
+    "coverage_conditions": null,
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": null
+    },
+    "exemptions": null,
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": null,
+    "effective_date": null,
+    "citation": "L.A. Council File 24-1031 (Motion, Sept. 3, 2024)",
+    "quoted_span": "the feasibility of instituting a ban on the use of this software to set",
+    "penalty": null,
+    "confidence": 0.55,
+    "conflict_note": null
+   },
+   {
+    "jurisdiction": "San Francisco, CA",
+    "level": "city",
+    "category": "algorithmic_rent_setting",
+    "status": "in_force",
+    "title": "San Francisco ban on algorithmic rent-setting tools",
+    "requirement": "Bans property owners and managers from using algorithm-based tools that recommend or set rental prices.",
+    "key_value": "Ban on algorithm-based tools that recommend or set rents",
+    "coverage_conditions": null,
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": null
+    },
+    "exemptions": null,
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": null,
+    "effective_date": null,
+    "citation": "S.F. Admin. Code § 37.10C",
+    "quoted_span": "legislation to ban property owners and managers from using algorithm-based tools that recommend",
+    "penalty": null,
+    "confidence": 0.4,
+    "conflict_note": "This is a secondary mention in a Los Angeles motion. The motion says only that the Board of Supervisors 'approved' the legislation in July 2024. It gives no signing date, effective date or code section, so the in_force status and the citation are inferred and should be verified against the San Francisco ordinance."
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

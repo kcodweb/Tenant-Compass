@@ -1,0 +1,77 @@
+{
+ "doc_id": "D082",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:49:23+00:00",
+ "prompt_sha256": "85dfe5a3664a69c735af9815e3e3e2c4501f7773c844ab41d7a01632d9703040",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "San Francisco, CA",
+    "level": "city",
+    "category": "just_cause_eviction",
+    "status": "in_force",
+    "title": "SF Rent Ordinance relocation payments for owner/relative move-in, demolition/permanent removal, temporary capital improvement, and substantial rehabilitation evictions",
+    "requirement": "Landlords must pay relocation to tenants evicted for owner/relative move-in, demolition or permanent removal of the unit from housing use, temporary capital improvement work, or substantial rehabilitation. The amount depends on the date the eviction notice is served and is adjusted each March 1. For notices served 3/01/26 through 2/28/27: $8,245.00 per tenant, up to $24,733.00 per unit. Add $5,497.00 for each elderly (60 or older) or disabled tenant or household with minor children.",
+    "key_value": "$8,245.00 per tenant; max $24,733.00 per unit; plus $5,497.00 per elderly (60+)/disabled tenant or household with minor child(ren) (notices served 3/01/26–2/28/27)",
+    "coverage_conditions": "Units subject to SF Rent Ordinance eviction controls; applies by date of service of the eviction notice",
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": null
+    },
+    "exemptions": "Relocation for temporary capital improvement evictions of less than 20 days is governed by Cal. Civ. Code § 1947.9, not § 37.9C.",
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": "Temporary capital improvement displacements under 20 days are governed by state law (Cal. Civ. Code § 1947.9) instead.",
+    "effective_date": "2026-03-01",
+    "citation": "S.F. Admin. Code § 37.9C",
+    "quoted_span": "*The amount of relocation payments for temporary capital improvement evictions for less than 20 days is governed by California Civil Code Section 1947.9 and not by Rent Ordinance Section 37.9C.",
+    "penalty": null,
+    "confidence": 0.75,
+    "conflict_note": null
+   },
+   {
+    "jurisdiction": "San Francisco, CA",
+    "level": "city",
+    "category": "just_cause_eviction",
+    "status": "in_force",
+    "title": "SF Rent Ordinance relocation payments for Ellis Act evictions",
+    "requirement": "Landlords must pay relocation to tenants evicted under the Ellis Act (withdrawal of units from the rental market). The amount depends on the date the eviction notice is served and is adjusted each March 1. For notices served 3/01/26 through 2/28/27: $11,110.05 per tenant, up to $33,330.13 per unit. Add $7,443.90 for each elderly (62 or older) or disabled tenant.",
+    "key_value": "$11,110.05 per tenant; max $33,330.13 per unit; plus $7,443.90 per elderly (62+) or disabled tenant (notices served 3/01/26–2/28/27)",
+    "coverage_conditions": "Units withdrawn from the rental market under the Ellis Act; applies by date of service of the eviction notice",
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": null
+    },
+    "exemptions": null,
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": null,
+    "effective_date": "2026-03-01",
+    "citation": "S.F. Admin. Code § 37.9A",
+    "quoted_span": "Relocation payments for tenants evicted under the Ellis Act",
+    "penalty": null,
+    "confidence": 0.7,
+    "conflict_note": null
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "doc_id": "D025",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:47:13+00:00",
+ "prompt_sha256": "f774addea0654c72116d1dbc7d6ffcb9bd0f4a3142dbd74921cef1bc98361bd3",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "CA",
+    "level": "state",
+    "category": "security_deposits",
+    "status": "in_force",
+    "title": "California security deposit limits and return rules (Civil Code 1950.5)",
+    "requirement": "A landlord may not demand or receive security, however labeled, of more than one month's rent on top of first month's rent. A small landlord may charge up to two months' rent if it is a natural person, or an LLC whose members are all natural persons, and owns no more than two residential rental properties with no more than 4 units in total. That exception does not apply to service member tenants. An advance payment of at least six months' rent is allowed on leases of six months or longer. Since April 1, 2025, a higher deposit charged to a service member must be explained in writing and returned after 6 months without rent arrears. Deductions are limited to unpaid rent, tenant-caused damage beyond ordinary wear and tear, cleaning to move-in condition, and restoring personal property. The tenant may request an initial pre-move-out inspection and must receive an itemized statement of proposed deductions. Landlords must photograph the unit at move-in (tenancies beginning on or after July 1, 2025), after move-out, and after repairs. Within 21 calendar days after move-out, the landlord must give an itemized statement with receipts and invoices and return the balance, electronically if the deposit or rent was paid electronically. On sale or transfer, the deposit must be transferred to the successor or returned. Deposits may not be called nonrefundable.",
+    "key_value": "Max deposit = 1 month's rent (2 months for qualifying small natural-person landlords); return within 21 days",
+    "coverage_conditions": "Applies to security for any residential rental used as the tenant's dwelling. The 2-month cap applies only if the landlord is a natural person or an all-natural-person LLC owning no more than two rental properties with no more than 4 units in total, and never to service member tenants.",
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": true,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": 4
+    },
+    "exemptions": "The cap does not apply to security collected or demanded before July 1, 2024. Advance payment of at least 6 months' rent is permitted for leases of 6+ months. Fees for tenant-requested alterations are permitted. Application screening fees fall under Section 1950.6. Inspection requirements do not apply to terminations under CCP 1161(2)-(4). Documentation requirements do not apply if deductions are $125 or less or the tenant validly waived them.",
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": null,
+    "effective_date": "2024-07-01",
+    "citation": "Cal. Civ. Code § 1950.5",
+    "quoted_span": "a landlord shall not demand or receive security, however denominated, in an amount or value in excess of an amount equal to one month’s rent, in addition to any rent for the first month paid on or before initial occupancy.",
+    "penalty": "Bad faith retention or claim may result in statutory damages of up to twice the amount of the security plus actual damages. A landlord who in bad faith fails to comply with the itemization and return rules forfeits any claim to the security.",
+    "confidence": 0.85,
+    "conflict_note": "The one-month cap's effective date (2024-07-01) is derived from subdivision (c)(6), which exempts security collected before July 1, 2024. The section was most recently amended by Stats. 2025, Ch. 340 (AB 414), effective January 1, 2026. The photo requirements took effect April 1, 2025 and July 1, 2025."
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

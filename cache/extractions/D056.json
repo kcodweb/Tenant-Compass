@@ -1,0 +1,46 @@
+{
+ "doc_id": "D056",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:48:21+00:00",
+ "prompt_sha256": "fa11c343ce1ab9779fd50d4ba6fd05f8d93c5609d8d767d5aa8de97d97ba5e41",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "MA",
+    "level": "state",
+    "category": "screening_restrictions",
+    "status": "in_force",
+    "title": "803 CMR 5.00: Criminal Offender Record Information (CORI) – Housing",
+    "requirement": "Landlords, property management companies and real estate agents may request standard-access CORI on a market-rate housing applicant only as the final step in the application process, and only to decide whether to rent to that applicant. Standard-access CORI may not be used to screen other household members (open-access CORI may be used for them). Before asking the applicant any questions about criminal history, and before any adverse decision based on CORI or other criminal history, the housing provider must give the applicant a copy of the record and disclose its source. Before an adverse action, the provider must also: notify the applicant; give FCRA pre-adverse-action disclosures if a consumer reporting agency was used; give a copy of its CORI policy if applicable; identify the information relied on; let the applicant dispute its accuracy; give DCJIS information on correcting CORI; and document these steps. Other requirements: a signed CORI Acknowledgment Form (kept at least 1 year), a CORI policy and need-to-know list, retention limited to 7 years, restricted dissemination with a secondary dissemination log, and separate written notice and authorization when a CRA is used. Public housing authorities and subsidized-program managers use required-access CORI under parallel rules.",
+    "key_value": "CORI only as final step of application; copy of record and its source must be given before questioning or any adverse decision",
+    "coverage_conditions": "Applies to landlords, real estate agents, public housing authorities and property management companies that request CORI to screen rental applicants; market-rate and subsidized housing have separate access tiers.",
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": null
+    },
+    "exemptions": "Subsidized housing operated by public housing authorities or qualifying property managers follows 5.05 (required-access CORI, screening only as provided by state and federal law). Housing with a voucher tenant counts as market-rate housing. Nothing limits CORI access for other purposes (e.g., as an employer or member of the public). An adverse decision may be based on an applicant's refusal to consent to a lawful CORI request.",
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": "Applies to CORI obtained from DCJIS; the copy-and-disclosure duties in 5.10 and 5.14 also extend to other criminal history information, including reports from consumer reporting agencies.",
+    "effective_date": null,
+    "citation": "803 CMR 5.00",
+    "quoted_span": "CORI shall only be requested for a housing applicant as the final step in the application",
+    "penalty": "Subject to DCJIS audit (803 CMR 5.16). Improper access to or dissemination of national criminal history information may result in criminal and civil sanctions.",
+    "confidence": 0.8,
+    "conflict_note": null
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

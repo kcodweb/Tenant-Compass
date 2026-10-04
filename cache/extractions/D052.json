@@ -1,0 +1,77 @@
+{
+ "doc_id": "D052",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:48:29+00:00",
+ "prompt_sha256": "e545e2362b29b1e80887a992a121e6c736eb6aa25a4c178152b3ccc33e1ce5be",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "MA",
+    "level": "state",
+    "category": "security_deposits",
+    "status": "in_force",
+    "title": "Massachusetts security deposit law",
+    "requirement": "A security deposit may not exceed one month's rent. It must be held in a separate interest-bearing Massachusetts bank account, beyond the reach of the lessor's creditors. The lessor must give: a receipt for the deposit; a statement of condition within 10 days of tenancy start; and a bank receipt within 30 days. Tenants earn 5% interest per year (or the lesser rate the bank pays), paid annually; the same interest rule applies to last month's rent paid in advance. The lessor must keep deposit records for 2 years. The deposit must be returned within 30 days after the tenancy ends. Allowed deductions are limited to unpaid rent or water charges, tax-escalation amounts, and reasonable repair of tenant-caused damage (excluding reasonable wear and tear), backed by a sworn itemized list. The deposit must be transferred to a buyer or other successor owner. Lease waivers of these rules are void. EOHLC may adopt regulations allowing an optional fee in lieu of a deposit, capped at 1 month's rent in total.",
+    "key_value": "Max deposit = 1 month's rent; 5% annual interest (or bank rate if lower); return within 30 days of termination",
+    "coverage_conditions": "All residential leases/tenancies except vacation/recreational rentals of 100 days or less",
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": null
+    },
+    "exemptions": "Leases, rentals, occupancies or tenancies of 100 days or less for vacation or recreational purposes (subsection 9).",
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": null,
+    "effective_date": null,
+    "citation": "G.L. c.186 § 15B",
+    "quoted_span": "a security deposit equal to the first month's rent provided that such security deposit is deposited as required by subsection (3) and that the tenant is given the statement of condition as required by subsection (2)",
+    "penalty": "Lessor forfeits the right to retain any portion of the deposit for listed violations. For failure to deposit properly, failure to transfer, or failure to return within 30 days, the tenant recovers 3x the deposit plus 5% interest, court costs and reasonable attorney's fees. Failure to pay interest within 30 days of termination brings treble interest damages plus costs and fees. Failure to give the bank receipt, or to make records available, entitles the tenant to immediate return of the deposit.",
+    "confidence": 0.9,
+    "conflict_note": null
+   },
+   {
+    "jurisdiction": "MA",
+    "level": "state",
+    "category": "application_screening_fees",
+    "status": "in_force",
+    "title": "Limit on upfront charges at start of tenancy (including payments to lessor's agents/brokers)",
+    "requirement": "At or before the start of any tenancy, no lessor or agent of the lessor may require a tenant or prospective tenant to pay the lessor or the lessor's agent more than: first month's rent; last month's rent at the same rate; a security deposit equal to one month's rent; and the purchase and installation cost of a key and lock. After the tenancy begins, no rent in advance beyond the current month may be demanded. A receipt is required for last month's rent paid in advance.",
+    "key_value": "Upfront charges limited to first month's rent, last month's rent, security deposit (max 1 month), and lock/key cost; applies to payments to the lessor's agent (e.g., broker) as of 2025-08-01",
+    "coverage_conditions": "All residential tenancies except vacation/recreational rentals of 100 days or less",
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": null
+    },
+    "exemptions": "Vacation or recreational rentals of 100 days or less (subsection 9).",
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": null,
+    "effective_date": "2025-08-01",
+    "citation": "G.L. c.186 § 15B(1)(b), as amended by St. 2025, c.9, §§ 54-55",
+    "quoted_span": "(b) At or prior to the commencement of any tenancy, no lessor or agent of the lessor may require a tenant or prospective tenant to pay, to the lessor or to an agent of the lessor, any amount in excess of the following:",
+    "penalty": null,
+    "confidence": 0.85,
+    "conflict_note": "The upfront-charge limit on lessors predates the amendment (original date not stated). St. 2025, c.9, §§ 54-55 extended it to agents of the lessor effective August 1, 2025 per the document's note; that date is used here."
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

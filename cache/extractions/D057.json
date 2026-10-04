@@ -1,0 +1,46 @@
+{
+ "doc_id": "D057",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:48:15+00:00",
+ "prompt_sha256": "0474e5d38803eda41f5c1cecd960aabafba45745d335869dc97ab7bfcf8acbc4",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "MA",
+    "level": "state",
+    "category": "application_screening_fees",
+    "status": "in_force",
+    "title": "Broker fees paid only by the party that hired the broker (rental brokers)",
+    "requirement": "A rental broker fee may be paid only by the party (landlord or tenant) who originally engaged and contracted with the licensed broker or salesperson. A broker may contract solely with the prospective tenant or solely with the landlord or landlord's agent. Only licensed brokers or salespersons may engage in the business of finding dwelling accommodations for prospective tenants for a fee.",
+    "key_value": "Broker fee payable only by the party who engaged the broker (landlord-hired broker cannot charge the tenant)",
+    "coverage_conditions": null,
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": null
+    },
+    "exemptions": null,
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": null,
+    "effective_date": "2025-08-01",
+    "citation": "G.L. c.112 § 87DDD1/2",
+    "quoted_span": "Any fee shall only be paid by the party, lessor or tenant who originally engaged and entered into a contract with the licensed broker or salesperson.",
+    "penalty": null,
+    "confidence": 0.9,
+    "conflict_note": null
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

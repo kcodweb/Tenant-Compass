@@ -1,0 +1,46 @@
+{
+ "doc_id": "D076",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:49:02+00:00",
+ "prompt_sha256": "a3337f3a0df578aa49caf94863ecd4d0e212d5ba0cc1b4d65321e32418961372",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "San Diego, CA",
+    "level": "city",
+    "category": "algorithmic_rent_setting",
+    "status": "pending",
+    "title": "Prohibition of Anti-Competitive Automated Rent Price-Fixing Ordinance (proposed S.D. Mun. Code ch. 9, art. 8, div. 11)",
+    "requirement": "Proposed ordinance would make it unlawful for any person to sell, license, or otherwise provide an algorithmic device to a landlord, and unlawful for a landlord to use an algorithmic device to set rental rates or occupancy levels for residential rental property in San Diego. An algorithmic device is software or a product that uses algorithms to perform calculations of nonpublic competitor data (actual rents, rent changes, supply, occupancy, lease start/end dates) to advise or recommend rental rates or occupancy levels. Each month of use and each property counts as a separate violation.",
+    "key_value": "Ban on sale, licensing and landlord use of rent-setting algorithms that use nonpublic competitor data",
+    "coverage_conditions": "All residential rental property in the City of San Diego (as defined in S.D. Mun. Code § 98.0702); no unit-count or construction-date threshold.",
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": null
+    },
+    "exemptions": "Excludes (a) software/products that publish reports on rental rates or occupancy from aggregated historical nonpublic competitor data more than 90 days old or from public information and do not recommend rates or occupancy for future leases or renewals; (b) software/products used to establish rental rates or income limits under local, state, or federal affordable housing program guidelines.",
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": null,
+    "effective_date": null,
+    "citation": "S.D. Mun. Code §§ 98.1101-98.1104 (proposed, O-2025-107)",
+    "quoted_span": "The proposed ordinance bans the sale, licensing, and use of an algorithmic device to set rental rates or",
+    "penalty": "Tenant civil action for injunctive relief, damages, or civil penalties up to $1,000 per violation; prevailing tenant recovers costs and reasonable attorney's fees; each month and each property is a separate violation; remedies cumulative.",
+    "confidence": 0.6,
+    "conflict_note": "Document is pre-adoption Council materials (staff report dated February 27, 2025; ordinance number, date of final passage, and clerk certification are blank). It states the ordinance takes effect on the thirtieth day after final passage, but no passage date is given, so status is recorded as pending and effective date is null; actual adoption status as of the query date should be verified from an enacted source."
+   }
+  ],
+  "no_rule_findings": []
+ }
+}

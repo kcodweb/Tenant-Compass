@@ -1,0 +1,46 @@
+{
+ "doc_id": "D035",
+ "extractor": "claude-opus-5-5",
+ "served_by": "claude-opus-5-5",
+ "as_of": "2026-10-01",
+ "extracted_at": "2026-10-03T19:47:26+00:00",
+ "prompt_sha256": "4bb68cfc3ec1cec275d2ae19638a389dd24a17e015a245dce34246b0b23c5fef",
+ "repair_round": false,
+ "dropped_unverifiable": [],
+ "output": {
+  "rules": [
+   {
+    "jurisdiction": "Jersey City, NJ",
+    "level": "city",
+    "category": "algorithmic_rent_setting",
+    "status": "in_force",
+    "title": "Jersey City ordinance banning rent-setting algorithms (RealPage ban)",
+    "requirement": "Bans landlords' use of rent-setting algorithms such as RealPage, including revenue management software that uses certain nonpublic competitor data to set or recommend rents. Per the article, real estate agents were excluded at the realtors' request, and owners of multiple buildings who use algorithms without colluding are reportedly not covered.",
+    "key_value": "Ban on rent-setting algorithms using nonpublic data; reported $2,000 daily fine",
+    "coverage_conditions": null,
+    "coverage": {
+     "min_units": null,
+     "max_units": null,
+     "co_on_or_before": null,
+     "co_after": null,
+     "exempt_if_newer_than_years": null,
+     "owner_fact_dependent": false,
+     "subsidy_dependent": false,
+     "other_unknown_fact": null,
+     "owner_fact_max_units": null
+    },
+    "exemptions": "Real estate agents reportedly excluded. A possible exclusion for Multiple Listing Services was requested but not confirmed.",
+    "yields_to_local": false,
+    "may_preempt_local": false,
+    "interaction": null,
+    "effective_date": null,
+    "citation": "Jersey City Council approves RealPage ban and increasing benefits for laborers",
+    "quoted_span": "The Jersey City Council unanimously approved (9-0) a measure banning rent-setting algorithms such as RealPage, as well as increasing benefits for laborers, at last night’s meeting.",
+    "penalty": "$2,000 daily fine (as mentioned by a public commenter)",
+    "confidence": 0.55,
+    "conflict_note": "This is a news article on the council's final passage on about 2025-05-21. It gives no ordinance number or effective date, and council members noted amendments may still happen. In_force status assumes ordinary effectiveness after adoption. The article also notes possible federal legislation that could bar municipalities from such actions."
+   }
+  ],
+  "no_rule_findings": []
+ }
+}
