@@ -1,0 +1,421 @@
+<title>Rental Housing Law Navigator</title>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,650&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a single working column. Controls on top, the address's jurisdiction stack and facts, then one
+   section per rule category with a status chip per rule. Citations are set like a code book: mono, with §. */
+:root {
+  --paper: #f5f7fa;
+  --sheet: #ffffff;
+  --ink: #18212d;
+  --muted: #5a6677;
+  --rule: #d9dfe7;
+  --accent: #23498f;
+  --accent-soft: #e6ecf7;
+  --ok: #1d6b45;      --ok-bg: #e2f2e8;
+  --warn: #8a5a00;    --warn-bg: #fbefd2;
+  --sup: #4f5866;     --sup-bg: #e9ecf0;
+  --future: #1f5a8a;  --future-bg: #e1edf8;
+  --pend: #6a3d99;    --pend-bg: #efe6f8;
+  --flag: #a3271f;    --flag-bg: #fbe4e1;
+  --quote-bg: #f0f3f7;
+  --display: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --paper: #10151c; --sheet: #171e27; --ink: #e4e9f0; --muted: #9aa6b6; --rule: #2a3442;
+  --accent: #8fb0ef; --accent-soft: #1d2a40;
+  --ok: #7fd3a4; --ok-bg: #173226; --warn: #f0c46b; --warn-bg: #3a2d12; --sup: #b4bcc8; --sup-bg: #262e39;
+  --future: #8ec3f0; --future-bg: #152d42; --pend: #c9a6f0; --pend-bg: #2c2140; --flag: #f39a90; --flag-bg: #3d1b18;
+  --quote-bg: #1d2530; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --paper: #10151c; --sheet: #171e27; --ink: #e4e9f0; --muted: #9aa6b6; --rule: #2a3442;
+  --accent: #8fb0ef; --accent-soft: #1d2a40;
+  --ok: #7fd3a4; --ok-bg: #173226; --warn: #f0c46b; --warn-bg: #3a2d12; --sup: #b4bcc8; --sup-bg: #262e39;
+  --future: #8ec3f0; --future-bg: #152d42; --pend: #c9a6f0; --pend-bg: #2c2140; --flag: #f39a90; --flag-bg: #3d1b18;
+  --quote-bg: #1d2530; color-scheme: dark; }
+
+* { box-sizing: border-box; }
+body { background: var(--paper); color: var(--ink); font: 15px/1.55 var(--body); margin: 0; }
+.wrap { max-width: 980px; margin: 0 auto; padding-inline: 16px; padding-block: 0 48px; }
+.notice { background: var(--ink); color: var(--paper); font-size: 13px; padding: 8px 16px; text-align: center; }
+.notice strong { letter-spacing: .04em; }
+header.top { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; padding-block: 24px 8px; }
+h1 { font: 650 28px/1.15 var(--display); margin: 0; text-wrap: balance; }
+h1 span { color: var(--muted); font-weight: 500; }
+.tabs { display: flex; gap: 4px; flex-wrap: wrap; }
+.tabs button { font: 500 14px var(--body); background: none; border: 1px solid transparent; color: var(--muted); padding: 6px 12px; border-radius: 6px; cursor: pointer; }
+.tabs button[aria-selected="true"] { color: var(--accent); background: var(--accent-soft); }
+.tabs button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.controls { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: end; padding: 16px; background: var(--sheet); border: 1px solid var(--rule); border-radius: 10px; margin-block: 12px 20px; }
+.controls label { display: grid; gap: 4px; font-size: 12px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); }
+.controls input { font: 400 16px var(--body); padding: 9px 11px; border: 1px solid var(--rule); border-radius: 7px; background: var(--paper); color: var(--ink); width: 100%; min-width: 0; }
+.datebox { display: flex; gap: 6px; align-items: end; flex-wrap: wrap; }
+.datebox .presets { display: flex; gap: 4px; flex-wrap: wrap; }
+.chip-btn { font: 500 12px var(--mono); padding: 5px 8px; border-radius: 6px; border: 1px solid var(--rule); background: var(--sheet); color: var(--ink); cursor: pointer; }
+.chip-btn:hover { border-color: var(--accent); }
+@media (max-width: 640px) { .controls { grid-template-columns: minmax(0, 1fr); } }
+
+.summary { display: grid; gap: 10px; margin-bottom: 18px; }
+.addr { font: 650 22px/1.25 var(--display); margin: 0; text-wrap: balance; }
+.stack { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 14px; }
+.stack .lvl { padding: 3px 9px; border-radius: 5px; background: var(--accent-soft); color: var(--accent); font-weight: 500; }
+.stack .sep { color: var(--muted); }
+.facts { display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 13px; color: var(--muted); }
+.facts b { color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+.asof { font: 500 13px var(--mono); color: var(--muted); }
+.datanote { font-size: 13px; color: var(--warn); }
+.tally { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.badge { display: inline-block; font: 600 11px/1 var(--body); letter-spacing: .05em; text-transform: uppercase; padding: 5px 7px; border-radius: 4px; white-space: nowrap; }
+.b-applies { color: var(--ok); background: var(--ok-bg); }
+.b-unknown { color: var(--warn); background: var(--warn-bg); }
+.b-superseded { color: var(--sup); background: var(--sup-bg); }
+.b-not_yet_effective { color: var(--future); background: var(--future-bg); }
+.b-pending { color: var(--pend); background: var(--pend-bg); }
+.b-flag { color: var(--flag); background: var(--flag-bg); }
+.b-failed { color: var(--sup); background: var(--sup-bg); text-decoration: line-through; }
+.failed { border-top: 1px dashed var(--rule); padding: 10px 16px; font-size: 14px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; }
+
+section.cat { background: var(--sheet); border: 1px solid var(--rule); border-radius: 10px; margin-bottom: 14px; }
+section.cat > h2 { font: 650 18px/1.3 var(--display); margin: 0; padding: 14px 16px 4px; }
+section.cat > .catsum { margin: 0; padding: 0 16px 12px; color: var(--muted); font-size: 14px; }
+.none { padding: 0 16px 14px; color: var(--muted); font-size: 14px; }
+.rule { border-top: 1px solid var(--rule); padding: 12px 16px; display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 4px 14px; }
+.rule .st { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+.rule h3 { font: 600 15px/1.35 var(--body); margin: 0; }
+.rule .req { margin: 2px 0 0; max-width: 68ch; }
+.rule .kv { font-weight: 600; }
+.cite { font: 500 13px var(--mono); color: var(--accent); }
+.meta { font-size: 12px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 14px; }
+details { margin-top: 6px; }
+summary { cursor: pointer; font-size: 13px; color: var(--accent); width: fit-content; }
+blockquote { margin: 8px 0 4px; padding: 10px 12px; background: var(--quote-bg); border-left: 3px solid var(--accent); font: 400 14px/1.5 var(--display); max-width: 70ch; overflow-wrap: anywhere; }
+.why { font-size: 13px; color: var(--muted); margin: 6px 0 0; max-width: 72ch; }
+@media (max-width: 560px) { .rule { grid-template-columns: minmax(0, 1fr); } .rule .st { flex-direction: row; } }
+
+.panel { background: var(--sheet); border: 1px solid var(--rule); border-radius: 10px; padding: 16px; margin-bottom: 14px; }
+.panel h2 { font: 650 18px var(--display); margin: 0 0 6px; }
+.panel p { margin: 4px 0; max-width: 72ch; }
+.tablewrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 13px; }
+th, td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font-size: 11px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+td.num { font-variant-numeric: tabular-nums; text-align: right; }
+.ids { font: 400 12px var(--mono); color: var(--muted); overflow-wrap: anywhere; }
+a { color: var(--accent); }
+footer { color: var(--muted); font-size: 12px; margin-top: 24px; max-width: 80ch; }
+.cases { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr)); gap: 8px; margin: -8px 0 20px; }
+.cases-h { font-size: 12px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin: 0 0 6px; }
+.case { text-align: left; font: 500 13px/1.35 var(--body); color: var(--ink); background: var(--sheet); border: 1px solid var(--rule); border-radius: 8px; padding: 9px 11px; cursor: pointer; display: grid; gap: 2px; min-width: 0; }
+.case:hover, .case[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); }
+.case small { color: var(--muted); font-weight: 400; font-size: 12px; }
+.boundary { font-size: 13px; color: var(--muted); max-width: 80ch; margin: 0; }
+.plain { margin: 8px 0 2px; padding: 9px 12px; border-radius: 7px; background: var(--ok-bg); color: var(--ink); max-width: 70ch; font-size: 14px; }
+.plain .lbl { display: block; font: 600 11px var(--body); letter-spacing: .05em; text-transform: uppercase; color: var(--ok); margin-bottom: 2px; }
+.audit { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 3px 12px; font-size: 12px; color: var(--muted); margin: 8px 0 0; }
+.audit dt { font-weight: 600; color: var(--ink); }
+.audit dd { margin: 0; overflow-wrap: anywhere; }
+.verdict { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; margin: 8px 0; font-size: 13px; }
+.expect { font-size: 14px; border-left: 3px solid var(--rule); padding-left: 10px; margin: 6px 0; max-width: 72ch; }
+.scorebar { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+#lang-btn { margin-left: 4px; }
+</style>
+
+<div class="notice" id="notice"><strong>NOT LEGAL ADVICE.</strong> Summaries of public law generated by software for information only. Check the cited source or ask a lawyer before acting.</div>
+<div class="wrap">
+  <header class="top">
+    <h1>Rental Housing Law Navigator <span>· which rules apply here</span></h1>
+    <nav class="tabs" role="tablist">
+      <button role="tab" id="tab-lookup" aria-selected="true" data-view="lookup">Address lookup</button>
+      <button role="tab" id="tab-changes" aria-selected="false" data-view="changes">Law changes</button>
+      <button role="tab" id="tab-sources" aria-selected="false" data-view="sources">Sources &amp; audit</button>
+      <button type="button" id="lang-btn" class="chip-btn" aria-label="Switch language">Español</button>
+    </nav>
+  </header>
+
+  <div id="view-lookup">
+    <form class="controls" id="controls" autocomplete="off">
+      <label for="addr-input">Address
+        <input id="addr-input" list="addr-list" placeholder="Start typing a street, city or ID (e.g. A0001)">
+        <datalist id="addr-list"></datalist>
+      </label>
+      <div class="datebox">
+        <label for="asof-input">As of
+          <input id="asof-input" type="date" value="2026-10-01">
+        </label>
+        <div class="presets" id="presets"></div>
+      </div>
+    </form>
+    <div id="cases-box"></div>
+    <div id="result"><p class="asof">Loading rules…</p></div>
+  </div>
+
+  <div id="view-changes" hidden></div>
+  <div id="view-sources" hidden></div>
+
+  <footer>
+    Every result is computed from rules that an AI extraction pipeline read out of the source documents. Each rule carries its
+    citation, an exact quote from the source and the date the source was retrieved. “Unknown” means the answer turns on a fact the
+    public property record does not contain. Not legal advice, not a compliance certification. Built by team Tenant Compass (Karan) for HackNation Challenge 2.
+  </footer>
+</div>
+
+<script src="engine.js"></script>
+<script>
+const CATS = [
+  ["rent_increase_limits", "Rent increases"],
+  ["just_cause_eviction", "Eviction protections"],
+  ["security_deposits", "Security deposits"],
+  ["application_screening_fees", "Application & screening fees"],
+  ["screening_restrictions", "Tenant screening limits"],
+  ["algorithmic_rent_setting", "Algorithmic rent-setting"],
+];
+let LANG = "en";
+try { LANG = localStorage.getItem("nav-lang") || "en"; } catch (e) {}
+const I18N = {
+  en: { applies: "Applies", unknown: "Unknown", superseded: "Superseded", not_yet_effective: "Not yet effective", pending: "Pending bill",
+        cats: {}, plain: "In plain language", plainNote: "machine-written summary of the rule record; the citation and quote below are the source",
+        notice: "<strong>NOT LEGAL ADVICE.</strong> Summaries of public law generated by software for information only. Check the cited source or ask a lawyer before acting.",
+        cases: "Try a case", toggle: "Español", answerAsOf: "ANSWER AS OF", why: "Why", none: "No rule found in the corpus for this address on this date.",
+        boundary: "What this answer checks: the address's legal city, year built, unit count and use code from the public assessor record, against each rule's coverage test on the date above. What it cannot see: who owns the building, the certificate-of-occupancy date, lease terms and anything about the tenant. Rules that turn on those facts say Unknown." },
+  es: { applies: "Aplica", unknown: "Desconocido", superseded: "Desplazada", not_yet_effective: "Aún no vigente", pending: "Proyecto de ley",
+        cats: { rent_increase_limits: "Aumentos de alquiler", just_cause_eviction: "Protección contra desalojos", security_deposits: "Depósitos de garantía",
+                application_screening_fees: "Cuotas de solicitud y evaluación", screening_restrictions: "Límites a la evaluación de inquilinos", algorithmic_rent_setting: "Fijación de alquileres por algoritmo" },
+        plain: "En lenguaje sencillo", plainNote: "resumen escrito por máquina; la cita y el texto legal de abajo (en inglés) son la fuente",
+        notice: "<strong>NO ES ASESORÍA LEGAL.</strong> Resúmenes de leyes públicas generados por software, solo con fines informativos. Revise la fuente citada o consulte a un abogado antes de actuar.",
+        cases: "Pruebe un caso", toggle: "English", answerAsOf: "RESPUESTA A FECHA DE", why: "Por qué", none: "No se encontró ninguna regla en el corpus para esta dirección en esta fecha.",
+        boundary: "Esta respuesta revisa la ciudad legal, el año de construcción, el número de unidades y el uso según el registro público del tasador, frente a la cobertura de cada regla en la fecha indicada. No puede ver quién es el dueño, la fecha del certificado de ocupación, los términos del contrato ni datos del inquilino. Las reglas que dependen de esos datos dicen Desconocido." },
+};
+const T = k => I18N[LANG][k] ?? I18N.en[k];
+const LABEL = new Proxy({}, { get: (_, k) => T(k) });
+const catName = (cat, name) => (LANG === "es" && I18N.es.cats[cat]) || name;
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+let DATA, RULES, BYADDR = {}, current = null;
+
+function fmtDate(iso) {
+  if (!iso) return "no date stated";
+  const p = iso.split("-");
+  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  return p.length === 3 ? `${months[+p[1] - 1]} ${+p[2]}, ${p[0]}` : p.length === 2 ? `${months[+p[1] - 1]} ${p[0]}` : p[0];
+}
+
+function catSummary(entries) {
+  if (!entries.length) return null;
+  const a = entries.filter(e => e.res.result === "applies");
+  const sup = entries.filter(e => e.res.result === "superseded");
+  if (a.length) {
+    let s = a.map(e => e.rule.key_value ? `${e.rule.title}: ${e.rule.key_value}` : e.rule.title).slice(0, 2).join(" · ");
+    if (sup.length) s += `. ${sup.map(e => e.rule.title).join(", ")} yields to the local rule.`;
+    return s;
+  }
+  if (entries.some(e => e.res.result === "unknown")) return "Coverage depends on facts the property record does not contain.";
+  if (entries.some(e => e.res.result === "not_yet_effective")) return "A new law is enacted but not yet in effect on this date.";
+  if (entries.some(e => e.res.result === "pending")) return "Only proposed bills, which are not law.";
+  return null;
+}
+
+function renderLookup() {
+  const box = document.getElementById("result");
+  const a = current;
+  if (!a) { box.innerHTML = `<p class="asof">No matching sample address. Pick one from the list.</p>`; return; }
+  const asOf = document.getElementById("asof-input").value || DATA.meta.default_as_of;
+  const res = NavigatorEngine.lookup(a, RULES, asOf);
+  const byId = Object.fromEntries(RULES.map(r => [r.team_rule_id, r]));
+  const tally = {};
+  res.forEach(r => tally[r.result] = (tally[r.result] || 0) + 1);
+  const units = a.units !== null ? `${a.units}` : a.units_min ? `${a.units_min}${a.units_max ? "–" + a.units_max : "+"} (from use code)` : "not recorded";
+  let html = `<div class="summary">
+    <p class="asof">${T("answerAsOf")} ${esc(fmtDate(asOf)).toUpperCase()} · ${esc(a.address_id)}</p>
+    <h2 class="addr">${esc(a.address)}</h2>
+    <div class="stack">${a.stack.map(s => `<span class="lvl">${esc(s.name)}</span>`).join('<span class="sep">›</span>')}
+      ${a.city ? "" : '<span class="datanote">City not resolved; only state rules shown</span>'}</div>
+    <div class="facts"><span>Built <b>${a.year_built ?? "not recorded"}</b></span><span>Units <b>${esc(units)}</b></span>
+      <span>Use <b>${esc(a.use)}</b></span><span>Jurisdiction: ${esc(a.jurisdiction_basis)}</span></div>
+    ${a.notes.length ? `<div class="datanote">${a.notes.map(esc).join(" ")}</div>` : ""}
+    <p class="boundary">${esc(T("boundary"))}</p>
+    <div class="tally">${Object.entries(tally).map(([k, n]) => `<span class="badge b-${k}">${n} ${LABEL[k]}</span>`).join("")}</div>
+  </div>`;
+  for (const [cat, name] of CATS) {
+    const entries = res.map(r => ({ res: r, rule: byId[r.team_rule_id] })).filter(e => e.rule.category === cat);
+    const sum = catSummary(entries);
+    html += `<section class="cat"><h2>${esc(catName(cat, name))}</h2>${sum ? `<p class="catsum">${esc(sum)}</p>` : ""}`;
+    const failed = RULES.filter(r => r.status === "failed" && r.category === cat
+      && (r.jurisdiction === a.state || (a.city && r.jurisdiction.startsWith(a.city + ","))));
+    const failedHtml = failed.map(r => `<div class="failed"><span class="badge b-failed">${LANG === "es" ? "Fallida" : "Failed"}</span>
+      <span>${esc(r.title)}: not law, so it is not applied here.</span><span class="cite">${esc(r.citation)}</span>
+      <span class="meta">${esc(r.source_doc_id)} · retrieved ${esc(r.retrieved_at)}</span></div>`).join("");
+    if (!entries.length) {
+      const nf = DATA.no_rule_findings.filter(f => f.category === cat && (f.jurisdiction === a.state || f.jurisdiction.startsWith(a.city || "~")));
+      html += `<p class="none">${esc(T("none"))}${nf.length ? " " + nf.map(f => esc(f.finding) + ` <span class="cite">[${esc(f.source_doc_id)}]</span>`).join(" ") : ""}</p>`;
+    }
+    for (const { res: r, rule } of entries) {
+      html += `<div class="rule"><div class="st"><span class="badge b-${r.result}">${LABEL[r.result]}</span>${rule.citation_basis === "research_only" ? '<span class="badge b-pending" title="Described only by a page outside the supplied corpus">Research source</span>' : r.conflict_flag ? '<span class="badge b-flag">Review: conflict</span>' : ""}</div>
+        <div style="min-width:0">
+          <h3>${esc(rule.title)}</h3>
+          <p class="req">${esc(rule.requirement)}${rule.key_value ? ` <span class="kv">${esc(rule.key_value)}</span>` : ""}</p>
+          <div class="meta"><span class="cite">${esc(rule.citation)}</span><span>Source ${esc(rule.source_doc_id)} · retrieved ${esc(String(rule.retrieved_at || "").slice(0, 10))}</span><span>${esc(rule.level === "state" ? "State" : "City")} · ${esc(rule.jurisdiction)}</span>
+            <span>Effective ${esc(fmtDate(rule.effective_date))}</span>${rule.confidence != null ? `<span>Confidence ${Math.round(rule.confidence * 100)}%</span>` : ""}</div>
+          ${rule.plain ? `<p class="plain"><span class="lbl">${esc(T("plain"))} · ${esc(T("plainNote"))}</span>${esc(rule.plain[LANG] || rule.plain.en)}</p>` : ""}
+          <p class="why"><b>${esc(T("why"))}:</b> ${esc(r.explanation)}</p>
+          <details><summary>Source text</summary>
+            <blockquote>“${esc(rule.quoted_span)}”</blockquote>
+            <div class="meta"><a href="${esc(rule.source_url)}" target="_blank" rel="noopener">${esc(rule.source_doc_id)} · open source</a><span>Retrieved ${esc(rule.retrieved_at)}</span><span>Rule ${esc(rule.team_rule_id)}</span>
+            ${(rule.corroborating_sources || []).length ? `<span>Also in ${rule.corroborating_sources.map(c => esc(c.source_doc_id)).join(", ")}</span>` : ""}</div>
+            ${rule.exemptions ? `<p class="why"><b>Exemptions:</b> ${esc(rule.exemptions)}</p>` : ""}
+            ${rule.conflict_note ? `<p class="why"><b>Review note:</b> ${esc(rule.conflict_note)}</p>` : ""}
+            <dl class="audit"><dt>As of</dt><dd>${esc(asOf)} (query date)</dd>
+              <dt>Source</dt><dd>${esc(rule.source_doc_id)} · ${esc(rule.source_url)}</dd>
+              <dt>Retrieved</dt><dd>${esc(rule.retrieved_at)}</dd>
+              <dt>Citation</dt><dd>${rule.citation_basis === "research_only" ? "Research page outside the supplied corpus (not a corpus citation); needs review" : "Supplied corpus text"}</dd>
+              <dt>Extracted by</dt><dd>${esc(rule.extractor || "?")}, quote checked word for word against the source</dd>
+              <dt>Status on date</dt><dd>${esc(rule.status)}${rule.effective_date ? `, effective ${esc(rule.effective_date)}` : ", no effective date stated"}</dd>
+              <dt>Needs human review</dt><dd>${r.conflict_flag ? "Yes: " + esc(rule.conflict_note || "sources or laws may conflict") : "No conflict found"}</dd></dl>
+          </details>
+        </div></div>`;
+    }
+    html += failedHtml + `</section>`;
+  }
+  box.innerHTML = html;
+}
+
+function pickCases(d) {
+  const A = d.addresses, multi = a => (a.units ?? a.units_min ?? 0) >= 2;
+  const find = (f) => A.find(a => f(a));
+  return [
+    [find(a => a.city === "San Francisco" && a.year_built && a.year_built < 1979 && multi(a)), "San Francisco, pre-1979", "City rent control replaces the state cap"],
+    [find(a => a.city === "Los Angeles" && a.year_built >= 1979 && a.year_built <= 2010 && (a.units ?? 0) >= 5), "Los Angeles, newer building", "City RSO does not cover it; the state cap does"],
+    [find(a => a.city === "Hoboken"), "Hoboken", "City ban on rent-setting software, and a conflict flag with the new state law"],
+    [find(a => a.city === "Newark"), "Newark", "No city software ban; state law not yet in effect"],
+    [find(a => a.city === "Cambridge"), "Cambridge", "No rent control (state bar), pending bills, failed ballot question"],
+    [find(a => a.city === "San Diego" && !a.year_built), "San Diego, year built missing", "Answers Unknown instead of guessing"],
+  ].filter(c => c[0]);
+}
+
+function renderCases() {
+  const box = document.getElementById("cases-box");
+  box.innerHTML = `<p class="cases-h">${esc(T("cases"))}</p><div class="cases">${pickCases(DATA).map(([a, t, sub]) =>
+    `<button type="button" class="case" data-aid="${esc(a.address_id)}" aria-pressed="${current && current.address_id === a.address_id}">${esc(t)}<small>${esc(sub)}</small></button>`).join("")}</div>`;
+  box.querySelectorAll(".case").forEach(b => b.addEventListener("click", () => {
+    const a = BYADDR[b.dataset.aid];
+    document.getElementById("addr-input").value = `${a.address_id} · ${a.address}`;
+    pickAddress(a.address_id);
+  }));
+}
+
+function applyLang() {
+  document.documentElement.lang = LANG;
+  document.getElementById("notice").innerHTML = T("notice");
+  document.getElementById("lang-btn").textContent = T("toggle");
+  if (DATA) { renderLookup(); renderCases(); }
+}
+
+function renderChanges() {
+  const v = document.getElementById("view-changes");
+  const ch = DATA.changes || {};
+  const sc = (DATA.selfcheck && DATA.selfcheck.change_tests) || {};
+  let html = `<div class="panel"><h2>Law-change tests</h2><p>For each change, the addresses whose answer changes, computed by rerunning the same lookup on the dates in the test. Pending bills are listed by the addresses they would cover if enacted.</p></div>`;
+  for (const [id, t] of Object.entries(ch)) {
+    const cities = {};
+    t.affected_address_ids.forEach(aid => { const c = BYADDR[aid]?.city || "?"; cities[c] = (cities[c] || 0) + 1; });
+    html += `<div class="panel"><h2>${esc(id)} · ${esc(t.title || "")}</h2>
+      ${t.expected_behavior ? `<p class="expect"><b>Expected:</b> ${esc(t.expected_behavior)}</p>` : ""}
+      <p><b>Our result:</b> ${esc(t.notes)}</p>
+      <div class="verdict">${Object.entries(t.transitions || {}).map(([k, n]) => `<span>${n} × ${k.split(" -> ").map(x => `<span class="badge b-${esc(x)}">${esc(LABEL[x] || x)}</span>`).join(" → ")}</span>`).join("")}
+        ${sc[id] ? `<span class="badge ${sc[id].overlap === 1 ? "b-applies" : "b-unknown"}">${sc[id].overlap === 1 ? "Matches" : "Overlap " + Math.round(sc[id].overlap * 100) + "%"} expected set · ${sc[id].got}/${sc[id].expected}</span>` : ""}</div>
+      <div class="meta">${(t.mapped_rules || []).map(m => `<span class="cite">${esc(m)}</span>`).join("")}</div>
+      <div class="tablewrap"><table><thead><tr><th>City</th><th class="num">Affected addresses</th></tr></thead><tbody>
+      ${Object.entries(cities).map(([c, n]) => `<tr><td>${esc(c)}</td><td class="num">${n}</td></tr>`).join("") || `<tr><td>None</td><td class="num">0</td></tr>`}
+      </tbody></table></div>
+      <p class="meta">${t.affected_address_ids.length} affected · ${t.conflict_flag_address_ids.length} flagged for review</p>
+      ${t.affected_address_ids.length ? `<details><summary>Address IDs</summary><p class="ids">${t.affected_address_ids.join(" ")}</p></details>` : ""}
+    </div>`;
+  }
+  v.innerHTML = html;
+}
+
+function renderSources() {
+  const v = document.getElementById("view-sources");
+  const byDoc = {};
+  RULES.forEach(r => { byDoc[r.source_doc_id] = (byDoc[r.source_doc_id] || 0) + 1; });
+  const S = DATA.selfcheck;
+  const pct = x => Math.round(x * 100) + "%";
+  const scPanel = S ? `<div class="panel"><h2>Self-check</h2><p>Our own validation of the outputs. The official scoring is done by the judges. It checks the rules the brief names, that each quote appears word for word in the supplied corpus text, the T1–T5 expected address sets and the coverage spot checks in the participant guide.</p>
+    ${S.citations_detail ? `<p class="meta">${S.citations_detail.verified_in_supplied_corpus} of ${S.citations_detail.applies_answers} “applies” answers quote supplied corpus text. ${S.citations_detail.research_only} rest on research pages, for laws whose official text is link-only in the manifest.</p>` : ""}
+    <div class="scorebar">${[["Brief rules found", S.summary.extraction], ["Citations verified", S.summary.citations], ["Change tests", S.summary.change_tests], ["Coverage spot checks", S.summary.coverage_spot_checks]]
+      .map(([l, x]) => `<span class="badge ${x >= 0.999 ? "b-applies" : "b-unknown"}">${l} ${pct(x)}</span>`).join("")}</div></div>` : "";
+  v.innerHTML = scPanel + `<div class="panel"><h2>How answers are made</h2>
+      <p>1. An AI model reads each source document and writes one record per rule, with an exact quote. Quotes that are not found word for word in the source are dropped.</p>
+      <p>2. Each address is placed in its state and city, and its year built and unit count come from the public assessor record.</p>
+      <p>3. Each rule's coverage test runs against those facts on the chosen date. Missing facts give “Unknown”, never a guess.</p>
+      <p>4. A second, separate model call rewrites each rule record in plain English and Spanish for renters. It sees only the record, and the page labels it as machine-written next to the cited source.</p>
+      <p class="meta">${RULES.length} rules from ${DATA.meta.documents} documents · data built ${esc(DATA.meta.generated_at)} · extractor: ${esc(DATA.meta.extractors.join(", "))}</p></div>
+    ${openQuestions()}
+    ${(DATA.research_rules || []).length ? `<div class="panel"><h2>Research context</h2><p>These rules appear only on pages we captured ourselves from the manifest's link-only sources, and the supplied corpus already has rules for the same topic. They are kept out of rules.json and the address answers, and shown here for reference.</p>
+      ${DATA.research_rules.map(r => `<p><span class="cite">${esc(r.citation)}</span> · ${esc(r.jurisdiction)} · ${esc(r.title)} <span class="meta">[${esc(r.source_doc_id)}]</span></p>`).join("")}</div>` : ""}
+    <div class="panel"><h2>Sources</h2><p class="meta">“Research capture” pages are link-only sources in the manifest that we saved from their public URLs. They do not count as corpus citations.</p><div class="tablewrap"><table><thead><tr><th>Doc</th><th>Jurisdiction</th><th>Type</th><th>Text</th><th>Retrieved</th><th class="num">Rules</th></tr></thead><tbody>
+      ${DATA.sources.map(s => `<tr><td><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.doc_id)}</a></td><td>${esc(s.jurisdictions)}</td><td>${esc(s.source_type)}</td><td>${s.supplied ? "Supplied corpus" : "Research capture"}</td><td>${esc(s.retrieved)}</td><td class="num">${byDoc[s.doc_id] || 0}</td></tr>`).join("")}
+    </tbody></table></div></div>
+    <div class="panel"><h2>Extraction log</h2>${DATA.audit.length ? `<div class="tablewrap"><table><thead><tr><th>Doc</th><th>Model</th><th>When</th><th class="num">Rules</th><th class="num">Dropped</th></tr></thead><tbody>
+      ${DATA.audit.map(l => `<tr><td>${esc(l.doc_id)}</td><td>${esc(l.served_by || l.extractor)}</td><td>${esc(l.extracted_at)}</td><td class="num">${l.rules}</td><td class="num">${l.dropped}</td></tr>`).join("")}</tbody></table></div>`
+      : "<p>No API extraction runs logged yet for this build.</p>"}</div>`;
+}
+
+function openQuestions() {
+  // Section 9 of the participant guide lists open questions in the law; show what our data says about each.
+  const find = (j, c) => RULES.filter(r => r.jurisdiction === j && r.category === c);
+  const Q = [
+    ["Berkeley's algorithmic ban: two published effective dates", find("Berkeley, CA", "algorithmic_rent_setting")],
+    ["New Jersey FAIR Act may preempt the Jersey City and Hoboken bans", find("NJ", "algorithmic_rent_setting")],
+    ["Los Angeles RSO formula: two published effective dates", find("Los Angeles, CA", "rent_increase_limits")],
+    ["California screening-fee cap: no single official 2026 dollar figure", find("CA", "application_screening_fees")],
+  ];
+  return `<div class="panel"><h2>Open questions in the law</h2><p>The participant guide lists these as unsettled. Each rule below is flagged for human review where our sources disagree.</p>
+    ${Q.map(([q, rs]) => `<p><b>${esc(q)}</b><br>${rs.map(r => `<span class="cite">${esc(r.team_rule_id)} ${esc(r.citation)}</span> · effective ${esc(r.effective_date || "not stated")}${r.conflict_note ? ` · <span class="meta">${esc(r.conflict_note)}</span>` : ""}`).join("<br>") || "No rule extracted."}</p>`).join("")}</div>`;
+}
+
+function pickAddress(val) {
+  const v = (val || "").trim().toLowerCase();
+  const id = v.match(/^a\d{4}/i) ? v.slice(0, 5).toUpperCase() : null;
+  current = (id && BYADDR[id]) || DATA.addresses.find(a => `${a.address_id} · ${a.address}`.toLowerCase() === v)
+    || DATA.addresses.find(a => a.address.toLowerCase().includes(v)) || null;
+  renderLookup();
+  if (document.getElementById("cases-box").firstChild) renderCases();
+  try { if (current) localStorage.setItem("nav-addr", current.address_id); } catch (e) {}
+}
+
+function showView(name) {
+  document.querySelectorAll(".tabs button[data-view]").forEach(b => b.setAttribute("aria-selected", b.dataset.view === name));
+  for (const n of ["lookup", "changes", "sources"]) document.getElementById("view-" + n).hidden = n !== name;
+}
+
+fetch("data.json").then(r => r.json()).then(d => {
+  DATA = d; RULES = d.rules;
+  d.addresses.forEach(a => BYADDR[a.address_id] = a);
+  document.getElementById("addr-list").innerHTML = d.addresses.map(a => `<option value="${esc(a.address_id + " · " + a.address)}">`).join("");
+  const presets = [["Today", d.meta.default_as_of], ["12/31/2025", "2025-12-31"], ["1/2/2026", "2026-01-02"], ["7/2/2027", "2027-07-02"]];
+  document.getElementById("presets").innerHTML = presets.map(([l, v]) => `<button type="button" class="chip-btn" data-date="${v}">${l}</button>`).join("");
+  document.querySelectorAll("[data-date]").forEach(b => b.addEventListener("click", () => { document.getElementById("asof-input").value = b.dataset.date; renderLookup(); }));
+  let start = "A0001";
+  try { start = localStorage.getItem("nav-addr") || start; } catch (e) {}
+  if (!BYADDR[start]) start = d.addresses[0].address_id;
+  document.getElementById("addr-input").value = `${start} · ${BYADDR[start].address}`;
+  pickAddress(start);
+  renderChanges(); renderSources(); renderCases(); applyLang();
+  const h = location.hash.slice(1);
+  if (["changes", "sources"].includes(h)) showView(h);
+}).catch(e => { document.getElementById("result").innerHTML = `<p class="datanote">Could not load data.json (${esc(e.message)}). Serve this folder over HTTP, for example: python -m http.server -d web</p>`; });
+
+document.getElementById("addr-input").addEventListener("change", e => pickAddress(e.target.value));
+document.getElementById("lang-btn").addEventListener("click", () => {
+  LANG = LANG === "en" ? "es" : "en";
+  try { localStorage.setItem("nav-lang", LANG); } catch (e) {}
+  applyLang();
+});
+document.getElementById("asof-input").addEventListener("change", renderLookup);
+document.getElementById("controls").addEventListener("submit", e => { e.preventDefault(); pickAddress(document.getElementById("addr-input").value); });
+document.querySelectorAll(".tabs button[data-view]").forEach(b => b.addEventListener("click", () => showView(b.dataset.view)));
+</script>
