@@ -73,7 +73,8 @@
     const st = rule.status;
     if (st === "pending" || st === "failed") return st;
     const eff = parseDate(rule.effective_date);
-    if (eff) return cmp(eff, asOf) <= 0 ? "in_force" : "not_yet_effective";
+    // A rate period or latest amendment starting later does not mean the law itself is not yet in force.
+    if (eff) return cmp(eff, asOf) <= 0 || rule.effective_date_basis === "current_version" ? "in_force" : "not_yet_effective";
     return st;
   }
 
@@ -85,7 +86,11 @@
   }
 
   function inJurisdiction(rule, a) {
-    if (rule.level === "state") return rule.jurisdiction === a.state;
+    if (rule.level === "state") {
+      const only = rule.applies_only_in;  // a state law written for named cities (Cal. Civ. Code § 1947.9: SF only)
+      return rule.jurisdiction === a.state &&
+        (!only || !only.length || (a.city !== null && only.includes(`${a.city}, ${a.state}`)));
+    }
     return a.city !== null && rule.jurisdiction === `${a.city}, ${a.state}`;
   }
 
@@ -110,6 +115,9 @@
       if (ts === "pending") { result = "pending"; notes.push("Proposed, not law. Shown so you can see what would change if it passed."); }
       else if (ts === "not_yet_effective") { result = "not_yet_effective"; notes.push(`Enacted; takes effect ${r.effective_date || "on a future date"}.`); }
       else result = cov === TRUE ? "applies" : "unknown";
+      const eff = parseDate(r.effective_date);
+      if (ts === "in_force" && eff && cmp(asOf, eff) < 0)
+        notes.push(`The amount or text shown takes effect ${r.effective_date}; on ${asOfStr} this law was already in force under an earlier rate or version.`);
       if (r.level === "state" && r.yields_to_local && (result === "applies" || result === "unknown")) {
         const locals = vals.filter(([l, lts]) => l.level === "city" && l.category === r.category && lts === "in_force");
         const covering = locals.find(([, , lcov]) => lcov === TRUE);
@@ -140,6 +148,6 @@
     return results;
   }
 
-  const api = { lookup, coverage, temporalStatus };
+  const api = { lookup, coverage, temporalStatus, inJurisdiction };
   if (typeof module !== "undefined") module.exports = api; else root.NavigatorEngine = api;
 })(typeof window !== "undefined" ? window : globalThis);
