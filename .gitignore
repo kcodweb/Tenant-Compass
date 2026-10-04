@@ -24,3 +24,8 @@ desktop.ini
 .vscode/
 .idea/
 *.swp
+
+# Local only
+.claude/
+submission/video_scripts.md
+py.json

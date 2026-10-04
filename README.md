@@ -3,7 +3,23 @@
 HackNation 7th Global AI Hackathon · Challenge 2 (RealPage) · Team Tenant Compass (Karan, sole member). For any sample apartment address: which housing rules apply on a
 given date, with citations and exact source quotes, and which addresses a law change affects.
 
+**Live demo: https://kcodweb.github.io/Tenant-Compass/**
+
 **Not legal advice.** Every interface says so.
+
+## Results
+
+From `out/selfcheck.txt`, our own validation (official scoring is done by the judges):
+
+| Check | Result |
+|---|---|
+| Rules the challenge brief names, found by extraction | 25 of 25 |
+| T1–T5 change tests, affected address sets | 5 of 5 exact (T3 conflict flags 90 of 90) |
+| "Applies" answers whose quote is found word for word in supplied corpus text | 3,804 of 3,894 (98%); the other 90 are the Hoboken and Jersey City bans, which only research pages describe |
+| Participant guide coverage spot checks | 100%, including no SF-only rule at California addresses outside San Francisco |
+| Browser engine vs Python engine | 2,000 of 2,000 lookups identical |
+
+Output: 62 rules (54 in force, 1 not yet effective, 4 pending, 3 failed) and answers for all 500 sample addresses.
 
 ## How it works
 
@@ -16,7 +32,7 @@ given date, with citations and exact source quotes, and which addresses a law ch
 | C · Changes | `navigator/changes.py` | Maps answer-key ids like `HOB-ALG-01` to our rules by jurisdiction and category, reruns lookups on the test dates, writes `out/changes.json`. `--new-doc` reports what an added document changes. |
 | Self-check | `navigator/selfcheck.py` | Our own validation (the scoring script and dev key are judge materials, not shared with participants in v5): rules the brief names, expected T1–T5 sets, quotes verified in supplied corpus text only, and the guide's coverage spot checks. Writes `out/selfcheck.txt` and `out/selfcheck.json`. |
 | Plain language | `navigator/plain.py` | Renter-facing summary of each rule in English and Spanish, written by a second model call from the rule record only, cached in `cache/plain/`. Shown in the demo as machine-written, next to the citation. |
-| Demo | `web/` | Static page: address search, "as of" date, jurisdiction stack, rules by category with status chips, explanation, quote and source link; law-change tests; sources and audit log. |
+| Demo | `web/` | Static page, no build step. Address search and "as of" date; an at-a-glance tile per category; a timeline of when each rule took effect at the address; rules by category with status chips, explanation, quote, source link and audit details; a notice when the address's city code was link-only and not read; English and Spanish; law-change tests; sources, self-check and extraction log. |
 
 ## Run it
 
@@ -27,6 +43,15 @@ python -m navigator.extract             # extracts documents that have no cache 
 python -m navigator.jurisdiction        # optional: fills the geocode cache from the Census Geocoder
 python -m navigator.run                 # rules.json, lookups.json, changes.json, selfcheck.txt, web/data.json
 python -m http.server -d web 8000       # open http://localhost:8000
+```
+
+Works on Windows, macOS and Linux (all files are read and written as UTF-8). Without an API key, `navigator.run` rebuilds
+everything from the cached extractions and summaries.
+
+Check that the browser engine matches the Python one (needs Node):
+
+```bash
+python tests/dump_py.py > py.json && node tests/parity.mjs py.json
 ```
 
 ### Adding a document from outside the corpus (optional)
@@ -44,8 +69,8 @@ tracking is evaluated on T1–T5 only.
 
 - Live demo: https://kcodweb.github.io/Tenant-Compass/ (the `web/` folder on GitHub Pages; also runs locally, see above).
   To redeploy after `python -m navigator.run`: `git subtree split --prefix web -b gh-pages` then `git push -f origin gh-pages`.
+- `out/rules.json`, `out/lookups.json`, `out/changes.json`: the three required files.
 - `submission/method_note.md`: one-page method note.
-- `submission/video_scripts.md`: scripts for the team, demo and technical videos.
 
 ## Data
 
