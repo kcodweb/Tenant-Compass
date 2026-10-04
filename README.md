@@ -42,7 +42,8 @@ tracking is evaluated on T1–T5 only.
 
 ## Submission
 
-- Live demo: https://claude.ai/artifact/UjFnCoSNmFF8vsfbBcEBzS (the `web/` page with its data; also runs locally, see above).
+- Live demo: https://kcodweb.github.io/Tenant-Compass/ (the `web/` folder on GitHub Pages; also runs locally, see above).
+  To redeploy after `python -m navigator.run`: `git subtree split --prefix web -b gh-pages` then `git push -f origin gh-pages`.
 - `submission/method_note.md`: one-page method note.
 - `submission/video_scripts.md`: scripts for the team, demo and technical videos.
 
