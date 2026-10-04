@@ -86,3 +86,8 @@ tracking is evaluated on T1–T5 only.
 - Owner names are not in the data, so owner-based exceptions are `unknown` unless the building is too large for them.
 - Year built is not the certificate-of-occupancy date: a building in a cutoff year is `unknown`.
 - Sources the manifest lists as link-only code-publisher pages (Hoboken D032–D034, Newark D070–D072, LA D038, San Diego D074–D075) were not read, so Hoboken and Newark rent control are missing. The demo says so on each affected address.
+
+## License
+
+Code and outputs: [MIT](LICENSE). The source texts in `data/starter/` (the organizers' participant pack) and
+`data/extra_corpus/` (public pages captured with their URLs) remain under their original owners' terms.
